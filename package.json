@@ -1,15 +1,36 @@
 {
-  "name": "my-app",
+  "name": "app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
+    "@aws-sdk/client-apprunner": "^3.34.0",
+    "@aws-sdk/client-s3": "^3.6.1",
+    "@fullstory/browser": "^1.4.9",
+    "@headlessui/react": "^1.4.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "aws-amplify": "^4.3.0",
+    "axios": "^0.21.4",
+    "body-parser": "^1.19.0",
+    "circular-structure-stringify": "^1.0.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "flatted": "^3.2.2",
+    "json-stringify-safe": "^5.0.1",
+    "jwt-decode": "^3.1.2",
+    "moment": "^2.29.1",
+    "node-fetch": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.0"
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "recharts": "^2.1.4",
+    "styled-components": "^5.3.1",
+    "universal-cookie": "^4.0.4",
+    "use-force-update": "^1.0.7",
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,6 +38,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://127.0.0.1:5000",
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+/**********************
+ * Second Level File *
+ **********************/
 
-function App() {
+import React, { useEffect } from "react";
+import "./index.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "../src/Pages2/HomePage.js";
+import Amplify, { API } from "aws-amplify";
+import awsconfig from "./aws-exports";
+import styled from "styled-components";
+Amplify.configure(awsconfig);
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ParentWrapper>
+      <BrowserRouter>
+        <div>
+          <Switch>
+            <Route path="/" component={Home} exact />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    </ParentWrapper>
   );
 }
 
-export default App;
+// Makes it so app doesn't flow off screen
+const ParentWrapper = styled.div`
+  overflow-y: auto;
+  overflow-x: hidden;
+`;
