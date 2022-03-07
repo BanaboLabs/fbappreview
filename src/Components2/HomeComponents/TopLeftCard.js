@@ -34,6 +34,7 @@ const Inner = styled.div`
   gap: 27px;
   padding-left: 45px;
   padding-top: 35px;
+  z-index: 10;
 `;
 
 const GrayText = styled.div`
