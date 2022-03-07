@@ -4,13 +4,18 @@ import Toggle from "../Images2/toggle.svg";
 import TabHighlighted from "../Images2/tabhighlighted.svg";
 import TabHighlightedClear from "../Images2/tabhighlightedclear.svg";
 
-export default function SideBar() {
+export default function SideBar(props) {
   // OnClick of Home, we want to change the font color and the background
 
   const [highlight, setHighlight] = useState("Insights");
 
   useEffect(() => {
-    //
+    props.sendToParent(highlight); // This is the mounting part
+  }, [highlight]);
+
+  useEffect(() => {
+    console.log(highlight);
+    props.sendToParent(highlight); // This is the mounting part
   }, [highlight]);
 
   return (

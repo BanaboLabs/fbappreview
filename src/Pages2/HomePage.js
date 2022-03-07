@@ -8,6 +8,8 @@ import styled from "styled-components";
 import WhiteCanvas from "../Components2/whitecanvas";
 import SideBar from "../Components2/sidebar";
 import Home from "../Components2/HomeComponents/ParentHome";
+import Events from "../Components2/EventsComponents/EventsHome";
+import Campaigns from "../Components2/CampaignComponents/CampaignsHome";
 
 export default function HomePage(props) {
   const [isScreen, setIsScreen] = useState("Home");
@@ -15,19 +17,33 @@ export default function HomePage(props) {
   const [isGrandpaData1, setIsGrandpaData1] = useState(false);
   const [screen1, setScreen1] = useState(true);
   const [isParentData2, setIsParentData2] = useState(false);
+  const [isParentData, setIsParentData] = useState("Link");
 
   useEffect(() => {
     console.log("yessir");
   }, [isParentData2]);
 
+  useEffect(() => {
+    console.log("pokemon");
+    console.log(isParentData);
+  }, [isParentData]);
+
   return (
     <Wrapper>
       <SubWrapper>
-        <SideBar></SideBar>
+        <SideBar toChild={isParentData} sendToParent={setIsParentData} />
       </SubWrapper>
       <AlignDiv>
         <WhiteCanvas></WhiteCanvas>
-        <Home />
+        <div>
+          {isParentData == "Home" ? (
+            <Home />
+          ) : isParentData == "Events" ? (
+            <Events />
+          ) : (
+            <Campaigns />
+          )}
+        </div>
       </AlignDiv>
     </Wrapper>
   );
