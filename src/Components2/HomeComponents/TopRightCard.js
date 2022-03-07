@@ -14,7 +14,8 @@ import TabHighlightedClear2 from "../../Images2/tabhighlightedclear2.svg";
 export default function TopRightCard() {
   const [toggleActive1, setToggleActive1] = useState(false);
   const [toggleActive2, setToggleActive2] = useState(false);
-  const [highlight, setHighlight] = useState("Custom");
+  const [highlight1, setHighlight1] = useState("Custom");
+  const [highlight2, setHighlight2] = useState("Purchases");
 
   return (
     <CardParameter>
@@ -23,7 +24,7 @@ export default function TopRightCard() {
         <HStack4>
           <GrayButtonBackground>
             <HStack6 onClick={() => setToggleActive1(!toggleActive1)}>
-              <BoldBlackText2>{highlight}</BoldBlackText2>
+              <BoldBlackText2>{highlight1}</BoldBlackText2>
               <BlackSimpleArrow1
                 toggleActive1={toggleActive1}
                 src={blacksimplearrow}
@@ -36,8 +37,8 @@ export default function TopRightCard() {
                 <BlueBackground>
                   <ModalBlackSemiBold>Models</ModalBlackSemiBold>
                 </BlueBackground>
-                <div onClick={() => setHighlight("Custom")}>
-                  {highlight == "Custom" ? (
+                <div onClick={() => setHighlight1("Custom")}>
+                  {highlight1 == "Custom" ? (
                     <TabHighlighted22>
                       <ModalGraySemiBold>Custom</ModalGraySemiBold>
                     </TabHighlighted22>
@@ -47,8 +48,8 @@ export default function TopRightCard() {
                     </TabHighlightedClear22>
                   )}
                 </div>
-                <div onClick={() => setHighlight("First-Touch")}>
-                  {highlight == "First-Touch" ? (
+                <div onClick={() => setHighlight1("First-Touch")}>
+                  {highlight1 == "First-Touch" ? (
                     <TabHighlighted22>
                       <ModalGrayRegular>First-Touch</ModalGrayRegular>
                     </TabHighlighted22>
@@ -58,8 +59,8 @@ export default function TopRightCard() {
                     </TabHighlightedClear22>
                   )}
                 </div>
-                <div onClick={() => setHighlight("Last-Touch")}>
-                  {highlight == "Last-Touch" ? (
+                <div onClick={() => setHighlight1("Last-Touch")}>
+                  {highlight1 == "Last-Touch" ? (
                     <TabHighlighted22>
                       <ModalGrayRegular>Last-Touch</ModalGrayRegular>
                     </TabHighlighted22>
@@ -69,8 +70,8 @@ export default function TopRightCard() {
                     </TabHighlightedClear22>
                   )}
                 </div>
-                <div onClick={() => setHighlight("Linear")}>
-                  {highlight == "Linear" ? (
+                <div onClick={() => setHighlight1("Linear")}>
+                  {highlight1 == "Linear" ? (
                     <TabHighlighted22>
                       <ModalGrayRegular>Linear</ModalGrayRegular>
                     </TabHighlighted22>
@@ -80,8 +81,8 @@ export default function TopRightCard() {
                     </TabHighlightedClear22>
                   )}
                 </div>
-                <div onClick={() => setHighlight("U-Shaped")}>
-                  {highlight == "U-Shaped" ? (
+                <div onClick={() => setHighlight1("U-Shaped")}>
+                  {highlight1 == "U-Shaped" ? (
                     <TabHighlighted22>
                       <ModalGrayRegular>U-Shaped</ModalGrayRegular>
                     </TabHighlighted22>
@@ -106,7 +107,68 @@ export default function TopRightCard() {
             </HStack6>
           </GrayButtonBackground>
           {toggleActive2 == true ? (
-            <ToggleRectangle2></ToggleRectangle2>
+            <ToggleRectangle2>
+              <VStack>
+                <BlueBackground>
+                  <ModalBlackSemiBold>Events</ModalBlackSemiBold>
+                </BlueBackground>
+                <div onClick={() => setHighlight2("Purchases")}>
+                  {highlight2 == "Purchases" ? (
+                    <TabHighlighted22>
+                      <ModalGraySemiBold>Purchases</ModalGraySemiBold>
+                    </TabHighlighted22>
+                  ) : (
+                    <TabHighlightedClear22>
+                      <ModalGraySemiBold>Purchases</ModalGraySemiBold>
+                    </TabHighlightedClear22>
+                  )}
+                </div>
+                <div onClick={() => setHighlight2("Revenue")}>
+                  {highlight2 == "Revenue" ? (
+                    <TabHighlighted22>
+                      <ModalGrayRegular>Revenue</ModalGrayRegular>
+                    </TabHighlighted22>
+                  ) : (
+                    <TabHighlightedClear22>
+                      <ModalGrayRegular>Revenue</ModalGrayRegular>
+                    </TabHighlightedClear22>
+                  )}
+                </div>
+                <div onClick={() => setHighlight2("Sign Ups")}>
+                  {highlight2 == "Sign Ups" ? (
+                    <TabHighlighted22>
+                      <ModalGrayRegular>Sign Ups</ModalGrayRegular>
+                    </TabHighlighted22>
+                  ) : (
+                    <TabHighlightedClear22>
+                      <ModalGrayRegular>Sign Ups</ModalGrayRegular>
+                    </TabHighlightedClear22>
+                  )}
+                </div>
+                <div onClick={() => setHighlight2("Add To Cart")}>
+                  {highlight2 == "Add To Cart" ? (
+                    <TabHighlighted22>
+                      <ModalGrayRegular>Add To Cart</ModalGrayRegular>
+                    </TabHighlighted22>
+                  ) : (
+                    <TabHighlightedClear22>
+                      <ModalGrayRegular>Add To Cart</ModalGrayRegular>
+                    </TabHighlightedClear22>
+                  )}
+                </div>
+                <div onClick={() => setHighlight2("Read Content")}>
+                  {highlight2 == "Read Content" ? (
+                    <TabHighlighted22>
+                      <ModalGrayRegular>Read Content</ModalGrayRegular>
+                    </TabHighlighted22>
+                  ) : (
+                    <TabHighlightedClear22>
+                      <ModalGrayRegular>Read Content</ModalGrayRegular>
+                    </TabHighlightedClear22>
+                  )}
+                </div>
+              </VStack>
+            </ToggleRectangle2>
           ) : (
             <div> </div>
           )}

@@ -62,21 +62,6 @@ export default function SideBar() {
             </TabHighlightClear>
           )}{" "}
         </div>
-        <div onClick={() => setHighlight("Predictions")}>
-          {highlight == "Predictions" ? (
-            <TabHighlight>
-              <TabItemHorizontalWrapper>
-                <Text2 style={{ color: "#252531" }}>Predictions</Text2>
-              </TabItemHorizontalWrapper>
-            </TabHighlight>
-          ) : (
-            <TabHighlightClear>
-              <TabItemHorizontalWrapper>
-                <Text style={{ color: "#252531" }}>Predictions</Text>
-              </TabItemHorizontalWrapper>
-            </TabHighlightClear>
-          )}{" "}
-        </div>
       </TopWrapper>
     </VStack>
   );
@@ -141,3 +126,23 @@ const TabItemHorizontalWrapper = styled.div`
   align-items: center;
   gap: 12px;
 `;
+
+// In Case
+/*
+<div onClick={() => setHighlight("Predictions")}>
+          {highlight == "Predictions" ? (
+            <TabHighlight>
+              <TabItemHorizontalWrapper>
+                <Text2 style={{ color: "#252531" }}>Predictions</Text2>
+              </TabItemHorizontalWrapper>
+            </TabHighlight>
+          ) : (
+            <TabHighlightClear>
+              <TabItemHorizontalWrapper>
+                <Text style={{ color: "#252531" }}>Predictions</Text>
+              </TabItemHorizontalWrapper>
+            </TabHighlightClear>
+          )}{" "}
+        </div>
+
+*/
