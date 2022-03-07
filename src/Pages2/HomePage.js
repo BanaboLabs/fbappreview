@@ -7,10 +7,18 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import WhiteCanvas from "../Components2/whitecanvas";
 import SideBar from "../Components2/sidebar";
-import Home from "../Components2/HomeComponents/ParentCampaign";
+import Home from "../Components2/HomeComponents/ParentHome";
 
-export default function HomePage() {
+export default function HomePage(props) {
   const [isScreen, setIsScreen] = useState("Home");
+  const [calendarActive, setCalendarActive] = useState(false);
+  const [isGrandpaData1, setIsGrandpaData1] = useState(false);
+  const [screen1, setScreen1] = useState(true);
+  const [isParentData2, setIsParentData2] = useState(false);
+
+  useEffect(() => {
+    console.log("yessir");
+  }, [isParentData2]);
 
   return (
     <Wrapper>
