@@ -1,9 +1,58 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import Iframe from "react-iframe";
+<script type="module" src="https://unpkg.com/x-frame-bypass"></script>;
 
 export default function Tooling() {
-  return <BlueBlur />;
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+  }, []);
+
+  return (
+    <Wrapper>
+      <BlueBlur>
+        <WhiteRectangle />
+        <PositionDiv>
+          <WhiteRectangle>hi</WhiteRectangle>
+          <Iframe
+            url="http://localhost:3000/?url=https://www.tesla.com/"
+            width="2000px"
+            height="1540px"
+            id="myId"
+            className="myClassname"
+            display="initial"
+            position="relative"
+          ></Iframe>
+        </PositionDiv>
+      </BlueBlur>
+    </Wrapper>
+  );
 }
+
+const Wrapper = styled.div`
+  overflow-y: hidden;
+`;
+
+const WhiteRectangle = styled.div`
+  position: absolute;
+  width: 100vw;
+  height: 34px;
+  left: 80px;
+  top: 45px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 50;
+`;
+
+const PositionDiv = styled.div`
+  z-index: 100;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+`;
 
 const BlueBlur = styled.div`
   position: absolute;
