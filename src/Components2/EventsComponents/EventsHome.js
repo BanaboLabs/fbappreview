@@ -6,48 +6,125 @@ import Filter2 from "../HomeComponents/Filter2";
 import WhiteArrow1 from "../../Images2/whitearrow.svg";
 import Purchases from "./Purchases";
 import Signups from "./Signups";
+import EventsStep1 from "./EventCreation/EventsStep1";
 
 export default function EventsHome() {
   const [toggleActive, setToggleActive] = useState(false);
   const [filterActive, setFilterActive] = useState(true);
   const [Screen, setScreen] = useState(1);
+  const [isShown, setIsShown] = useState(false);
+  const [eventsProcessOn, setEventsProcessOn] = useState(false);
+  const [isParentData1, setIsParentData1] = useState(false);
 
   useEffect(() => {
     setFilterActive(!filterActive);
+    console.log("wentoff1");
   }, [toggleActive]);
+
+  useEffect(() => {
+    setEventsProcessOn(!eventsProcessOn);
+    console.log("wentoff2");
+  }, [isParentData1]);
 
   return (
     <div>
-      <VStack>
-        <HStack>
-          {Screen == 1 ? (
-            <DarkText>Purchases</DarkText>
-          ) : (
-            <LightText onClick={() => setScreen(1)}>Purchases</LightText>
-          )}
-          {Screen == 1 ? (
-            <LightText onClick={() => setScreen(2)}>Sign Ups</LightText>
-          ) : (
-            <DarkText>Sign Ups</DarkText>
-          )}
-        </HStack>
-        <MainLine />
-        <LittleLine />
-        <HStack2>
-          <EventButton src={eventbutton} />
-          <Button2>
-            <HStack3 onClick={() => setToggleActive(!toggleActive)}>
-              <WhiteText>Today</WhiteText>
-              <WhiteArrow src={WhiteArrow1} toggleActive={toggleActive} />
-            </HStack3>
-            {filterActive ? <Filter2 /> : <div></div>}
-          </Button2>
-        </HStack2>
-        {Screen == 1 ? <Purchases /> : <Signups />}
-      </VStack>
+      {eventsProcessOn == true ? (
+        <EventsStep1
+          toChild1={isParentData1}
+          sendToParent1={setIsParentData1}
+        />
+      ) : (
+        <VStack>
+          <HStack>
+            {Screen == 1 ? (
+              <DarkText>Purchases</DarkText>
+            ) : (
+              <LightText onClick={() => setScreen(1)}>Purchases</LightText>
+            )}
+            {Screen == 1 ? (
+              <LightText onClick={() => setScreen(2)}>Sign Ups</LightText>
+            ) : (
+              <DarkText>Sign Ups</DarkText>
+            )}
+          </HStack>
+          <MainLine />
+          {Screen == 1 ? <LittleLine1 /> : <LittleLine2 />}
+          <HStack2>
+            <div
+              onMouseEnter={() => setIsShown(true)}
+              onMouseLeave={() => setIsShown(false)}
+            >
+              {isShown ? (
+                <div>
+                  <EventButton
+                    src={eventbutton}
+                    onClick={() => setEventsProcessOn(true)}
+                  />
+                  <AddEventRectangle>
+                    <AddEventWrapper>
+                      <BoldEventText>Add an event</BoldEventText>
+                      <RegularEventText>
+                        Create a new conversion event and map a visitor’s
+                        touchpoints through that event
+                      </RegularEventText>
+                    </AddEventWrapper>
+                  </AddEventRectangle>
+                </div>
+              ) : (
+                <EventButton src={eventbutton} />
+              )}
+            </div>
+            <Button2>
+              <HStack3 onClick={() => setToggleActive(!toggleActive)}>
+                <WhiteText>Today</WhiteText>
+                <WhiteArrow src={WhiteArrow1} toggleActive={toggleActive} />
+              </HStack3>
+              {filterActive ? <Filter2 /> : <div></div>}
+            </Button2>
+          </HStack2>
+          {Screen == 1 ? <Purchases /> : <Signups />}
+        </VStack>
+      )}
     </div>
   );
 }
+
+const BoldEventText = styled.div`
+  font-size: 16px;
+  line-height: 19px;
+  color: #252531;
+  text-shadow: 2px 5px 20px #f1f1f1;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const RegularEventText = styled.div`
+  color: #88879b;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "ProximaNovaRegular";
+  text-shadow: 2px 5px 20px #f1f1f1;
+`;
+
+const AddEventRectangle = styled.div`
+  position: absolute;
+  width: 285px;
+  height: 79px;
+  left: 1311px;
+  top: 60px;
+  background: #ffffff;
+  /* Low */
+  z-index: 100;
+  box-shadow: 2px 5px 20px #f1f1f1;
+  border-radius: 10px;
+`;
+
+const AddEventWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+  padding-left: 12px;
+  gap: 6px;
+`;
 
 const WhiteText = styled.div`
   font-family: "ProximaNovaSemiBold";
@@ -115,12 +192,21 @@ const HStack2 = styled.div`
   gap: 16px;
 `;
 
-const LittleLine = styled.div`
+const LittleLine1 = styled.div`
   width: 84px;
   height: 3.2px;
   background: #1e9efb;
   position: absolute;
   left: 464px;
+  top: 100px;
+`;
+
+const LittleLine2 = styled.div`
+  width: 84px;
+  height: 3.2px;
+  background: #1e9efb;
+  position: absolute;
+  left: 555px;
   top: 100px;
 `;
 

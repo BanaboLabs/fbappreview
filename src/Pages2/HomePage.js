@@ -40,8 +40,10 @@ export default function HomePage(props) {
             <Home />
           ) : isParentData == "Events" ? (
             <Events />
-          ) : (
+          ) : isParentData == "Campaigns" ? (
             <Campaigns />
+          ) : (
+            <div></div>
           )}
         </div>
       </AlignDiv>

@@ -13,17 +13,16 @@ import TabHighlightedClear2 from "../../Images2/tabhighlightedclear2.svg";
 
 // Purchases Breakdown
 
-export default function Card2Purchases() {
+export default function Card1Signups() {
   const [toggleActive1, setToggleActive1] = useState(false);
   const [toggleActive2, setToggleActive2] = useState(false);
   const [highlight1, setHighlight1] = useState("Custom");
   const [highlight2, setHighlight2] = useState("Purchases");
-
   return (
     <SmallRectangle>
       <ParentVStack>
         <TopHStack>
-          <TitleText>REVENUE PER TRAFFIC SOURCE</TitleText>
+          <TitleText>SIGN UPS PER TRAFFIC SOURCE</TitleText>
           <MiniHStack>
             <VStackNew>
               <ToggleRectangle>
@@ -104,7 +103,7 @@ export default function Card2Purchases() {
               )}
             </VStackNew>
             <VerticalLine />
-            <BoldBlackText>$41.5k</BoldBlackText>
+            <BoldBlackText>19.8k</BoldBlackText>
           </MiniHStack>
         </TopHStack>
         <InfoStack>
@@ -117,31 +116,31 @@ export default function Card2Purchases() {
             <DataParentHStack>
               <img src={purchasesdata1} />
               <BackgroundRectangle>
-                <InsideText>$8.5k</InsideText>
+                <InsideText>11.5k</InsideText>
               </BackgroundRectangle>
             </DataParentHStack>
             <DataParentHStack>
               <img src={purchasesdata2} />
               <BackgroundRectangle>
-                <InsideText>$7.3k</InsideText>
+                <InsideText>5.7k</InsideText>
               </BackgroundRectangle>
             </DataParentHStack>
             <DataParentHStack>
               <img src={purchasesdata3} />
               <BackgroundRectangle>
-                <InsideText>$6.8k</InsideText>
+                <InsideText>1.3k</InsideText>
               </BackgroundRectangle>
             </DataParentHStack>
             <DataParentHStack>
               <img src={purchasesdata4} />
               <BackgroundRectangle>
-                <InsideText>$1.2k</InsideText>
+                <InsideText>541</InsideText>
               </BackgroundRectangle>
             </DataParentHStack>
             <DataParentHStack>
               <img src={purchasesdata5} />
               <BackgroundRectangle>
-                <InsideText>$897</InsideText>
+                <InsideText>211</InsideText>
               </BackgroundRectangle>
             </DataParentHStack>
             <DataParentHStack>
@@ -153,7 +152,7 @@ export default function Card2Purchases() {
             <DataParentHStack>
               <img src={purchasesdata7} />
               <BackgroundRectangle>
-                <InsideText>$151</InsideText>
+                <InsideText>27</InsideText>
               </BackgroundRectangle>
             </DataParentHStack>
           </DataVStack>
@@ -163,10 +162,21 @@ export default function Card2Purchases() {
   );
 }
 
+const SmallRectangle = styled.div`
+  width: 1020px;
+  height: 370px;
+
+  background: #ffffff;
+  /* La La La */
+
+  box-shadow: 0px 11px 28.5px 6.5px #eceff4;
+  border-radius: 10px;
+`;
+
 const ToggleRectangle1 = styled.div`
   position: absolute;
   bottom: 140px;
-  right: 65px;
+  right: 75px;
   width: 113px;
   height: 155px;
   background: #ffffff;
@@ -209,13 +219,13 @@ const DataParentHStack = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 380px;
+  width: 945px;
 `;
 
 const LabelHStack = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 260px;
+  gap: 854px;
 `;
 
 const LabelFont = styled.div`
@@ -225,7 +235,7 @@ const LabelFont = styled.div`
 `;
 
 const BlueLine = styled.div`
-  width: 347.88px;
+  width: 940px;
   height: 1.3px;
   background: #e4f2ff;
 `;
@@ -283,7 +293,7 @@ const TitleText = styled.div`
   font-size: 16px;
   font-family: "ProximaNovaSemiBold";
   color: #88879b;
-  width: 160px;
+  width: 362px;
   line-height: 19px;
 `;
 
@@ -304,21 +314,8 @@ const InfoStack = styled.div`
 const TopHStack = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 400px;
 `;
-
-const SmallRectangle = styled.div`
-  width: 484px;
-  height: 370px;
-
-  background: #ffffff;
-  /* La La La */
-
-  box-shadow: 0px 11px 28.5px 6.5px #eceff4;
-  border-radius: 10px;
-`;
-
-///////
 
 const GraphIMG = styled.img`
   position: absolute;

@@ -166,7 +166,7 @@ export default function Card1Purchases() {
 const ToggleRectangle1 = styled.div`
   position: absolute;
   bottom: 140px;
-  left: 300px;
+  left: 310px;
   width: 113px;
   height: 155px;
   background: #ffffff;
