@@ -6,13 +6,20 @@ import eventimage2 from "../../../Images2/eventimage2.svg";
 import urlbutton from "../../../Images2/urlbutton.svg";
 import elementsbutton from "../../../Images2/elementsbutton.svg";
 import WebElements from "./WebElements";
+import graybackarrow from "../../../Images2/graybackarrow.svg";
+import clickeventcard2 from "../../../Images2/clickeventcard2.svg";
+import graytriangle from "../../../Images2/graytrianglenew.svg";
+import savebutton from "../../../Images2/savebutton.svg";
 
 // first step in creating those custom events
 
 export default function EventsStep1(props) {
   const [show, setShow] = useState(true);
   const [webElementsScreen, setWebElementsScreen] = useState(false);
+  const [urlEventsScreen, setUrlEventsScreen] = useState(false);
   const [isParentData2, setIsParentData2] = useState(false);
+  const [element1Clicked, setElement1Clicked] = useState(false);
+  const [number, setNumber] = useState(1);
 
   useEffect(() => {
     props.sendToParent1(show); // This is the mounting part
@@ -37,52 +44,304 @@ export default function EventsStep1(props) {
       ) : (
         <BlueBlur>
           <ModalRectangle>
-            <ClickImg src={blackx} onClick={() => setShow(!show)} />
-            <LargeVStack>
-              <MiddleVStack>
-                <LargeBlackText>
-                  Create events to track conversions
-                </LargeBlackText>
-                <MediumGrayText>
-                  Events are actions a website visitor takes to achieve a
-                  business goal, like viewing content, adding an item to a cart,
-                  or making a purchase
-                </MediumGrayText>
-              </MiddleVStack>
-              <PictureHStack>
-                <EventIMG src={eventimage1} />
-                <EventIMG src={eventimage2} />
-              </PictureHStack>
-            </LargeVStack>
-            <BottomHStack>
-              <BottomVStack>
-                <SmallBlackText>
-                  URL events
-                  <SmallGrayText>
-                    Track every time someone visits a specific webpage, like a
-                    product details page or an order confirmation page.
-                  </SmallGrayText>
-                </SmallBlackText>
-              </BottomVStack>
-              <BottomVStack>
-                <SmallBlackText>Click events</SmallBlackText>
-                <SmallGrayText>
-                  Track every time someone clicks on a webpage element, like an
-                  add to cart button or a form submission button
-                </SmallGrayText>
-              </BottomVStack>
-            </BottomHStack>
-            <BottomButton1 src={urlbutton} />
-            <BottomButton2
-              src={elementsbutton}
-              onClick={() => setWebElementsScreen(!webElementsScreen)}
-            />
+            <div>
+              {urlEventsScreen == false ? (
+                <div>
+                  <ClickImg src={blackx} onClick={() => setShow(!show)} />
+                  <LargeVStack>
+                    <MiddleVStack>
+                      <LargeBlackText>
+                        Create events to track conversions
+                      </LargeBlackText>
+                      <MediumGrayText>
+                        Events are actions a website visitor takes to achieve a
+                        business goal, like viewing content, adding an item to a
+                        cart, or making a purchase
+                      </MediumGrayText>
+                    </MiddleVStack>
+                    <PictureHStack>
+                      <EventIMG src={eventimage1} />
+                      <EventIMG src={eventimage2} />
+                    </PictureHStack>
+                  </LargeVStack>
+                  <BottomHStack>
+                    <BottomVStack>
+                      <SmallBlackText>
+                        URL events
+                        <SmallGrayText>
+                          Track every time someone visits a specific webpage,
+                          like a product details page or an order confirmation
+                          page.
+                        </SmallGrayText>
+                      </SmallBlackText>
+                    </BottomVStack>
+                    <BottomVStack>
+                      <SmallBlackText>Click events</SmallBlackText>
+                      <SmallGrayText>
+                        Track every time someone clicks on a webpage element,
+                        like an add to cart button or a form submission button
+                      </SmallGrayText>
+                    </BottomVStack>
+                  </BottomHStack>
+                  <BottomButton1
+                    src={urlbutton}
+                    onClick={() => setUrlEventsScreen(!urlEventsScreen)}
+                  />
+                  <BottomButton2
+                    src={elementsbutton}
+                    onClick={() => setWebElementsScreen(!webElementsScreen)}
+                  />
+                </div>
+              ) : (
+                <div>
+                  <ClickImg5
+                    src={graybackarrow}
+                    onClick={() => setUrlEventsScreen(!urlEventsScreen)}
+                  />
+                  <LargeVStack>
+                    <MiddleVStack>
+                      <LargeBlackText>URL Events</LargeBlackText>
+                      <MediumGrayText5>
+                        The event will be triggered every time a visitor reaches
+                        the destination url
+                      </MediumGrayText5>
+                    </MiddleVStack>
+                  </LargeVStack>
+                  <ClickEventCard5 src={clickeventcard2} />
+                  <TopText5>Enter URL Keywords</TopText5>
+                  <EventNameText5>EVENT NAME</EventNameText5>
+                  <EventFieldText5>Sign Up</EventFieldText5>
+                  <TheBlueLine5 />
+                  <EventNameText6>DESTINATION URL 1</EventNameText6>
+                  <EventFieldText6>
+                    https://nike.com/loyaltyprogram/signup
+                  </EventFieldText6>
+                  <TheBlueLine6 />
+                  <EventNameText7>DESTINATION URL 2</EventNameText7>
+                  <EventFieldText7>
+                    https://nike.com/loyaltyprogram/confirm
+                  </EventFieldText7>
+                  <TheBlueLine7 />
+                  <SaveButton5
+                    src={savebutton}
+                    onClick={() => setShow(!show)}
+                  />
+                </div>
+              )}
+            </div>
           </ModalRectangle>
         </BlueBlur>
       )}
     </div>
   );
 }
+
+const ClickEventCard5 = styled.img`
+  position: absolute;
+  left: 94px;
+  top: 160px;
+`;
+
+const TopText5 = styled.div`
+  position: absolute;
+  left: 135px;
+  top: 182px;
+  width: 200px;
+  color: #666678;
+  font-size: 18px;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const EventNameText5 = styled.div`
+  position: absolute;
+  left: 135px;
+  top: 250px;
+  font-size: 13px;
+  color: #9392a6;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const EventFieldText5 = styled.div`
+  position: absolute;
+  left: 135px;
+  top: 275px;
+  font-size: 18px;
+  color: #666678;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const TheBlueLine5 = styled.div`
+  position: absolute;
+  width: 330px;
+  height: 2px;
+  left: 135px;
+  top: 297px;
+  background: #e4f2ff;
+`;
+
+const EventNameText6 = styled.div`
+  position: absolute;
+  left: 135px;
+  top: 330px;
+  font-size: 13px;
+  color: #9392a6;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const EventFieldText6 = styled.div`
+  position: absolute;
+  left: 135px;
+  top: 352px;
+  font-size: 18px;
+  color: #666678;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const TheBlueLine6 = styled.div`
+  position: absolute;
+  width: 330px;
+  height: 2px;
+  left: 135px;
+  top: 377px;
+  background: #e4f2ff;
+`;
+
+const EventNameText7 = styled.div`
+  position: absolute;
+  left: 135px;
+  top: 410px;
+  font-size: 13px;
+  color: #9392a6;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const EventFieldText7 = styled.div`
+  position: absolute;
+  left: 135px;
+  top: 432px;
+  font-size: 18px;
+  color: #666678;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const TheBlueLine7 = styled.div`
+  position: absolute;
+  width: 330px;
+  height: 2px;
+  left: 135px;
+  top: 457px;
+  background: #e4f2ff;
+`;
+
+const SaveButton5 = styled.img`
+  position: absolute;
+  left: 118px;
+  top: 487px;
+  cursor: pointer;
+`;
+
+const EventNameText25 = styled.div`
+  position: absolute;
+  right: 178px;
+  top: 720px;
+  font-size: 13px;
+  color: #9392a6;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const EventFieldText25 = styled.div`
+  position: absolute;
+  right: 256px;
+  top: 740px;
+  font-size: 18px;
+  color: #666678;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const TheBlueLine25 = styled.div`
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  right: 80px;
+  top: 760px;
+  background: #e4f2ff;
+`;
+
+const BlueCircle5 = styled.div`
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  right: 82px;
+  top: 736px;
+  border-radius: 60px;
+  background: #e4f2ff;
+  transform: rotate(-179.95deg);
+`;
+
+const GrayTriangle5 = styled.img`
+  position: absolute;
+  right: 87px;
+  top: 742px;
+  cursor: pointer;
+`;
+
+const AbsolutePositioning5 = styled.div`
+  position: absolute;
+  left: 160px;
+  top: 610px;
+`;
+
+const RectangleMain5 = styled.div`
+  position: absolute;
+  width: 1496px;
+  height: 880px;
+  left: 140px;
+  top: 580px;
+
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+  border-radius: 10px;
+`;
+
+const RectangleTop5 = styled.div`
+  position: absolute;
+  width: 184px;
+  height: 36px;
+  left: 140px;
+  top: 560px;
+  z-index: 10;
+  background: #ffffff;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+`;
+
+const URLText5 = styled.div`
+  font-size: 14px;
+  font-family: "ProximaNovaSemiBold";
+  color: #666678;
+  padding-top: 11px;
+  padding-left: 20px;
+`;
+
+//
+
+const ClickImg5 = styled.img`
+  cursor: pointer;
+  position: absolute;
+  right: 880px;
+  top: 20px;
+`;
+
+const MediumGrayText5 = styled.div`
+  font-family: "ProximaNovaRegular";
+  font-size: 16px;
+  color: #9a99a9;
+  width: 600px;
+  line-height: 19px;
+`;
+
+////////
 
 const BottomButton1 = styled.img`
   position: absolute;

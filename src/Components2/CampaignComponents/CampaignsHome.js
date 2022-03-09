@@ -5,6 +5,7 @@ import copybutton from "../../Images2/copybutton.svg";
 import savebutton from "../../Images2/savebutton.svg";
 import useInput from "../../CustomHooks/useInput";
 import ToggleSwitch from "./ToggleSwitch";
+import CampaignsConnect from "./CampaignsConnect";
 
 export default function CampaignsHome() {
   const noRefresh = (event) => {
@@ -101,13 +102,21 @@ export default function CampaignsHome() {
     setScreen1(!screen1);
   }, [isParentData]);
 
+  useEffect(() => {
+    console.log("changed");
+    console.log(screen1);
+    console.log("above");
+  }, [screen1]);
+
   return (
     <div>
       <AbsolutePosition>
         <ToggleSwitch toChild={isParentData} sendToParent={setIsParentData} />
       </AbsolutePosition>
       {screen1 == false ? (
-        <div></div>
+        <div>
+          <CampaignsConnect />
+        </div>
       ) : (
         <HStack>
           <CampaignsConfigure />
