@@ -85,7 +85,7 @@ export default function InsideBottomLeft1(props) {
           </HStack15>
           <HStack15>
             <HStack2>
-              <CompanyLogo src={hackernews} />
+              <HackerNewsLogo src={hackernews} />
               <GrayText>Hacker News</GrayText>
             </HStack2>
             <ShadowRectangle>
@@ -94,14 +94,14 @@ export default function InsideBottomLeft1(props) {
           </HStack15>
           <HStack15>
             <HStack2>
-              <CompanyLogo src={hackernews} />
-              <GrayText>Hacker News</GrayText>
+              <CompanyLogo src={facebook} />
+              <GrayText>Facebook Christmas...</GrayText>
             </HStack2>
             <ShadowRectangle>
-              <DarkText>341</DarkText>
+              <DarkText>84</DarkText>
             </ShadowRectangle>
           </HStack15>
-        </VStack>{" "}
+        </VStack>
       </div>
     </Wrapper>
   );
@@ -116,10 +116,15 @@ const CompanyLogo = styled.img`
   padding-left: 10px;
 `;
 
+const HackerNewsLogo = styled.img`
+  padding-left: 10px;
+  width: 26px;
+`;
+
 const HStack = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 250px;
+  gap: 256px;
   padding-bottom: 10px;
   padding-left: 10px;
 `;
@@ -195,7 +200,7 @@ const GrayRectangle = styled.div`
   width: 360px;
   height: 27px;
   background: rgba(238, 238, 238, 0.6);
-  border-radius: 2px;
+  border-radius: 4px;
   padding-right: 50px;
 `;
 

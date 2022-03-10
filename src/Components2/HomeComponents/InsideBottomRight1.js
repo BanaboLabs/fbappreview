@@ -9,35 +9,22 @@ export default function InsideBottomRight1(props) {
     props.sendToParent1(clicked); // This is the mounting part
   }, [clicked]);
   return (
-    <div>
-      <HStack>
-        <BoldText>Name</BoldText>
-        <SemiBoldText>Conversion</SemiBoldText>
-      </HStack>
-      <Line />
-      <VStack>
-        <HStack15>
-          <div>
-            <HStack15
-              onMouseEnter={() => setIsShown(true)}
-              onMouseLeave={() => setIsShown(false)}
-            >
-              {isShown ? (
-                <div>
-                  <GrayRectangle onClick={() => setClicked(!clicked)}>
-                    <HStack15>
-                      <HStack2>
-                        <GrayText>Purchase</GrayText>
-                      </HStack2>
-                      <ShadowRectangle>
-                        <DarkText>5.7k</DarkText>
-                      </ShadowRectangle>
-                    </HStack15>
-                  </GrayRectangle>
-                </div>
-              ) : (
-                <div>
-                  <HStack15>
+    <Wrapper>
+      <div>
+        <HStack>
+          <BoldText>Name</BoldText>
+          <SemiBoldText>Conversion</SemiBoldText>
+        </HStack>
+        <Line />
+        <VStack>
+          <HStack15
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}
+          >
+            {isShown ? (
+              <AreaWrapper>
+                <GrayRectangle>
+                  <HStack15 onClick={() => setClicked(!clicked)}>
                     <HStack2>
                       <GrayText>Purchase</GrayText>
                     </HStack2>
@@ -45,53 +32,88 @@ export default function InsideBottomRight1(props) {
                       <DarkText>5.7k</DarkText>
                     </ShadowRectangle>
                   </HStack15>
-                </div>
-              )}
-            </HStack15>
-          </div>
-        </HStack15>
-        <HStack15>
-          <HStack2>
-            <GrayText>Sign Up</GrayText>
-          </HStack2>
-          <ShadowRectangle>
-            <DarkText>2.5k</DarkText>
-          </ShadowRectangle>
-        </HStack15>
-        <HStack15>
-          <HStack2>
-            <GrayText>Add to Cart</GrayText>
-          </HStack2>
-          <ShadowRectangle>
-            <DarkText>1.3k</DarkText>
-          </ShadowRectangle>
-        </HStack15>
-        <HStack15>
-          <HStack2>
-            <GrayText>Started Trial</GrayText>
-          </HStack2>
-          <ShadowRectangle>
-            <DarkText>240</DarkText>
-          </ShadowRectangle>
-        </HStack15>
-        <HStack15>
-          <HStack2>
-            <GrayText>Content Viewed</GrayText>
-          </HStack2>
-          <ShadowRectangle>
-            <DarkText>111</DarkText>
-          </ShadowRectangle>
-        </HStack15>
-      </VStack>{" "}
-    </div>
+                </GrayRectangle>
+              </AreaWrapper>
+            ) : (
+              <div>
+                <HStack15>
+                  <HStack2>
+                    <GrayText>Purchase</GrayText>
+                  </HStack2>
+                  <ShadowRectangle>
+                    <DarkText>2.7k</DarkText>
+                  </ShadowRectangle>
+                </HStack15>
+              </div>
+            )}
+          </HStack15>
+
+          <HStack15>
+            <HStack2>
+              <GrayText>Sign Up</GrayText>
+            </HStack2>
+            <ShadowRectangle>
+              <DarkText>900</DarkText>
+            </ShadowRectangle>
+          </HStack15>
+          <HStack15>
+            <HStack2>
+              <GrayText>Add to Cart</GrayText>
+            </HStack2>
+            <ShadowRectangle>
+              <DarkText>652</DarkText>
+            </ShadowRectangle>
+          </HStack15>
+          <HStack15>
+            <HStack2>
+              <GrayText>Started Trial</GrayText>
+            </HStack2>
+            <ShadowRectangle>
+              <DarkText>123</DarkText>
+            </ShadowRectangle>
+          </HStack15>
+          <HStack15>
+            <HStack2>
+              <GrayText>Content Viewed</GrayText>
+            </HStack2>
+            <ShadowRectangle>
+              <DarkText>104</DarkText>
+            </ShadowRectangle>
+          </HStack15>
+          <HStack15>
+            <HStack2>
+              <GrayText>Filled Out Form</GrayText>
+            </HStack2>
+            <ShadowRectangle>
+              <DarkText>84</DarkText>
+            </ShadowRectangle>
+          </HStack15>
+        </VStack>
+      </div>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  position: absolute;
+  left: 45px;
+`;
+
+const CompanyLogo = styled.img`
+  padding-left: 10px;
+`;
+
+const HackerNewsLogo = styled.img`
+  padding-left: 10px;
+  width: 26px;
+`;
 
 const HStack = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 258px;
+  gap: 246px;
   padding-bottom: 10px;
+  padding-left: 10px;
 `;
 
 const BoldText = styled.div`
@@ -108,7 +130,8 @@ const SemiBoldText = styled.div`
 
 const Line = styled.div`
   position: absolute;
-  width: 373px;
+  left: 12px;
+  width: 368px;
   height: 1px;
   background: #e4f2ff;
 `;
@@ -117,7 +140,7 @@ const VStack = styled.div`
   padding-top: 18px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 `;
 
 const HStack15 = styled.div`
@@ -132,11 +155,7 @@ const HStack2 = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10px;
-`;
-
-const CompanyLogo = styled.img`
-  width: 20px;
-  height: 20px;
+  padding-left: 12px;
 `;
 
 const GrayText = styled.div`
@@ -148,26 +167,29 @@ const GrayText = styled.div`
 `;
 
 const ShadowRectangle = styled.div`
-  width: 60px;
-  height: 30px;
+  width: 54px;
+  height: 27px;
   background: #ffffff;
   box-shadow: 2px 5px 20px #f1f1f1;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 `;
 
 const DarkText = styled.div`
   font-family: "ProximaNovaRegular";
-  font-size: 16px;
+  font-size: 15px;
   color: #666678;
-  padding-left: 14px;
-  padding-top: 9px;
+  padding-top: 6px;
 `;
 
 const GrayRectangle = styled.div`
-  width: 350px;
-  height: 30px;
+  width: 360px;
+  height: 27px;
   background: rgba(238, 238, 238, 0.6);
-  border-radius: 2px;
+  border-radius: 4px;
+  padding-right: 50px;
 `;
+
+const AreaWrapper = styled.div``;

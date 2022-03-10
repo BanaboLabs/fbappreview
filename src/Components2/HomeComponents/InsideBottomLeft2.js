@@ -67,7 +67,7 @@ export default function InsideBottomLeft2() {
 const HStack = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 258px;
+  gap: 253px;
   padding-bottom: 10px;
 `;
 
@@ -94,7 +94,7 @@ const VStack = styled.div`
   padding-top: 18px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 `;
 
 const HStack15 = styled.div`
@@ -102,7 +102,7 @@ const HStack15 = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 380px;
+  width: 372px;
 `;
 
 const HStack2 = styled.div`
@@ -125,26 +125,27 @@ const GrayText = styled.div`
 `;
 
 const ShadowRectangle = styled.div`
-  width: 60px;
-  height: 30px;
+  width: 54px;
+  height: 27px;
   background: #ffffff;
   box-shadow: 2px 5px 20px #f1f1f1;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 `;
 
 const DarkText = styled.div`
   font-family: "ProximaNovaRegular";
-  font-size: 16px;
+  font-size: 15px;
   color: #666678;
-  padding-left: 14px;
-  padding-top: 9px;
+  padding-top: 6px;
 `;
 
 const GrayRectangle = styled.div`
-  width: 350px;
-  height: 30px;
+  width: 360px;
+  height: 27px;
   background: rgba(238, 238, 238, 0.6);
-  border-radius: 2px;
+  border-radius: 4px;
+  padding-right: 50px;
 `;
