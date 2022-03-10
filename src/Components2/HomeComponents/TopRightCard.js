@@ -40,55 +40,95 @@ export default function TopRightCard() {
                 <div onClick={() => setHighlight1("Custom")}>
                   {highlight1 == "Custom" ? (
                     <TabHighlighted22>
-                      <ModalGraySemiBold>Custom</ModalGraySemiBold>
+                      <ModalGraySemiBold
+                        onClick={() => setToggleActive1(!toggleActive1)}
+                      >
+                        Custom
+                      </ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>Custom</ModalGrayRegular>
+                      <ModalGrayRegular
+                        onClick={() => setToggleActive1(!toggleActive1)}
+                      >
+                        Custom
+                      </ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
                 <div onClick={() => setHighlight1("First-Touch")}>
                   {highlight1 == "First-Touch" ? (
                     <TabHighlighted22>
-                      <ModalGraySemiBold>First-Touch</ModalGraySemiBold>
+                      <ModalGraySemiBold
+                        onClick={() => setToggleActive1(!toggleActive1)}
+                      >
+                        First-Touch
+                      </ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>First-Touch</ModalGrayRegular>
+                      <ModalGrayRegular
+                        onClick={() => setToggleActive1(!toggleActive1)}
+                      >
+                        First-Touch
+                      </ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
                 <div onClick={() => setHighlight1("Last-Touch")}>
                   {highlight1 == "Last-Touch" ? (
                     <TabHighlighted22>
-                      <ModalGraySemiBold>Last-Touch</ModalGraySemiBold>
+                      <ModalGraySemiBold
+                        onClick={() => setToggleActive1(!toggleActive1)}
+                      >
+                        Last-Touch
+                      </ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>Last-Touch</ModalGrayRegular>
+                      <ModalGrayRegular
+                        onClick={() => setToggleActive1(!toggleActive1)}
+                      >
+                        Last-Touch
+                      </ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
                 <div onClick={() => setHighlight1("Linear")}>
                   {highlight1 == "Linear" ? (
                     <TabHighlighted22>
-                      <ModalGraySemiBold>Linear</ModalGraySemiBold>
+                      <ModalGraySemiBold
+                        onClick={() => setToggleActive1(!toggleActive1)}
+                      >
+                        Linear
+                      </ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>Linear</ModalGrayRegular>
+                      <ModalGrayRegular
+                        onClick={() => setToggleActive1(!toggleActive1)}
+                      >
+                        Linear
+                      </ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
                 <div onClick={() => setHighlight1("U-Shaped")}>
                   {highlight1 == "U-Shaped" ? (
                     <TabHighlighted22>
-                      <ModalGraySemiBold>U-Shaped</ModalGraySemiBold>
+                      <ModalGraySemiBold
+                        onClick={() => setToggleActive1(!toggleActive1)}
+                      >
+                        U-Shaped
+                      </ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>U-Shaped</ModalGrayRegular>
+                      <ModalGrayRegular
+                        onClick={() => setToggleActive1(!toggleActive1)}
+                      >
+                        U-Shaped
+                      </ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
@@ -99,7 +139,7 @@ export default function TopRightCard() {
           )}
           <GrayButtonBackground2>
             <HStack6 onClick={() => setToggleActive2(!toggleActive2)}>
-              <BoldBlackText2>Revenue</BoldBlackText2>
+              <BoldBlackText2>{highlight2}</BoldBlackText2>
               <BlackSimpleArrow2
                 toggleActive2={toggleActive2}
                 src={blacksimplearrow}
@@ -115,55 +155,95 @@ export default function TopRightCard() {
                 <div onClick={() => setHighlight2("Revenue")}>
                   {highlight2 == "Revenue" ? (
                     <TabHighlighted22>
-                      <ModalGraySemiBold>Revenue</ModalGraySemiBold>
+                      <ModalGraySemiBold
+                        onClick={() => setToggleActive2(!toggleActive2)}
+                      >
+                        Revenue
+                      </ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>Revenue</ModalGrayRegular>
+                      <ModalGrayRegular
+                        onClick={() => setToggleActive2(!toggleActive2)}
+                      >
+                        Revenue
+                      </ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
                 <div onClick={() => setHighlight2("Purchase")}>
                   {highlight2 == "Purchase" ? (
                     <TabHighlighted22>
-                      <ModalGraySemiBold>Purchase</ModalGraySemiBold>
+                      <ModalGraySemiBold
+                        onClick={() => setToggleActive2(!toggleActive2)}
+                      >
+                        Purchase
+                      </ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>Purchase</ModalGrayRegular>
+                      <ModalGrayRegular
+                        onClick={() => setToggleActive2(!toggleActive2)}
+                      >
+                        Purchase
+                      </ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
                 <div onClick={() => setHighlight2("Sign Up")}>
                   {highlight2 == "Sign Up" ? (
                     <TabHighlighted22>
-                      <ModalGraySemiBold>Sign Up</ModalGraySemiBold>
+                      <ModalGraySemiBold
+                        onClick={() => setToggleActive2(!toggleActive2)}
+                      >
+                        Sign Up
+                      </ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>Sign Up</ModalGrayRegular>
+                      <ModalGrayRegular
+                        onClick={() => setToggleActive2(!toggleActive2)}
+                      >
+                        Sign Up
+                      </ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
                 <div onClick={() => setHighlight2("Add To Cart")}>
                   {highlight2 == "Add To Cart" ? (
                     <TabHighlighted22>
-                      <ModalGraySemiBold>Add To Cart</ModalGraySemiBold>
+                      <ModalGraySemiBold
+                        onClick={() => setToggleActive2(!toggleActive2)}
+                      >
+                        Add To Cart
+                      </ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>Add To Cart</ModalGrayRegular>
+                      <ModalGrayRegular
+                        onClick={() => setToggleActive2(!toggleActive2)}
+                      >
+                        Add To Cart
+                      </ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
                 <div onClick={() => setHighlight2("Start Trial")}>
                   {highlight2 == "Start Trial" ? (
                     <TabHighlighted22>
-                      <ModalGraySemiBold>Start Trial</ModalGraySemiBold>
+                      <ModalGraySemiBold
+                        onClick={() => setToggleActive2(!toggleActive2)}
+                      >
+                        Start Trial
+                      </ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>Start Trial</ModalGrayRegular>
+                      <ModalGrayRegular
+                        onClick={() => setToggleActive2(!toggleActive2)}
+                      >
+                        Start Trial
+                      </ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
