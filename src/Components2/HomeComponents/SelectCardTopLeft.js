@@ -253,6 +253,12 @@ export default function SelectCardTopLeft() {
     console.log(jsonArraySelected);
   }, [changed]);
 
+  ////////
+
+  //////// ACTUAL CODE ///////
+
+  ////////
+
   return (
     <SelectCard toggleActive={toggleActive}>
       <VStack toggleActive={toggleActive}>
@@ -268,32 +274,40 @@ export default function SelectCardTopLeft() {
             </InsideWrapperTop>
           </BlueCircle>
         </HStack>
-        <Line />
+        <Line1 />
         {toggleActive == false ? (
           <VStack>
             <div>
-              <HStack2>
+              <HStack22>
                 <GrayChoices>{position1type}</GrayChoices>
                 <BlueChoices>{position1data}</BlueChoices>
-              </HStack2>
-              <Line />
-              <HStack2>
+              </HStack22>
+              <LineWrapper>
+                <Line />
+              </LineWrapper>
+              <HStack22>
                 <GrayChoices>{position2type}</GrayChoices>
                 <BlueChoices>{position2data}</BlueChoices>
-              </HStack2>
-              <Line />
-              <HStack2>
+              </HStack22>
+              <LineWrapper>
+                <Line />
+              </LineWrapper>
+              <HStack22>
                 <GrayChoices>{position3type}</GrayChoices>
                 <BlueChoices>{position3data}</BlueChoices>
-              </HStack2>
-              <Line />
+              </HStack22>
+              <LineWrapper>
+                <Line />
+              </LineWrapper>
             </div>
           </VStack>
         ) : (
-          <VStack>
+          <VStack1>
             {position1.map((position1) => (
               <HStack2>
-                <GrayChoices>{position1.StatType}</GrayChoices>
+                <GrayChoices1 position1symbol={position1symbol}>
+                  {position1.StatType}
+                </GrayChoices1>
                 {position1symbol == "plus" ? (
                   <MPIMG
                     src={plus}
@@ -309,7 +323,9 @@ export default function SelectCardTopLeft() {
             ))}
             {position2.map((position2) => (
               <HStack2>
-                <GrayChoices>{position2.StatType}</GrayChoices>
+                <GrayChoices2 position2symbol={position2symbol}>
+                  {position2.StatType}
+                </GrayChoices2>
                 {position2symbol == "plus" ? (
                   <MPIMG
                     src={plus}
@@ -325,7 +341,9 @@ export default function SelectCardTopLeft() {
             ))}
             {position3.map((position3) => (
               <HStack2>
-                <GrayChoices>{position3.StatType}</GrayChoices>
+                <GrayChoices3 position3symbol={position3symbol}>
+                  {position3.StatType}
+                </GrayChoices3>
                 {position3symbol == "plus" ? (
                   <MPIMG
                     src={plus}
@@ -341,7 +359,9 @@ export default function SelectCardTopLeft() {
             ))}
             {position4.map((position4) => (
               <HStack2>
-                <GrayChoices>{position4.StatType}</GrayChoices>
+                <GrayChoices4 position4symbol={position4symbol}>
+                  {position4.StatType}
+                </GrayChoices4>
                 {position4symbol == "plus" ? (
                   <MPIMG
                     src={plus}
@@ -357,7 +377,9 @@ export default function SelectCardTopLeft() {
             ))}
             {position5.map((position5) => (
               <HStack2>
-                <GrayChoices>{position5.StatType}</GrayChoices>
+                <GrayChoices5 position5symbol={position5symbol}>
+                  {position5.StatType}
+                </GrayChoices5>
                 {position5symbol == "plus" ? (
                   <MPIMG
                     src={plus}
@@ -373,7 +395,9 @@ export default function SelectCardTopLeft() {
             ))}
             {position6.map((position6) => (
               <HStack2>
-                <GrayChoices>{position6.StatType}</GrayChoices>
+                <GrayChoices6 position6symbol={position6symbol}>
+                  {position6.StatType}
+                </GrayChoices6>
                 {position6symbol == "plus" ? (
                   <MPIMG
                     src={plus}
@@ -387,19 +411,82 @@ export default function SelectCardTopLeft() {
                 )}
               </HStack2>
             ))}
-          </VStack>
+          </VStack1>
         )}
       </VStack>
     </SelectCard>
   );
 }
 
-// 1. If the Toggle is clicked on, open the rest of the stats
+const GrayChoices1 = styled.div`
+  font-size: 13px;
+  font-family: ${(props) =>
+    props.position1symbol == "minus"
+      ? "ProximaNovaSemibold"
+      : "ProximaNovaRegular"};
+  color: #9a99a9;
+`;
+
+const GrayChoices2 = styled.div`
+  font-size: 13px;
+  font-family: ${(props) =>
+    props.position2symbol == "minus"
+      ? "ProximaNovaSemibold"
+      : "ProximaNovaRegular"};
+  color: #9a99a9;
+`;
+
+const GrayChoices3 = styled.div`
+  font-size: 13px;
+  font-family: ${(props) =>
+    props.position3symbol == "minus"
+      ? "ProximaNovaSemibold"
+      : "ProximaNovaRegular"};
+  color: #9a99a9;
+`;
+
+const GrayChoices4 = styled.div`
+  font-size: 13px;
+  font-family: ${(props) =>
+    props.position4symbol == "minus"
+      ? "ProximaNovaSemibold"
+      : "ProximaNovaRegular"};
+  color: #9a99a9;
+`;
+
+const GrayChoices5 = styled.div`
+  font-size: 13px;
+  font-family: ${(props) =>
+    props.position5symbol == "minus"
+      ? "ProximaNovaSemibold"
+      : "ProximaNovaRegular"};
+  color: #9a99a9;
+`;
+
+const GrayChoices6 = styled.div`
+  font-size: 13px;
+  font-family: ${(props) =>
+    props.position6symbol == "minus"
+      ? "ProximaNovaSemibold"
+      : "ProximaNovaRegular"};
+  color: #9a99a9;
+`;
+
+const LineWrapper = styled.div`
+  padding-top: 9px;
+  padding-bottom: 4px;
+`;
 
 const VStack = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
+  padding-bottom: ${(props) => (props.toggleActive ? "0px" : "0px")};
+`;
+
+const VStack1 = styled.div`
+  display: flex;
+  flex-direction: column;
   padding-bottom: ${(props) => (props.toggleActive ? "0px" : "0px")};
 `;
 
@@ -414,7 +501,7 @@ const SelectCard = styled.div`
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: ${(props) => (props.toggleActive ? "240" : "182")}px;
+  height: ${(props) => (props.toggleActive ? "280" : "182")}px;
   background: #ffffff;
   /* Low */
   box-shadow: 2px 5px 20px #f1f1f1;
@@ -437,13 +524,25 @@ const HStack = styled.div`
   gap: 25px;
 `;
 
+const HStack22 = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+  padding-top: 8px;
+`;
+
 const HStack2 = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 240px;
+  padding-top: 15.5px;
 `;
+
+// Here
 
 const BlueCircle = styled.div`
   border-radius: 20px;
@@ -463,6 +562,12 @@ const InsideWrapperTop = styled.div`
 `;
 
 const Line = styled.div`
+  width: 240px;
+  height: 2px;
+  background: #e4f2ff;
+`;
+
+const Line1 = styled.div`
   width: 240px;
   height: 2px;
   background: #e4f2ff;
