@@ -16,6 +16,151 @@ export default function TopRightCard() {
   const [toggleActive2, setToggleActive2] = useState(false);
   const [highlight1, setHighlight1] = useState("Custom");
   const [highlight2, setHighlight2] = useState("Revenue");
+  const [total, setTotal] = useState("$837k");
+  const [firstSpotName, setFirstSpotName] = useState("Instagram");
+  const [secondSpotName, setSecondSpotName] = useState("Facebook");
+  const [thirdSpotName, setThirdSpotName] = useState("LinkedIn");
+  const [fourthSpotName, setFourthSpotName] = useState("Google SEO");
+  const [fifthSpotName, setFifthSpotName] = useState("YouTube");
+  const [firstSpotAmount, setFirstSpotAmount] = useState("$554k");
+  const [secondSpotAmount, setSecondSpotAmount] = useState("$91k");
+  const [thirdSpotAmount, setThirdSpotAmount] = useState("$53k");
+  const [fourthSpotAmount, setFourthSpotAmount] = useState("$17k");
+  const [fifthSpotAmount, setFifthSpotAmount] = useState("$9k");
+
+  useEffect(() => {
+    if (highlight2 == "Revenue") {
+      setTotal("$837k");
+    }
+    if (highlight2 == "Purchase") {
+      setTotal("989");
+    }
+  }, [highlight1, highlight2]);
+
+  useEffect(() => {
+    if (highlight1 == "Custom" && highlight2 == "Revenue") {
+      setFirstSpotName("Instagram");
+      setFirstSpotAmount("$554k");
+      setSecondSpotName("Facebook");
+      setSecondSpotAmount("$91k");
+      setThirdSpotName("LinkedIn");
+      setThirdSpotAmount("$53k");
+      setFourthSpotName("Google SEO");
+      setFourthSpotAmount("$17k");
+      setFifthSpotName("YouTube");
+      setFifthSpotAmount("$9k");
+    }
+    if (highlight1 == "First-Touch" && highlight2 == "Revenue") {
+      setFirstSpotName("Hacker News");
+      setFirstSpotAmount("$400k");
+      setSecondSpotName("Facebook");
+      setSecondSpotAmount("$41k");
+      setThirdSpotName("LinkedIn");
+      setThirdSpotAmount("$17k");
+      setFourthSpotName("Google SEO");
+      setFourthSpotAmount("$12k");
+      setFifthSpotName("YouTube");
+      setFifthSpotAmount("$11k");
+    }
+    if (highlight1 == "Last-Touch" && highlight2 == "Revenue") {
+      setFirstSpotName("YouTube");
+      setFirstSpotAmount("$160k");
+      setSecondSpotName("Facebook");
+      setSecondSpotAmount("$41k");
+      setThirdSpotName("LinkedIn");
+      setThirdSpotAmount("$37k");
+      setFourthSpotName("Twitter");
+      setFourthSpotAmount("$22k");
+      setFifthSpotName("Instagram");
+      setFifthSpotAmount("$14k");
+    }
+    if (highlight1 == "Linear" && highlight2 == "Revenue") {
+      setFirstSpotName("Facebook");
+      setFirstSpotAmount("$160k");
+      setSecondSpotName("LinkedIn");
+      setSecondSpotAmount("$21k");
+      setThirdSpotName("Snapchat");
+      setThirdSpotAmount("$11k");
+      setFourthSpotName("Twitter");
+      setFourthSpotAmount("$9k");
+      setFifthSpotName("Twitter");
+      setFifthSpotAmount("$1k");
+    }
+    if (highlight1 == "U-Shaped" && highlight2 == "Revenue") {
+      setFirstSpotName("TikTok");
+      setFirstSpotAmount("$110k");
+      setSecondSpotName("Facebook");
+      setSecondSpotAmount("$24k");
+      setThirdSpotName("LinkedIn");
+      setThirdSpotAmount("$11k");
+      setFourthSpotName("Snapchat");
+      setFourthSpotAmount("$8k");
+      setFifthSpotName("Instagram");
+      setFifthSpotAmount("$7k");
+    }
+    /////////////
+
+    if (highlight1 == "Custom" && highlight2 == "Purchase") {
+      setFirstSpotName("Instagram");
+      setFirstSpotAmount("478");
+      setSecondSpotName("Facebook");
+      setSecondSpotAmount("123");
+      setThirdSpotName("LinkedIn");
+      setThirdSpotAmount("97");
+      setFourthSpotName("Google SEO");
+      setFourthSpotAmount("91");
+      setFifthSpotName("YouTube");
+      setFifthSpotAmount("82");
+    }
+    if (highlight1 == "First-Touch" && highlight2 == "Purchase") {
+      setFirstSpotName("Hacker News");
+      setFirstSpotAmount("981");
+      setSecondSpotName("Facebook");
+      setSecondSpotAmount("874");
+      setThirdSpotName("LinkedIn");
+      setThirdSpotAmount("796");
+      setFourthSpotName("Google SEO");
+      setFourthSpotAmount("775");
+      setFifthSpotName("YouTube");
+      setFifthSpotAmount("612");
+    }
+    if (highlight1 == "Last-Touch" && highlight2 == "Purchase") {
+      setFirstSpotName("YouTube");
+      setFirstSpotAmount("425");
+      setSecondSpotName("Facebook");
+      setSecondSpotAmount("412");
+      setThirdSpotName("LinkedIn");
+      setThirdSpotAmount("411");
+      setFourthSpotName("Twitter");
+      setFourthSpotAmount("409");
+      setFifthSpotName("Instagram");
+      setFifthSpotAmount("131");
+    }
+    if (highlight1 == "Linear" && highlight2 == "Purchase") {
+      setFirstSpotName("Facebook");
+      setFirstSpotAmount("617");
+      setSecondSpotName("LinkedIn");
+      setSecondSpotAmount("123");
+      setThirdSpotName("Snapchat");
+      setThirdSpotAmount("78");
+      setFourthSpotName("Twitter");
+      setFourthSpotAmount("56");
+      setFifthSpotName("Twitter");
+      setFifthSpotAmount("15");
+    }
+    if (highlight1 == "U-Shaped" && highlight2 == "Purchase") {
+      setFirstSpotName("TikTok");
+      setFirstSpotAmount("890");
+      setSecondSpotName("Facebook");
+      setSecondSpotAmount("789");
+      setThirdSpotName("LinkedIn");
+      setThirdSpotAmount("128");
+      setFourthSpotName("Snapchat");
+      setFourthSpotAmount("99");
+      setFifthSpotName("Instagram");
+      setFifthSpotAmount("78");
+    }
+  }, [highlight1, highlight2]);
 
   return (
     <CardParameter>
@@ -253,7 +398,8 @@ export default function TopRightCard() {
             <div> </div>
           )}
           <VerticalLine />
-          <BoldBlackText>$837k</BoldBlackText>
+          <BoldBlackText highlight2={highlight2}>{total}</BoldBlackText>
+          <TotalText>Total</TotalText>
         </HStack4>
       </HStack3>
       <GraphIMG src={graph} />
@@ -270,37 +416,37 @@ export default function TopRightCard() {
           <HStack2>
             <MiniHStack>
               <ColorIMG src={blue} />
-              <GrayPlainText>Instagram</GrayPlainText>
+              <GrayPlainText>{firstSpotName}</GrayPlainText>
             </MiniHStack>
-            <BlackPlainText>$554k</BlackPlainText>
+            <BlackPlainText>{firstSpotAmount}</BlackPlainText>
           </HStack2>
           <HStack2>
             <MiniHStack>
               <ColorIMG src={red} />
-              <GrayPlainText>Facebook</GrayPlainText>
+              <GrayPlainText>{secondSpotName}</GrayPlainText>
             </MiniHStack>
-            <BlackPlainText>$91k</BlackPlainText>
+            <BlackPlainText>{secondSpotAmount}</BlackPlainText>
           </HStack2>
           <HStack2>
             <MiniHStack>
               <ColorIMG src={purple} />
-              <GrayPlainText>LinkedIn</GrayPlainText>
+              <GrayPlainText>{thirdSpotName}</GrayPlainText>
             </MiniHStack>
-            <BlackPlainText>$53k</BlackPlainText>
+            <BlackPlainText>{thirdSpotAmount}</BlackPlainText>
           </HStack2>
           <HStack2>
             <MiniHStack>
               <ColorIMG src={orange} />
-              <GrayPlainText>Google SEO</GrayPlainText>
+              <GrayPlainText>{fourthSpotName}</GrayPlainText>
             </MiniHStack>
-            <BlackPlainText>$17k</BlackPlainText>
+            <BlackPlainText>{fourthSpotAmount}</BlackPlainText>
           </HStack2>
           <HStack2>
             <MiniHStack>
               <ColorIMG src={pink} />
-              <GrayPlainText>YouTube</GrayPlainText>
+              <GrayPlainText>{fifthSpotName}</GrayPlainText>
             </MiniHStack>
-            <BlackPlainText>$9k</BlackPlainText>
+            <BlackPlainText>{fifthSpotAmount}</BlackPlainText>
           </HStack2>
         </VStackCustom>
       </InsideCard>
@@ -444,6 +590,7 @@ const BlackPlainText = styled.div`
   font-family: "ProximaNovaRegular";
   font-size: 14px;
   width: 100px;
+  padding-top: 4px;
   /* identical to box height */
   color: #252531;
 `;
@@ -461,7 +608,7 @@ const AttributionTitle = styled.div`
 
 const GrayButtonBackground1 = styled.div`
   position: absolute;
-  left: 235px;
+  left: 190px;
   top: 30px;
   width: 108.95px;
   height: 28px;
@@ -473,7 +620,7 @@ const GrayButtonBackground1 = styled.div`
 
 const GrayButtonBackground2 = styled.div`
   position: absolute;
-  left: 355px;
+  left: 310px;
   top: 30px;
   height: 28px;
   width: 108.95px;
@@ -485,7 +632,7 @@ const GrayButtonBackground2 = styled.div`
 
 const VerticalLine = styled.div`
   position: absolute;
-  right: 82px;
+  right: 127px;
   top: 43px;
   width: 27.51px;
   height: 2.02px;
@@ -493,9 +640,18 @@ const VerticalLine = styled.div`
   transform: matrix(0, -1, 1, 0, 0, 0);
 `;
 
+const TotalText = styled.div`
+  position: absolute;
+  right: 100px;
+  top: 36px;
+  font-size: 14px;
+  color: #a9a9b9;
+  font-family: "ProximaNovaSemiBold";
+`;
+
 const BoldBlackText = styled.div`
   position: absolute;
-  right: 32px;
+  right: ${(props) => (props.highlight2 == "Purchase" ? "60px" : "40px")};
   top: 32px;
   font-size: 18px;
   line-height: 22px;

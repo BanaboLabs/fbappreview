@@ -29,11 +29,13 @@ export default function Filter(props) {
       {blurActive == true ? (
         <BlueBlur>
           <ModalRectangle>
-            <ClickImg1 src={blackx} onClick={() => setBlurActive(false)} />
+            <div onClick={() => setDone(!done)}>
+              <ClickImg1 src={blackx} onClick={() => setBlurActive(false)} />
+            </div>
             <HStackLine />
             <div>
               {step == 3 ? (
-                <div onClick={() => setDone(true)}>
+                <div onClick={() => setDone(!done)}>
                   <SubmitButton2 onClick={() => setBlurActive(false)}>
                     <SubmitText2>Submit</SubmitText2>
                   </SubmitButton2>
