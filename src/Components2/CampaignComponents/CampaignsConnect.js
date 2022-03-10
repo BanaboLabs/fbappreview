@@ -112,34 +112,161 @@ export default function CampaignsConnect() {
               <ChildHStack2>
                 <TheTitleText>Campaign Name</TheTitleText>
                 <TheTitleText>Budget</TheTitleText>
-                <TheTitleText>Time Frame</TheTitleText>
+                <TheTitleText1>Time Frame</TheTitleText1>
               </ChildHStack2>
             </ParentHStack>
           </HStackWrapper>
           <VStack>
-            {jsonArray.map((item) => (
-              <HStackWrapper2>
-                <ParentHStack>
-                  <ChildHStack1>
-                    <RegularText>{item.CampaignDate}</RegularText>
-                    <InnerHStack>
-                      <GreenCircle>
-                        <BlackLetter>{item.CampaignLetter}</BlackLetter>
-                      </GreenCircle>
-                      <CompanyNameText>{item.CampaignSource}</CompanyNameText>
-                    </InnerHStack>
-                  </ChildHStack1>
-                  <ChildHStack2>
-                    <RegularText>{item.CampaignName}</RegularText>
-                    <DarkGreenText>{item.CampaignBudget}</DarkGreenText>
-                    <RegularText>{item.CampaignTimeFrame}</RegularText>
-                  </ChildHStack2>
-                </ParentHStack>
-                <LineWrapper>
-                  <SmallLine />
-                </LineWrapper>
-              </HStackWrapper2>
-            ))}
+            <HStackWrapper2>
+              <ParentHStack2>
+                <ChildHStack1>
+                  <RegularText>2/12/22</RegularText>
+                  <InnerHStack1>
+                    <GreenCircle>
+                      <BlackLetter>F</BlackLetter>
+                    </GreenCircle>
+                    <CompanyNameText>FACEBOOK</CompanyNameText>
+                  </InnerHStack1>
+                </ChildHStack1>
+                <ChildHStack3>
+                  <RegularText>Facebook Easter Ads</RegularText>
+                  <DarkGreenTextWrapper>
+                    <DarkGreenText>$960</DarkGreenText>
+                  </DarkGreenTextWrapper>
+                  <TimeFrameWrapper>
+                    <RegularText1>Feb 3 - Mar 19</RegularText1>
+                  </TimeFrameWrapper>
+                </ChildHStack3>
+              </ParentHStack2>
+              <LineWrapper>
+                <SmallLine />
+              </LineWrapper>
+            </HStackWrapper2>
+            <HStackWrapper2>
+              <ParentHStack2>
+                <ChildHStack1>
+                  <RegularText>2/12/22</RegularText>
+                  <InnerHStack2>
+                    <GreenCircle>
+                      <BlackLetter>F</BlackLetter>
+                    </GreenCircle>
+                    <CompanyNameText>FACEBOOK</CompanyNameText>
+                  </InnerHStack2>
+                </ChildHStack1>
+                <ChildHStack3>
+                  <RegularText>Facebook Stories Buy</RegularText>
+                  <DarkGreenTextWrapper>
+                    <DarkGreenText2>$8120</DarkGreenText2>
+                  </DarkGreenTextWrapper>
+                  <TimeFrameWrapper>
+                    <RegularText2>Feb 1 - Mar 31</RegularText2>
+                  </TimeFrameWrapper>
+                </ChildHStack3>
+              </ParentHStack2>
+              <LineWrapper>
+                <SmallLine />
+              </LineWrapper>
+            </HStackWrapper2>
+            <HStackWrapper2>
+              <ParentHStack3>
+                <ChildHStack1>
+                  <RegularText>1/11/22</RegularText>
+                  <InnerHStack3>
+                    <GreenCircle>
+                      <BlackLetter>S</BlackLetter>
+                    </GreenCircle>
+                    <CompanyNameText>SNAPCHAT</CompanyNameText>
+                  </InnerHStack3>
+                </ChildHStack1>
+                <ChildHStack3>
+                  <RegularText>Snapchat Influencers</RegularText>
+                  <DarkGreenTextWrapper>
+                    <DarkGreenText3>$1210</DarkGreenText3>
+                  </DarkGreenTextWrapper>
+                  <TimeFrameWrapper>
+                    <RegularText3>Jan 9 - Jan 30</RegularText3>
+                  </TimeFrameWrapper>
+                </ChildHStack3>
+              </ParentHStack3>
+              <LineWrapper>
+                <SmallLine />
+              </LineWrapper>
+            </HStackWrapper2>
+            <HStackWrapper2>
+              <ParentHStack3>
+                <ChildHStack1>
+                  <RegularText>1/9/22</RegularText>
+                  <InnerHStack4>
+                    <GreenCircle>
+                      <BlackLetter2>G</BlackLetter2>
+                    </GreenCircle>
+                    <CompanyNameText>GOOGLE ADS</CompanyNameText>
+                  </InnerHStack4>
+                </ChildHStack1>
+                <ChildHStack3>
+                  <RegularText>Search Campaign V1</RegularText>
+                  <DarkGreenTextWrapper>
+                    <DarkGreenText4>$4400</DarkGreenText4>
+                  </DarkGreenTextWrapper>
+                  <TimeFrameWrapper>
+                    <RegularText4>Jan 7 - Apr 17</RegularText4>
+                  </TimeFrameWrapper>
+                </ChildHStack3>
+              </ParentHStack3>
+              <LineWrapper>
+                <SmallLine />
+              </LineWrapper>
+            </HStackWrapper2>
+            <HStackWrapper2>
+              <ParentHStack3>
+                <ChildHStack1>
+                  <RegularText>1/9/22</RegularText>
+                  <InnerHStack5>
+                    <GreenCircle>
+                      <BlackLetter2>G</BlackLetter2>
+                    </GreenCircle>
+                    <CompanyNameText>GOOGLE ADS</CompanyNameText>
+                  </InnerHStack5>
+                </ChildHStack1>
+                <ChildHStack3>
+                  <RegularText>Custom AdWords</RegularText>
+                  <DarkGreenTextWrapper>
+                    <DarkGreenText5>$2310</DarkGreenText5>
+                  </DarkGreenTextWrapper>
+                  <TimeFrameWrapper>
+                    <RegularText5>Jan 3 - Apr 19</RegularText5>
+                  </TimeFrameWrapper>
+                </ChildHStack3>
+              </ParentHStack3>
+              <LineWrapper>
+                <SmallLine />
+              </LineWrapper>
+            </HStackWrapper2>
+            <HStackWrapper2>
+              <ParentHStack3>
+                <ChildHStack1>
+                  <RegularText>1/7/22</RegularText>
+                  <InnerHStack6>
+                    <GreenCircle>
+                      <BlackLetter>T</BlackLetter>
+                    </GreenCircle>
+                    <CompanyNameText>TIKTOK</CompanyNameText>
+                  </InnerHStack6>
+                </ChildHStack1>
+                <ChildHStack3>
+                  <RegularText>TikTok Campaign One</RegularText>
+                  <DarkGreenTextWrapper>
+                    <DarkGreenText6>$12160</DarkGreenText6>
+                  </DarkGreenTextWrapper>
+                  <TimeFrameWrapper>
+                    <RegularText6>Jan 2 - Feb 6</RegularText6>
+                  </TimeFrameWrapper>
+                </ChildHStack3>
+              </ParentHStack3>
+              <LineWrapper>
+                <SmallLine />
+              </LineWrapper>
+            </HStackWrapper2>
           </VStack>
           <LongBlueLine />
         </div>
@@ -147,6 +274,215 @@ export default function CampaignsConnect() {
     </div>
   );
 }
+
+const RegularText = styled.div`
+  font-size: 16px;
+  font-family: "ProximaNovaRegular";
+  color: #6a6986;
+`;
+
+const RegularText1 = styled.div`
+  font-size: 16px;
+  font-family: "ProximaNovaRegular";
+  color: #6a6986;
+  padding-left: 5px;
+`;
+
+const RegularText2 = styled.div`
+  font-size: 16px;
+  font-family: "ProximaNovaRegular";
+  color: #6a6986;
+  padding-left: 1px;
+`;
+
+const RegularText3 = styled.div`
+  font-size: 16px;
+  font-family: "ProximaNovaRegular";
+  color: #6a6986;
+  padding-left: 7px;
+`;
+
+const RegularText4 = styled.div`
+  font-size: 16px;
+  font-family: "ProximaNovaRegular";
+  color: #6a6986;
+  padding-left: 11px;
+`;
+
+const RegularText5 = styled.div`
+  font-size: 16px;
+  font-family: "ProximaNovaRegular";
+  color: #6a6986;
+  padding-left: 32px;
+`;
+
+const RegularText6 = styled.div`
+  font-size: 16px;
+  font-family: "ProximaNovaRegular";
+  color: #6a6986;
+`;
+
+const DarkGreenText2 = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 16px;
+  color: #00786a;
+  padding-left: 5px;
+`;
+
+const DarkGreenText3 = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 16px;
+  color: #00786a;
+  padding-left: 11px;
+`;
+
+const DarkGreenText4 = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 16px;
+  color: #00786a;
+  padding-left: 15px;
+`;
+
+const DarkGreenText5 = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 16px;
+  color: #00786a;
+  padding-left: 37px;
+`;
+
+const DarkGreenText6 = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 16px;
+  color: #00786a;
+  padding-left: 5px;
+`;
+
+const ParentHStack3 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 534px;
+`;
+
+const BlackLetter2 = styled.div`
+  font-size: 16px;
+  color: #000000;
+  font-family: "ProximaNovaSemiBold";
+  padding-top: 7px;
+  padding-left: 8px;
+`;
+
+const InnerHStack6 = styled.div`
+  position: absolute;
+  top: 315px;
+  left: 195px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const InnerHStack5 = styled.div`
+  position: absolute;
+  top: 250px;
+  left: 195px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const InnerHStack4 = styled.div`
+  position: absolute;
+  top: 185px;
+  left: 195px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const InnerHStack3 = styled.div`
+  position: absolute;
+  top: 120px;
+  left: 195px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const InnerHStack2 = styled.div`
+  position: absolute;
+  top: 55px;
+  left: 195px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const VStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 435px;
+  top: 365px;
+  gap: 26px;
+`;
+
+const HStackWrapper2 = styled.div``;
+
+const DarkGreenTextWrapper = styled.div`
+  width: 100px;
+  justify-content: left;
+`;
+
+const DarkGreenText = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 16px;
+  color: #00786a;
+  padding-left: 8px;
+`;
+
+const TimeFrameWrapper = styled.div`
+  width: 200px;
+  justify-content: left;
+`;
+
+const ChildHStack3 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 62px;
+`;
+
+const ChildHStack2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+`;
+
+const InnerHStack1 = styled.div`
+  position: absolute;
+  top: -6px;
+  left: 195px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const GreenCircle = styled.div`
+  width: 28px;
+  height: 28px;
+  background: #54dfe6;
+  border-radius: 60px;
+`;
 
 const ClickIMG2 = styled.img`
   cursor: pointer;
@@ -238,57 +574,22 @@ const ConnectButton = styled.img`
   z-index: 20;
 `;
 
-const LineWrapper = styled.div`
-  padding-top: 12px;
-  padding-left: 140px;
-`;
-
-const VStack = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 435px;
-  top: 365px;
-`;
-
 const SmallLine = styled.div`
-  width: 930px;
+  width: 872px;
   height: 2px;
   background: #d7eeff;
   padding-left: 80px;
 `;
 
-const InnerHStack = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-`;
-
-const DarkGreenText = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  font-size: 16px;
-  color: #00786a;
-`;
-
-const RegularText = styled.div`
-  font-size: 16px;
-  font-family: "ProximaNovaRegular";
-  color: #6a6986;
+const LineWrapper = styled.div`
+  padding-top: 20px;
+  padding-left: 198px;
 `;
 
 const CompanyNameText = styled.div`
   font-size: 16px;
   color: #6a6986;
   font-family: "ProximaNovaSemiBold";
-`;
-
-const GreenCircle = styled.div`
-  width: 28px;
-  height: 28px;
-  background: #54dfe6;
-  border-radius: 60px;
 `;
 
 const BlackLetter = styled.div`
@@ -307,7 +608,12 @@ const TheTitleText = styled.div`
   font-family: "ProximaNovaSemiBold";
 `;
 
-const HStackWrapper2 = styled.div``;
+const TheTitleText1 = styled.div`
+  color: #6a6986;
+  font-size: 16px;
+  font-family: "ProximaNovaSemiBold";
+  padding-left: 6px;
+`;
 
 const HStackWrapper = styled.div`
   position: absolute;
@@ -321,16 +627,16 @@ const ParentHStack = styled.div`
   gap: 330px;
 `;
 
+const ParentHStack2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 526px;
+`;
+
 const ChildHStack1 = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 50px;
-`;
-
-const ChildHStack2 = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
+  gap: 80px;
 `;
 
 const LongBlueLine = styled.div`
@@ -351,7 +657,7 @@ const ClickIMG1 = styled.img`
 const TitleRectangle = styled.div`
   position: absolute;
   width: 271px;
-  height: 65px;
+  height: 60px;
   left: 420px;
   top: 120px;
   background: #ffffff;
@@ -361,9 +667,9 @@ const TitleRectangle = styled.div`
 `;
 
 const TitleText = styled.div`
-  color: #252531;
+  color: #88879b;
   font-size: 24px;
   font-family: "ProximaNovaRegular";
-  padding-top: 22px;
+  padding-top: 18px;
   padding-left: 23px;
 `;

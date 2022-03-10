@@ -15,7 +15,7 @@ import element2click from "../../../Images2/element2click.svg";
 export default function WebElements(props) {
   const [toggleActive, setToggleActive] = useState(false);
   const [inputValue1, setInputValue1] = useState("");
-  const [yesBold, setYesBold] = useState("Yes");
+  const [yesBold, setYesBold] = useState("No");
   const [closeEvents, setCloseEvents] = useState(false);
 
   /// Closing the Tab
