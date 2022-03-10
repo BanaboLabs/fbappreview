@@ -21,6 +21,39 @@ export default function EventsStep1(props) {
   const [element1Clicked, setElement1Clicked] = useState(false);
   const [number, setNumber] = useState(1);
   const [isParentData5, setIsParentData5] = useState(false);
+  const [inputValue1, setInputValue1] = useState("");
+  const [inputValue2, setInputValue2] = useState("");
+  const [inputValue3, setInputValue3] = useState("");
+
+  const noRefresh = (event) => {
+    event.preventDefault();
+  };
+  // Input Field handler
+  const handleUserInput1 = (e) => {
+    setInputValue1(e.target.value);
+  };
+
+  // Reset Input Field handler
+  const resetInputField1 = () => {
+    setInputValue1("");
+  };
+
+  const handleUserInput2 = (e) => {
+    setInputValue2(e.target.value);
+  };
+
+  const resetInputField2 = () => {
+    setInputValue2("");
+  };
+
+  const handleUserInput3 = (e) => {
+    setInputValue3(e.target.value);
+  };
+
+  // Reset Input Field handler
+  const resetInputField3 = () => {
+    setInputValue3("");
+  };
 
   ///
   /// Connects WebElements to main
@@ -121,23 +154,33 @@ export default function EventsStep1(props) {
                   </LargeVStack>
                   <ClickEventCard5 src={clickeventcard2} />
                   <TopText5>Enter URL Keywords</TopText5>
-                  <EventNameText5>EVENT NAME</EventNameText5>
-                  <EventFieldText5>Sign Up</EventFieldText5>
-                  <TheBlueLine5 />
-                  <EventNameText6>DESTINATION URL 1</EventNameText6>
-                  <EventFieldText6>
-                    https://nike.com/loyaltyprogram/signup
-                  </EventFieldText6>
-                  <TheBlueLine6 />
-                  <EventNameText7>DESTINATION URL 2</EventNameText7>
-                  <EventFieldText7>
-                    https://nike.com/loyaltyprogram/confirm
-                  </EventFieldText7>
-                  <TheBlueLine7 />
-                  <SaveButton5
-                    src={savebutton}
-                    onClick={() => setShow(!show)}
-                  />
+                  <form onSubmit={noRefresh}>
+                    <EventNameText5>EVENT NAME</EventNameText5>
+                    <Input1
+                      placeholder="Ex: Sign Up"
+                      value={inputValue1}
+                      onChange={handleUserInput1}
+                    />
+                    <TheBlueLine5 />
+                    <EventNameText6>DESTINATION URL 1</EventNameText6>
+                    <Input2
+                      placeholder="Ex: https://nike.com/loyaltyprogram/signup"
+                      value={inputValue2}
+                      onChange={handleUserInput2}
+                    />
+                    <TheBlueLine6 />
+                    <EventNameText7>DESTINATION URL 2</EventNameText7>
+                    <Input3
+                      placeholder="Ex: https://nike.com/loyaltyprogram/confirm"
+                      value={inputValue3}
+                      onChange={handleUserInput3}
+                    />
+                    <TheBlueLine7 />
+                    <SaveButton5
+                      src={savebutton}
+                      onClick={() => setShow(!show)}
+                    />
+                  </form>
                 </div>
               )}
             </div>
@@ -147,6 +190,51 @@ export default function EventsStep1(props) {
     </div>
   );
 }
+
+const Input1 = styled.input`
+  position: absolute;
+  left: 135px;
+  top: 275px;
+  border: none;
+  width: 300px;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "ProximaNovaRegular";
+  background-color: transparent;
+  :focus {
+    outline: none;
+  }
+`;
+
+const Input2 = styled.input`
+  position: absolute;
+  left: 135px;
+  top: 352px;
+  border: none;
+  width: 340px;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "ProximaNovaRegular";
+  background-color: transparent;
+  :focus {
+    outline: none;
+  }
+`;
+
+const Input3 = styled.input`
+  position: absolute;
+  left: 135px;
+  top: 432px;
+  border: none;
+  width: 340px;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "ProximaNovaRegular";
+  background-color: transparent;
+  :focus {
+    outline: none;
+  }
+`;
 
 const MajorStack1 = styled.div`
   position: absolute;
@@ -191,15 +279,6 @@ const EventNameText5 = styled.div`
   font-family: "ProximaNovaSemiBold";
 `;
 
-const EventFieldText5 = styled.div`
-  position: absolute;
-  left: 135px;
-  top: 275px;
-  font-size: 18px;
-  color: #666678;
-  font-family: "ProximaNovaSemiBold";
-`;
-
 const TheBlueLine5 = styled.div`
   position: absolute;
   width: 330px;
@@ -218,15 +297,6 @@ const EventNameText6 = styled.div`
   font-family: "ProximaNovaSemiBold";
 `;
 
-const EventFieldText6 = styled.div`
-  position: absolute;
-  left: 135px;
-  top: 352px;
-  font-size: 18px;
-  color: #666678;
-  font-family: "ProximaNovaSemiBold";
-`;
-
 const TheBlueLine6 = styled.div`
   position: absolute;
   width: 330px;
@@ -242,15 +312,6 @@ const EventNameText7 = styled.div`
   top: 410px;
   font-size: 13px;
   color: #9392a6;
-  font-family: "ProximaNovaSemiBold";
-`;
-
-const EventFieldText7 = styled.div`
-  position: absolute;
-  left: 135px;
-  top: 432px;
-  font-size: 18px;
-  color: #666678;
   font-family: "ProximaNovaSemiBold";
 `;
 
