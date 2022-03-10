@@ -15,6 +15,17 @@ export default function EventsHome() {
   const [isShown, setIsShown] = useState(false);
   const [eventsProcessOn, setEventsProcessOn] = useState(false);
   const [isParentData1, setIsParentData1] = useState(false);
+  const [isParentData6, setIsParentData6] = useState(false);
+
+  // Connects to WebElements Child
+  useEffect(() => {
+    if (isParentData6 == true) {
+      console.log("I am a pirate");
+      setEventsProcessOn(false);
+      setIsShown(!isShown);
+    }
+  }, [isParentData6]);
+  //
 
   useEffect(() => {
     setFilterActive(!filterActive);
@@ -32,6 +43,8 @@ export default function EventsHome() {
         <EventsStep1
           toChild1={isParentData1}
           sendToParent1={setIsParentData1}
+          toChild6={isParentData6}
+          sendToParent6={setIsParentData6}
         />
       ) : (
         <VStack>

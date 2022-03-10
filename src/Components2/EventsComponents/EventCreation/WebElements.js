@@ -6,11 +6,50 @@ import graytriangle from "../../../Images2/graytrianglenew.svg";
 import savebutton from "../../../Images2/savebutton.svg";
 import element1hover from "../../../Images2/element1hover.svg";
 import element1click from "../../../Images2/element1click.svg";
+import element2hover from "../../../Images2/element2hover.svg";
+import element2click from "../../../Images2/element2click.svg";
+
+// 1. Need to reach EventsStep1
+// 2. Need to reach EventsHome
 
 export default function WebElements(props) {
+  const [toggleActive, setToggleActive] = useState(false);
+  const [inputValue1, setInputValue1] = useState("");
+  const [yesBold, setYesBold] = useState("Yes");
+  const [closeEvents, setCloseEvents] = useState(false);
+
+  /// Closing the Tab
+  ///
+  ///
+  useEffect(() => {
+    if (closeEvents == true) {
+      props.sendToParent5(true);
+      console.log("Pink");
+    }
+  }, [closeEvents]);
+  ///
+  ///
+
+  ///
+  const noRefresh = (event) => {
+    event.preventDefault();
+  };
+  const handleUserInput1 = (e) => {
+    setInputValue1(e.target.value);
+  };
+  const resetInputField1 = () => {
+    setInputValue1("");
+  };
+  ///
+  ///
   const [show2, setShow2] = useState(true);
-  const [isShown, setIsShown] = useState(false);
+  ///
+  ///
+  ///
+  const [isShown1, setIsShown1] = useState(false);
   const [element1Clicked, setElement1Clicked] = useState(false);
+  const [isShown2, setIsShown2] = useState(false);
+  const [element2Clicked, setElement2Clicked] = useState(false);
   const [number, setNumber] = useState(1);
 
   useEffect(() => {
@@ -39,54 +78,158 @@ export default function WebElements(props) {
       </AbsolutePositioning>
       <ClickEventCard src={clickeventcard} />
       <TopText>Add Web Element Details</TopText>
+      <form onSubmit={noRefresh}>
+        <Input1
+          placeholder="Ex: Purchase"
+          value={inputValue1}
+          onChange={handleUserInput1}
+        />
+      </form>
       <EventNameText>EVENT NAME</EventNameText>
-      <EventFieldText>Purchase</EventFieldText>
       <TheBlueLine />
       <EventNameText2>TRACK REVENUE</EventNameText2>
-      <EventFieldText2>No</EventFieldText2>
+      <EventFieldText2 yesBold={yesBold}>{yesBold}</EventFieldText2>
       <TheBlueLine2 />
       <BlueCircle />
-      <GrayTriangle src={graytriangle} />
-      <SaveButton src={savebutton} onClick={() => setNumber(3)} />
-      {isShown == true ? (
+      <GrayTriangle
+        src={graytriangle}
+        onClick={() => setToggleActive(!toggleActive)}
+        toggleActive={toggleActive}
+      />
+      <SaveButton src={savebutton} onClick={() => setCloseEvents(true)} />
+      {isShown1 == true ? (
         <div>
           {element1Clicked == false ? (
             <Element1Hover
               src={element1hover}
               onClick={() => setElement1Clicked(true)}
-              onMouseEnter={() => setIsShown(true)}
-              onMouseLeave={() => setIsShown(false)}
+              onMouseEnter={() => setIsShown1(true)}
+              onMouseLeave={() => setIsShown1(false)}
             />
           ) : (
-            <Element1Clicked src={element1click} />
+            <Element1Clicked
+              src={element1click}
+              onClick={() => setElement1Clicked(false)}
+            />
           )}
         </div>
       ) : (
         <InvisibleWrapper
-          onMouseEnter={() => setIsShown(true)}
-          onMouseLeave={() => setIsShown(false)}
+          onMouseEnter={() => setIsShown1(true)}
+          onMouseLeave={() => setIsShown1(false)}
         />
+      )}
+      {isShown2 == true ? (
+        <div>
+          {element2Clicked == false ? (
+            <Element2Hover
+              src={element2hover}
+              onClick={() => setElement2Clicked(true)}
+              onMouseEnter={() => setIsShown2(true)}
+              onMouseLeave={() => setIsShown2(false)}
+            />
+          ) : (
+            <Element2Clicked
+              src={element2click}
+              onClick={() => setElement2Clicked(false)}
+            />
+          )}
+        </div>
+      ) : (
+        <InvisibleWrapper2
+          onMouseEnter={() => setIsShown2(true)}
+          onMouseLeave={() => setIsShown2(false)}
+        />
+      )}
+      {toggleActive == true ? (
+        <MiniRectangle>
+          {yesBold == "Yes" ? (
+            <VStackSmall onClick={() => setToggleActive(false)}>
+              <SmallTextBold onClick={() => setYesBold("Yes")}>
+                Yes
+              </SmallTextBold>
+              <SmallTextRegular onClick={() => setYesBold("No")}>
+                No
+              </SmallTextRegular>
+            </VStackSmall>
+          ) : (
+            <VStackSmall onClick={() => setToggleActive(false)}>
+              <SmallTextRegular onClick={() => setYesBold("Yes")}>
+                Yes
+              </SmallTextRegular>
+              <SmallTextBold onClick={() => setYesBold("No")}>No</SmallTextBold>
+            </VStackSmall>
+          )}
+        </MiniRectangle>
+      ) : (
+        <div> </div>
       )}
     </div>
   );
 }
 
-const InvisibleWrapper = styled.div`
-  width: 231px;
-  height: 72px;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
+const EventFieldText2 = styled.div`
   position: absolute;
-  left: 730px;
-  bottom: 790px;
-  z-index: 300px;
+  right: ${(props) => (props.yesBold == "Yes" ? "250px" : "258px")};
+  top: 740px;
+  font-size: 18px;
+  color: #666678;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const MiniRectangle = styled.div`
+  position: absolute;
+  right: 80px;
+  top: 770px;
+  z-index: 50;
+  width: 51px;
+  height: 52px;
+  background: #ffffff;
+  box-shadow: 2px 5px 20px #f1f1f1;
   border-radius: 10px;
+`;
+
+const VStackSmall = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 10px;
+  padding-left: 12px;
+`;
+
+const SmallTextRegular = styled.div`
+  font-family: "ProximaNovaRegular";
+  font-size: 15px;
+  color: #666678;
+  cursor: pointer;
+`;
+
+const SmallTextBold = styled.div`
+  font-family: "ProximaNovaSemibold";
+  font-size: 15px;
+  color: #666678;
+  cursor: pointer;
+`;
+
+const Input1 = styled.input`
+  position: absolute;
+  right: -22px;
+  top: 673px;
+  border: none;
+  width: 300px;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "ProximaNovaRegular";
+  background-color: transparent;
+  :focus {
+    outline: none;
+  }
 `;
 
 const Element1Hover = styled.img`
   position: absolute;
   left: 730px;
-  bottom: 790px;
+  bottom: 787px;
   z-index: 300px;
   cursor: pointer;
 `;
@@ -94,8 +237,48 @@ const Element1Hover = styled.img`
 const Element1Clicked = styled.img`
   position: absolute;
   left: 730px;
-  bottom: 790px;
+  bottom: 787px;
   z-index: 300px;
+`;
+
+const InvisibleWrapper = styled.div`
+  left: 730px;
+  bottom: 790px;
+  width: 231px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  position: absolute;
+
+  z-index: 300px;
+  border-radius: 10px;
+`;
+
+const Element2Hover = styled.img`
+  position: absolute;
+  right: 482px;
+  bottom: 1151px;
+  z-index: 300px;
+  cursor: pointer;
+`;
+
+const Element2Clicked = styled.img`
+  position: absolute;
+  right: 482px;
+  bottom: 1151px;
+  z-index: 300px;
+`;
+
+const InvisibleWrapper2 = styled.div`
+  position: absolute;
+  right: 482px;
+  bottom: 1151px;
+  width: 231px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 300px;
+  border-radius: 10px;
 `;
 
 const ClickEventCard = styled.img`
@@ -125,15 +308,6 @@ const EventNameText = styled.div`
   font-family: "ProximaNovaSemiBold";
 `;
 
-const EventFieldText = styled.div`
-  position: absolute;
-  right: 206px;
-  top: 673px;
-  font-size: 18px;
-  color: #666678;
-  font-family: "ProximaNovaSemiBold";
-`;
-
 const TheBlueLine = styled.div`
   position: absolute;
   width: 200px;
@@ -149,15 +323,6 @@ const EventNameText2 = styled.div`
   top: 720px;
   font-size: 13px;
   color: #9392a6;
-  font-family: "ProximaNovaSemiBold";
-`;
-
-const EventFieldText2 = styled.div`
-  position: absolute;
-  right: 256px;
-  top: 740px;
-  font-size: 18px;
-  color: #666678;
   font-family: "ProximaNovaSemiBold";
 `;
 
@@ -186,6 +351,10 @@ const GrayTriangle = styled.img`
   right: 87px;
   top: 742px;
   cursor: pointer;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transform: ${(props) =>
+    props.toggleActive ? "rotate(180deg)" : "rotate(0deg)"};
 `;
 
 const SaveButton = styled.img`

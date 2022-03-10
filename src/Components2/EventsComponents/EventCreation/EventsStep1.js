@@ -20,7 +20,15 @@ export default function EventsStep1(props) {
   const [isParentData2, setIsParentData2] = useState(false);
   const [element1Clicked, setElement1Clicked] = useState(false);
   const [number, setNumber] = useState(1);
+  const [isParentData5, setIsParentData5] = useState(false);
 
+  ///
+  /// Connects WebElements to Parent
+  useEffect(() => {
+    props.sendToParent6(isParentData5); // This is the mounting part
+  }, [isParentData5]);
+  ///
+  ///
   useEffect(() => {
     props.sendToParent1(show); // This is the mounting part
   }, [show]);
@@ -39,6 +47,8 @@ export default function EventsStep1(props) {
           <WebElements
             toChild2={isParentData2}
             sendToParent2={setIsParentData2}
+            toChild5={isParentData5}
+            sendToParent5={setIsParentData5}
           />
         </BlueBlur>
       ) : (
