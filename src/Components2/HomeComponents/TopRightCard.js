@@ -15,14 +15,14 @@ export default function TopRightCard() {
   const [toggleActive1, setToggleActive1] = useState(false);
   const [toggleActive2, setToggleActive2] = useState(false);
   const [highlight1, setHighlight1] = useState("Custom");
-  const [highlight2, setHighlight2] = useState("Purchases");
+  const [highlight2, setHighlight2] = useState("Revenue");
 
   return (
     <CardParameter>
       <HStack3>
         <AttributionTitle>ATTRIBUTION</AttributionTitle>
-        <HStack4>
-          <GrayButtonBackground>
+        <HStack4 toggleActive1={toggleActive1}>
+          <GrayButtonBackground1>
             <HStack6 onClick={() => setToggleActive1(!toggleActive1)}>
               <BoldBlackText2>{highlight1}</BoldBlackText2>
               <BlackSimpleArrow1
@@ -30,10 +30,10 @@ export default function TopRightCard() {
                 src={blacksimplearrow}
               />
             </HStack6>
-          </GrayButtonBackground>
+          </GrayButtonBackground1>
           {toggleActive1 == true ? (
             <ToggleRectangle1>
-              <VStack>
+              <VStackModal>
                 <BlueBackground>
                   <ModalBlackSemiBold>Models</ModalBlackSemiBold>
                 </BlueBackground>
@@ -44,14 +44,14 @@ export default function TopRightCard() {
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGraySemiBold>Custom</ModalGraySemiBold>
+                      <ModalGrayRegular>Custom</ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
                 <div onClick={() => setHighlight1("First-Touch")}>
                   {highlight1 == "First-Touch" ? (
                     <TabHighlighted22>
-                      <ModalGrayRegular>First-Touch</ModalGrayRegular>
+                      <ModalGraySemiBold>First-Touch</ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
@@ -62,7 +62,7 @@ export default function TopRightCard() {
                 <div onClick={() => setHighlight1("Last-Touch")}>
                   {highlight1 == "Last-Touch" ? (
                     <TabHighlighted22>
-                      <ModalGrayRegular>Last-Touch</ModalGrayRegular>
+                      <ModalGraySemiBold>Last-Touch</ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
@@ -73,7 +73,7 @@ export default function TopRightCard() {
                 <div onClick={() => setHighlight1("Linear")}>
                   {highlight1 == "Linear" ? (
                     <TabHighlighted22>
-                      <ModalGrayRegular>Linear</ModalGrayRegular>
+                      <ModalGraySemiBold>Linear</ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
@@ -84,7 +84,7 @@ export default function TopRightCard() {
                 <div onClick={() => setHighlight1("U-Shaped")}>
                   {highlight1 == "U-Shaped" ? (
                     <TabHighlighted22>
-                      <ModalGrayRegular>U-Shaped</ModalGrayRegular>
+                      <ModalGraySemiBold>U-Shaped</ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
@@ -92,12 +92,12 @@ export default function TopRightCard() {
                     </TabHighlightedClear22>
                   )}
                 </div>
-              </VStack>
+              </VStackModal>
             </ToggleRectangle1>
           ) : (
             <div> </div>
           )}
-          <GrayButtonBackground>
+          <GrayButtonBackground2>
             <HStack6 onClick={() => setToggleActive2(!toggleActive2)}>
               <BoldBlackText2>Revenue</BoldBlackText2>
               <BlackSimpleArrow2
@@ -105,28 +105,17 @@ export default function TopRightCard() {
                 src={blacksimplearrow}
               />
             </HStack6>
-          </GrayButtonBackground>
+          </GrayButtonBackground2>
           {toggleActive2 == true ? (
             <ToggleRectangle2>
-              <VStack>
+              <VStackModal>
                 <BlueBackground>
                   <ModalBlackSemiBold>Events</ModalBlackSemiBold>
                 </BlueBackground>
-                <div onClick={() => setHighlight2("Purchases")}>
-                  {highlight2 == "Purchases" ? (
-                    <TabHighlighted22>
-                      <ModalGraySemiBold>Purchases</ModalGraySemiBold>
-                    </TabHighlighted22>
-                  ) : (
-                    <TabHighlightedClear22>
-                      <ModalGraySemiBold>Purchases</ModalGraySemiBold>
-                    </TabHighlightedClear22>
-                  )}
-                </div>
                 <div onClick={() => setHighlight2("Revenue")}>
                   {highlight2 == "Revenue" ? (
                     <TabHighlighted22>
-                      <ModalGrayRegular>Revenue</ModalGrayRegular>
+                      <ModalGraySemiBold>Revenue</ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
@@ -134,21 +123,32 @@ export default function TopRightCard() {
                     </TabHighlightedClear22>
                   )}
                 </div>
-                <div onClick={() => setHighlight2("Sign Ups")}>
-                  {highlight2 == "Sign Ups" ? (
+                <div onClick={() => setHighlight2("Purchase")}>
+                  {highlight2 == "Purchase" ? (
                     <TabHighlighted22>
-                      <ModalGrayRegular>Sign Ups</ModalGrayRegular>
+                      <ModalGraySemiBold>Purchase</ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>Sign Ups</ModalGrayRegular>
+                      <ModalGrayRegular>Purchase</ModalGrayRegular>
+                    </TabHighlightedClear22>
+                  )}
+                </div>
+                <div onClick={() => setHighlight2("Sign Up")}>
+                  {highlight2 == "Sign Up" ? (
+                    <TabHighlighted22>
+                      <ModalGraySemiBold>Sign Up</ModalGraySemiBold>
+                    </TabHighlighted22>
+                  ) : (
+                    <TabHighlightedClear22>
+                      <ModalGrayRegular>Sign Up</ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
                 <div onClick={() => setHighlight2("Add To Cart")}>
                   {highlight2 == "Add To Cart" ? (
                     <TabHighlighted22>
-                      <ModalGrayRegular>Add To Cart</ModalGrayRegular>
+                      <ModalGraySemiBold>Add To Cart</ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
@@ -156,18 +156,18 @@ export default function TopRightCard() {
                     </TabHighlightedClear22>
                   )}
                 </div>
-                <div onClick={() => setHighlight2("Read Content")}>
-                  {highlight2 == "Read Content" ? (
+                <div onClick={() => setHighlight2("Start Trial")}>
+                  {highlight2 == "Start Trial" ? (
                     <TabHighlighted22>
-                      <ModalGrayRegular>Read Content</ModalGrayRegular>
+                      <ModalGraySemiBold>Start Trial</ModalGraySemiBold>
                     </TabHighlighted22>
                   ) : (
                     <TabHighlightedClear22>
-                      <ModalGrayRegular>Read Content</ModalGrayRegular>
+                      <ModalGrayRegular>Start Trial</ModalGrayRegular>
                     </TabHighlightedClear22>
                   )}
                 </div>
-              </VStack>
+              </VStackModal>
             </ToggleRectangle2>
           ) : (
             <div> </div>
@@ -178,14 +178,15 @@ export default function TopRightCard() {
       </HStack3>
       <GraphIMG src={graph} />
       <StickIMG src={stick} />
-      <InsideCard toggleActive2={toggleActive2}>
-        <VStack>
+      <InsideCard>
+        <VStackCustom>
           <HStack>
-            <TextGray>Top 5</TextGray>
-            <BlueCircle>
-              <TextGray>MAR 5</TextGray>
-            </BlueCircle>
+            <TextGray1>Top 5</TextGray1>
+            <BlueCircle1>
+              <ModalBlackSemiBold11>Mar 5</ModalBlackSemiBold11>
+            </BlueCircle1>
           </HStack>
+          <Spacer />
           <HStack2>
             <MiniHStack>
               <ColorIMG src={blue} />
@@ -221,11 +222,15 @@ export default function TopRightCard() {
             </MiniHStack>
             <BlackPlainText>$9k</BlackPlainText>
           </HStack2>
-        </VStack>
+        </VStackCustom>
       </InsideCard>
     </CardParameter>
   );
 }
+
+const Spacer = styled.div`
+  padding-top: 1px;
+`;
 
 const GraphIMG = styled.img`
   position: absolute;
@@ -270,22 +275,39 @@ const CardParameter = styled.div`
 `;
 
 const InsideCard = styled.div`
-  width: 187.64px;
-  height: 157px;
+  width: 200px;
+  height: 180px;
   position: absolute;
   right: 36px;
   bottom: 155px;
-  z-index: 1;
+  z-index: 0;
   background: #ffffff;
   box-shadow: 2px 5px 20px #f1f1f1;
   border-radius: 4px;
   display: ${(props) => (props.toggleActive2 ? "none" : "null")};
 `;
 
-const TextGray = styled.div`
+const TextGray1 = styled.div`
   font-family: "ProximaNovaSemibold";
   font-size: 14px;
+  padding-top: 4px;
   color: #666678;
+`;
+
+const VStackCustom = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-left: 20px;
+  width: 300px;
+  gap: 7px;
+`;
+
+const MiniHStack = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding-top: 3px;
 `;
 
 const VStack = styled.div`
@@ -296,10 +318,19 @@ const VStack = styled.div`
   gap: 7px;
 `;
 
+const VStackModal = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  padding-left: 14px;
+  width: 300px;
+  gap: 7px;
+`;
+
 const HStack = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 76px;
+  gap: 58px;
 `;
 
 const HStack2 = styled.div`
@@ -310,17 +341,12 @@ const HStack2 = styled.div`
   text-align: left;
 `;
 
-const MiniHStack = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-`;
-
-const BlueCircle = styled.div`
+const BlueCircle1 = styled.div`
   background: #e4f2ff;
   border-radius: 4px;
-  width: 48.42px;
-  height: 17px;
+  width: 60.42px;
+  height: 20px;
+  padding-right: 10px;
 `;
 
 const ColorIMG = styled.img``;
@@ -343,19 +369,58 @@ const BlackPlainText = styled.div`
 `;
 
 const AttributionTitle = styled.div`
+  position: absolute;
+  left: 50px;
+  top: 35px;
+  height: 28px;
   font-family: "ProximaNovaSemiBold";
   font-size: 16px;
   line-height: 19px;
   color: #88879b;
 `;
 
-const GrayButtonBackground = styled.div`
+const GrayButtonBackground1 = styled.div`
+  position: absolute;
+  left: 235px;
+  top: 30px;
   width: 108.95px;
   height: 28px;
   background: #eeeef4;
   border-radius: 8px;
   justify-content: center;
   align-items: center;
+`;
+
+const GrayButtonBackground2 = styled.div`
+  position: absolute;
+  left: 355px;
+  top: 30px;
+  height: 28px;
+  width: 108.95px;
+  background: #eeeef4;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+`;
+
+const VerticalLine = styled.div`
+  position: absolute;
+  right: 82px;
+  top: 43px;
+  width: 27.51px;
+  height: 2.02px;
+  background: #e4f2ff;
+  transform: matrix(0, -1, 1, 0, 0, 0);
+`;
+
+const BoldBlackText = styled.div`
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #252531;
+  font-family: "ProximaNovaSemiBold";
 `;
 
 const HStack3 = styled.div`
@@ -373,21 +438,7 @@ const HStack4 = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-`;
-
-const VerticalLine = styled.div`
-  width: 27.51px;
-  height: 2.02px;
-  background: #e4f2ff;
-  transform: matrix(0, -1, 1, 0, 0, 0);
-`;
-
-const BoldBlackText = styled.div`
-  font-size: 18px;
-  line-height: 22px;
-  color: #252531;
-  font-family: "ProximaNovaSemiBold";
+  gap: 12px;
 `;
 
 const HStack6 = styled.div`
@@ -409,71 +460,71 @@ const BoldBlackText2 = styled.div`
 
 const ToggleRectangle1 = styled.div`
   position: absolute;
-  top: 100px;
-  left: 212px;
-  width: 113px;
-  height: 155px;
+  top: 68px;
+  left: 236px;
+  width: 110px;
+  height: 165px;
   background: #ffffff;
-  z-index: 10px;
-  /* Banabo No Hover */
+  z-index: 30;
   box-shadow: 2px 5px 100px 5px #ededef;
   border-radius: 10px;
 `;
 
 const ToggleRectangle2 = styled.div`
   position: absolute;
-  top: 100px;
-  left: 340px;
-  width: 113px;
-  height: 155px;
+  top: 68px;
+  left: 356px;
+  width: 110px;
+  height: 165px;
   background: #ffffff;
-  z-index: 200px;
-  /* Banabo No Hover */
+  z-index: 30;
   box-shadow: 2px 5px 100px 5px #ededef;
   border-radius: 10px;
 `;
 
 const ModalBlackSemiBold = styled.div`
   font-family: "ProximaNovaSemiBold";
-  font-size: 16px;
-  color: #252531;
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 6px;
+  color: #666678;
+`;
+
+const ModalBlackSemiBold11 = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 10.5px;
+  color: #666678;
 `;
 
 const ModalGraySemiBold = styled.div`
   font-family: "ProximaNovaSemiBold";
-  font-size: 15px;
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 6px;
   color: #666678;
 `;
 
 const ModalGrayRegular = styled.div`
   font-family: "ProximaNovaRegular";
-  font-size: 15px;
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 6px;
   color: #666678;
 `;
 
 const BlueBackground = styled.div`
-  width: 54px;
+  width: 60px;
   height: 19px;
   background: #e4f2ff;
   border-radius: 4px;
 `;
 
 const TabHighlightedClear22 = styled.div`
-  background-image: url(${TabHighlightedClear2});
-  width: 80px;
-  height: 20px;
-  position: relative;
-  display: flex;
-  justify-content: left;
   cursor: pointer;
 `;
 
 const TabHighlighted22 = styled.div`
-  background-image: url(${TabHighlighted2});
-  width: 80px;
-  height: 20px;
-  position: relative;
-  display: flex;
-  justify-content: left;
   cursor: pointer;
 `;
