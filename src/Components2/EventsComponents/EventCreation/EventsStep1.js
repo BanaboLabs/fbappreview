@@ -23,7 +23,7 @@ export default function EventsStep1(props) {
   const [isParentData5, setIsParentData5] = useState(false);
 
   ///
-  /// Connects WebElements to Parent
+  /// Connects WebElements to main
   useEffect(() => {
     props.sendToParent6(isParentData5); // This is the mounting part
   }, [isParentData5]);
@@ -75,23 +75,25 @@ export default function EventsStep1(props) {
                     </PictureHStack>
                   </LargeVStack>
                   <BottomHStack>
-                    <BottomVStack>
-                      <SmallBlackText>
-                        URL events
+                    <MajorStack1>
+                      <VStack1>
+                        <SmallBlackText>URL events</SmallBlackText>
                         <SmallGrayText>
                           Track every time someone visits a specific webpage,
                           like a product details page or an order confirmation
                           page.
                         </SmallGrayText>
-                      </SmallBlackText>
-                    </BottomVStack>
-                    <BottomVStack>
-                      <SmallBlackText>Click events</SmallBlackText>
-                      <SmallGrayText>
-                        Track every time someone clicks on a webpage element,
-                        like an add to cart button or a form submission button
-                      </SmallGrayText>
-                    </BottomVStack>
+                      </VStack1>
+                    </MajorStack1>
+                    <MajorStack2>
+                      <VStack1>
+                        <SmallBlackText>Click events</SmallBlackText>
+                        <SmallGrayText>
+                          Track every time someone clicks on a webpage element,
+                          like an add to cart button or a form submission button
+                        </SmallGrayText>
+                      </VStack1>
+                    </MajorStack2>
                   </BottomHStack>
                   <BottomButton1
                     src={urlbutton}
@@ -145,6 +147,24 @@ export default function EventsStep1(props) {
     </div>
   );
 }
+
+const MajorStack1 = styled.div`
+  position: absolute;
+  left: 10px;
+  top: -40px;
+`;
+
+const VStack1 = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+const MajorStack2 = styled.div`
+  position: absolute;
+  left: 410px;
+  top: -40px;
+`;
 
 const ClickEventCard5 = styled.img`
   position: absolute;
@@ -355,14 +375,14 @@ const MediumGrayText5 = styled.div`
 
 const BottomButton1 = styled.img`
   position: absolute;
-  left: 100px;
+  left: 108px;
   top: 555px;
   cursor: pointer;
 `;
 
 const BottomButton2 = styled.img`
   position: absolute;
-  right: 228px;
+  right: 224px;
   top: 555px;
   cursor: pointer;
 `;
@@ -377,7 +397,7 @@ const SmallGrayText = styled.div`
   font-size: 14px;
   color: #666678;
   font-family: "ProximaNovaRegular";
-  width: 200px;
+  width: 250px;
 `;
 
 const BottomVStack = styled.div`
@@ -410,6 +430,7 @@ const PictureHStack = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
+  padding-top: 10px;
 `;
 
 const EventIMG = styled.img``;
