@@ -18,7 +18,7 @@ export default function Signups() {
       <VStack>
         <LargeRectangle>
           <VerticalWrapper>
-            <PurchasePathText>PURCHASE PATHS</PurchasePathText>
+            <PurchasePathText>SIGN UP PATHS</PurchasePathText>
             <PathHStack>
               <DateRectangle>
                 <DateVStack>

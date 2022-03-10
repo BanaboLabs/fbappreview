@@ -10,14 +10,22 @@ import purchasesdata6 from "../../Images2/PurchasesData6.svg";
 import purchasesdata7 from "../../Images2/PurchasesData7.svg";
 import TabHighlighted2 from "../../Images2/tabhighlighted2.svg";
 import TabHighlightedClear2 from "../../Images2/tabhighlightedclear2.svg";
+import instagram from "../../Images2/instagramlogonew.png";
+import bing from "../../Images2/binglogonew.png";
+import facebook from "../../Images2/facebooklogonew.png";
+import google from "../../Images2/googlelogonew.png";
+import hackernews from "../../Images2/hackernewslogonew.png";
 
 // Purchases Breakdown
 
-export default function Card1Purchases() {
+export default function Card1Purchases(props) {
   const [toggleActive1, setToggleActive1] = useState(false);
   const [toggleActive2, setToggleActive2] = useState(false);
   const [highlight1, setHighlight1] = useState("Custom");
   const [highlight2, setHighlight2] = useState("Purchases");
+  const [isShown, setIsShown] = useState(false);
+  const [clicked, setClicked] = useState(false);
+  const [total, setTotal] = useState("23.4k");
 
   return (
     <SmallRectangle>
@@ -38,140 +46,361 @@ export default function Card1Purchases() {
               </ToggleRectangle>
               {toggleActive1 == true ? (
                 <ToggleRectangle1>
-                  <VStack>
+                  <VStackModal>
                     <BlueBackground>
                       <ModalBlackSemiBold>Models</ModalBlackSemiBold>
                     </BlueBackground>
                     <div onClick={() => setHighlight1("Custom")}>
                       {highlight1 == "Custom" ? (
                         <TabHighlighted22>
-                          <ModalGraySemiBold>Custom</ModalGraySemiBold>
+                          <ModalGraySemiBold
+                            onClick={() => setToggleActive1(!toggleActive1)}
+                          >
+                            Custom
+                          </ModalGraySemiBold>
                         </TabHighlighted22>
                       ) : (
                         <TabHighlightedClear22>
-                          <ModalGraySemiBold>Custom</ModalGraySemiBold>
+                          <ModalGrayRegular
+                            onClick={() => setToggleActive1(!toggleActive1)}
+                          >
+                            Custom
+                          </ModalGrayRegular>
                         </TabHighlightedClear22>
                       )}
                     </div>
                     <div onClick={() => setHighlight1("First-Touch")}>
                       {highlight1 == "First-Touch" ? (
                         <TabHighlighted22>
-                          <ModalGrayRegular>First-Touch</ModalGrayRegular>
+                          <ModalGraySemiBold
+                            onClick={() => setToggleActive1(!toggleActive1)}
+                          >
+                            First-Touch
+                          </ModalGraySemiBold>
                         </TabHighlighted22>
                       ) : (
                         <TabHighlightedClear22>
-                          <ModalGrayRegular>First-Touch</ModalGrayRegular>
+                          <ModalGrayRegular
+                            onClick={() => setToggleActive1(!toggleActive1)}
+                          >
+                            First-Touch
+                          </ModalGrayRegular>
                         </TabHighlightedClear22>
                       )}
                     </div>
                     <div onClick={() => setHighlight1("Last-Touch")}>
                       {highlight1 == "Last-Touch" ? (
                         <TabHighlighted22>
-                          <ModalGrayRegular>Last-Touch</ModalGrayRegular>
+                          <ModalGraySemiBold
+                            onClick={() => setToggleActive1(!toggleActive1)}
+                          >
+                            Last-Touch
+                          </ModalGraySemiBold>
                         </TabHighlighted22>
                       ) : (
                         <TabHighlightedClear22>
-                          <ModalGrayRegular>Last-Touch</ModalGrayRegular>
+                          <ModalGrayRegular
+                            onClick={() => setToggleActive1(!toggleActive1)}
+                          >
+                            Last-Touch
+                          </ModalGrayRegular>
                         </TabHighlightedClear22>
                       )}
                     </div>
                     <div onClick={() => setHighlight1("Linear")}>
                       {highlight1 == "Linear" ? (
                         <TabHighlighted22>
-                          <ModalGrayRegular>Linear</ModalGrayRegular>
+                          <ModalGraySemiBold
+                            onClick={() => setToggleActive1(!toggleActive1)}
+                          >
+                            Linear
+                          </ModalGraySemiBold>
                         </TabHighlighted22>
                       ) : (
                         <TabHighlightedClear22>
-                          <ModalGrayRegular>Linear</ModalGrayRegular>
+                          <ModalGrayRegular
+                            onClick={() => setToggleActive1(!toggleActive1)}
+                          >
+                            Linear
+                          </ModalGrayRegular>
                         </TabHighlightedClear22>
                       )}
                     </div>
                     <div onClick={() => setHighlight1("U-Shaped")}>
                       {highlight1 == "U-Shaped" ? (
                         <TabHighlighted22>
-                          <ModalGrayRegular>U-Shaped</ModalGrayRegular>
+                          <ModalGraySemiBold
+                            onClick={() => setToggleActive1(!toggleActive1)}
+                          >
+                            U-Shaped
+                          </ModalGraySemiBold>
                         </TabHighlighted22>
                       ) : (
                         <TabHighlightedClear22>
-                          <ModalGrayRegular>U-Shaped</ModalGrayRegular>
+                          <ModalGrayRegular
+                            onClick={() => setToggleActive1(!toggleActive1)}
+                          >
+                            U-Shaped
+                          </ModalGrayRegular>
                         </TabHighlightedClear22>
                       )}
                     </div>
-                  </VStack>
+                  </VStackModal>
                 </ToggleRectangle1>
               ) : (
                 <div> </div>
               )}
             </VStackNew>
-            <VerticalLine />
-            <BoldBlackText>19.8k</BoldBlackText>
           </MiniHStack>
         </TopHStack>
-        <InfoStack>
-          <LabelHStack>
-            <LabelFont>Sources</LabelFont>
-            <LabelFont>Amount</LabelFont>
-          </LabelHStack>
-          <BlueLine />
-          <DataVStack>
-            <DataParentHStack>
-              <img src={purchasesdata1} />
-              <BackgroundRectangle>
-                <InsideText>11.5k</InsideText>
-              </BackgroundRectangle>
-            </DataParentHStack>
-            <DataParentHStack>
-              <img src={purchasesdata2} />
-              <BackgroundRectangle>
-                <InsideText>5.7k</InsideText>
-              </BackgroundRectangle>
-            </DataParentHStack>
-            <DataParentHStack>
-              <img src={purchasesdata3} />
-              <BackgroundRectangle>
-                <InsideText>1.3k</InsideText>
-              </BackgroundRectangle>
-            </DataParentHStack>
-            <DataParentHStack>
-              <img src={purchasesdata4} />
-              <BackgroundRectangle>
-                <InsideText>541</InsideText>
-              </BackgroundRectangle>
-            </DataParentHStack>
-            <DataParentHStack>
-              <img src={purchasesdata5} />
-              <BackgroundRectangle>
-                <InsideText>211</InsideText>
-              </BackgroundRectangle>
-            </DataParentHStack>
-            <DataParentHStack>
-              <img src={purchasesdata6} />
-              <BackgroundRectangle>
-                <InsideText>49</InsideText>
-              </BackgroundRectangle>
-            </DataParentHStack>
-            <DataParentHStack>
-              <img src={purchasesdata7} />
-              <BackgroundRectangle>
-                <InsideText>27</InsideText>
-              </BackgroundRectangle>
-            </DataParentHStack>
-          </DataVStack>
-        </InfoStack>
+        <MegaDiv>
+          <HStack1>
+            <BoldText1>Sources</BoldText1>
+            <SemiBoldText1>Amount</SemiBoldText1>
+          </HStack1>
+          <Line1 />
+          <VStack1>
+            <HStack151>
+              {isShown ? (
+                <AreaWrapper1>
+                  <GrayRectangle1>
+                    <HStack151 onClick={() => setClicked(!clicked)}>
+                      <HStack21>
+                        <CompanyLogo1 src={google} />
+                        <GrayText1>Google SEO</GrayText1>
+                      </HStack21>
+                      <ShadowRectangle1>
+                        <DarkText1>11.9k</DarkText1>
+                      </ShadowRectangle1>
+                    </HStack151>
+                  </GrayRectangle1>
+                </AreaWrapper1>
+              ) : (
+                <div>
+                  <HStack151>
+                    <HStack21>
+                      <CompanyLogo1 src={google} />
+                      <GrayText1>Google SEO</GrayText1>
+                    </HStack21>
+                    <ShadowRectangle1>
+                      <DarkText1>11.9k</DarkText1>
+                    </ShadowRectangle1>
+                  </HStack151>
+                </div>
+              )}
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={google} />
+                <GrayText1>Google Direct Search</GrayText1>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>8.4k</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={facebook} />
+                <GrayText1>Facebook</GrayText1>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>1.3k</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={google} />
+                <GrayText1>Google Direct Search</GrayText1>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>8.4k</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={facebook} />
+                <GrayText1>Facebook</GrayText1>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>1.3k</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+          </VStack1>
+        </MegaDiv>
       </ParentVStack>
+      <VerticalLine1 />
+      <BoldBlackText1 highlight2={highlight2}>{total}</BoldBlackText1>
+      <TotalText1>Total</TotalText1>
     </SmallRectangle>
   );
 }
 
+const BlueBackground = styled.div`
+  width: 60px;
+  height: 19px;
+  background: #e4f2ff;
+  border-radius: 4px;
+`;
+
+const ModalBlackSemiBold11 = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 10.5px;
+  color: #666678;
+`;
+
+const VStackModal = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  padding-left: 14px;
+  width: 300px;
+  gap: 7px;
+`;
+
+const VerticalLine1 = styled.div`
+  position: absolute;
+  left: 315px;
+  bottom: 320px;
+  width: 27.51px;
+  height: 2.02px;
+  background: #e4f2ff;
+  transform: matrix(0, -1, 1, 0, 0, 0);
+`;
+
+const TotalText1 = styled.div`
+  position: absolute;
+  left: 340px;
+  bottom: 315px;
+  font-size: 14px;
+  color: #a9a9b9;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const BoldBlackText1 = styled.div`
+  position: absolute;
+  left: 382px;
+  bottom: 311px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #252531;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const MegaDiv = styled.div`
+  padding-right: 100px;
+`;
+
+const CompanyLogo = styled.img`
+  padding-left: 10px;
+`;
+
+const Wrapper1 = styled.div`
+  position: absolute;
+  left: 45px;
+`;
+
+const CompanyLogo1 = styled.img``;
+
+const HackerNewsLogo1 = styled.img`
+  padding-left: 10px;
+  width: 26px;
+`;
+
+const HStack1 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 269px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+`;
+
+const BoldText1 = styled.div`
+  font-family: "ProximaNovaBold";
+  font-size: 16px;
+  color: #666678;
+`;
+
+const SemiBoldText1 = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 16px;
+  color: #666678;
+`;
+
+const Line1 = styled.div`
+  position: absolute;
+  left: 50px;
+  width: 382px;
+  height: 1px;
+  background: #e4f2ff;
+`;
+
+const VStack1 = styled.div`
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+`;
+
+const HStack151 = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 382px;
+`;
+
+const HStack21 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+`;
+
+const GrayText1 = styled.div`
+  font-size: 16px;
+  line-height: 16px;
+  color: #9a99a9;
+  font-family: "ProximaNovaRegular";
+  cursor: pointer;
+`;
+
+const ShadowRectangle1 = styled.div`
+  width: 54px;
+  height: 27px;
+  background: #ffffff;
+  box-shadow: 2px 5px 20px #f1f1f1;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
+
+const DarkText1 = styled.div`
+  font-family: "ProximaNovaRegular";
+  font-size: 15px;
+  color: #666678;
+  padding-top: 6px;
+`;
+
+const GrayRectangle1 = styled.div`
+  width: 360px;
+  height: 27px;
+  background: rgba(238, 238, 238, 0.6);
+  border-radius: 4px;
+  padding-right: 50px;
+`;
+
+const AreaWrapper1 = styled.div``;
+
 const ToggleRectangle1 = styled.div`
   position: absolute;
-  bottom: 140px;
-  left: 310px;
-  width: 113px;
-  height: 155px;
+  bottom: 134px;
+  left: 209px;
+  width: 110px;
+  height: 165px;
   background: #ffffff;
-  z-index: 10px;
-  /* Banabo No Hover */
+  z-index: 30;
   box-shadow: 2px 5px 100px 5px #ededef;
   border-radius: 10px;
 `;
@@ -304,7 +533,7 @@ const InfoStack = styled.div`
 const TopHStack = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 0px;
 `;
 
 const SmallRectangle = styled.div`
@@ -493,47 +722,34 @@ const ToggleRectangle2 = styled.div`
   border-radius: 10px;
 `;
 
-const ModalBlackSemiBold = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  font-size: 16px;
-  color: #252531;
-`;
-
 const ModalGraySemiBold = styled.div`
   font-family: "ProximaNovaSemiBold";
-  font-size: 15px;
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 6px;
+  color: #666678;
+`;
+
+const ModalBlackSemiBold = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 6px;
   color: #666678;
 `;
 
 const ModalGrayRegular = styled.div`
   font-family: "ProximaNovaRegular";
-  font-size: 15px;
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 6px;
   color: #666678;
 `;
 
-const BlueBackground = styled.div`
-  width: 54px;
-  height: 19px;
-  background: #e4f2ff;
-  border-radius: 4px;
-`;
-
 const TabHighlightedClear22 = styled.div`
-  background-image: url(${TabHighlightedClear2});
-  width: 80px;
-  height: 20px;
-  position: relative;
-  display: flex;
-  justify-content: left;
   cursor: pointer;
 `;
 
 const TabHighlighted22 = styled.div`
-  background-image: url(${TabHighlighted2});
-  width: 80px;
-  height: 20px;
-  position: relative;
-  display: flex;
-  justify-content: left;
   cursor: pointer;
 `;
