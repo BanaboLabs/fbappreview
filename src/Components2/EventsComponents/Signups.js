@@ -10,14 +10,15 @@ import verticalscroll from "../../Images2/verticalscroll.svg";
 import Card1Purchases from "./Card1Purchases";
 import Card2Purchases from "./Card2Purchases";
 import Card1Signups from "./Card1Signups";
+import purchaseline9 from "../../Images2/purchaseline9.svg";
 
 export default function Signups() {
   return (
     <div>
       <VStack>
         <LargeRectangle>
-          <InsideVStack>
-            <PurchasePathText>SIGNUP PATHS</PurchasePathText>
+          <VerticalWrapper>
+            <PurchasePathText>PURCHASE PATHS</PurchasePathText>
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
@@ -54,23 +55,62 @@ export default function Signups() {
               </DateRectangle>
               <LogoIMG src={purchaseline1} />
             </PathHStack>
-          </InsideVStack>
+            <PathHStack>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Oct 21, 2021</TheDate>
+                  <TheTime>11:21 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={purchaseline1} />
+            </PathHStack>
+            <PathHStack>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Oct 21, 2021</TheDate>
+                  <TheTime>11:21 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={purchaseline2} />
+            </PathHStack>
+            <PathHStack>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Oct 21, 2021</TheDate>
+                  <TheTime>11:21 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={purchaseline3} />
+            </PathHStack>
+            <HorizontalWrapper>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Oct 21, 2021</TheDate>
+                  <TheTime>11:21 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={purchaseline9} />
+            </HorizontalWrapper>
+          </VerticalWrapper>
         </LargeRectangle>
-
         <Card1Signups />
       </VStack>
       <WhiteFogHorizontal src={whitefoghorizontal} />
-      <HorizontalScrollIMG src={horizontalscroll} />
-      <VerticalScrollIMG src={verticalscroll} />
     </div>
   );
 }
 
-const WhiteFogHorizontal = styled.img`
-  z-index: 20;
-  position: absolute;
-  left: 464px;
-  top: 442px;
+const VerticalWrapper = styled.div`
+  display: grid;
+  grid-gap: 22px;
+  padding-left: 60px;
+  padding-top: 40px;
+`;
+
+const HorizontalWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 const HorizontalScrollIMG = styled.img`
@@ -90,6 +130,13 @@ const VerticalScrollIMG = styled.img`
 `;
 
 const LogoIMG = styled.img``;
+
+const WhiteFogHorizontal = styled.img`
+  z-index: 20;
+  position: absolute;
+  left: 464px;
+  top: 442px;
+`;
 
 const DateRectangle = styled.div`
   width: 131px;
@@ -163,9 +210,23 @@ const LargeRectangle = styled.div`
 
   background: #ffffff;
   /* La La La */
-
   box-shadow: 0px 11px 28.5px 6.5px #eceff4;
   border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
 `;
 
 const SmallRectangle = styled.div`

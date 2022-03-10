@@ -4,6 +4,11 @@ import purchaseline1 from "../../Images2/purchaseline1.svg";
 import purchaseline2 from "../../Images2/purchaseline2.svg";
 import purchaseline3 from "../../Images2/purchaseline3.svg";
 import purchaseline4 from "../../Images2/purchaseline4.svg";
+import purchaseline5 from "../../Images2/purchaseline1.svg";
+import purchaseline6 from "../../Images2/purchaseline2.svg";
+import purchaseline7 from "../../Images2/purchaseline3.svg";
+import purchaseline8 from "../../Images2/purchaseline4.svg";
+import purchaseline9 from "../../Images2/purchaseline9.svg";
 import whitefoghorizontal from "../../Images2/whitefoghorizontal.svg";
 import horizontalscroll from "../../Images2/horizontalscroll.svg";
 import verticalscroll from "../../Images2/verticalscroll.svg";
@@ -15,7 +20,7 @@ export default function Purchases() {
     <div>
       <VStack>
         <LargeRectangle>
-          <InsideVStack>
+          <VerticalWrapper>
             <PurchasePathText>PURCHASE PATHS</PurchasePathText>
             <PathHStack>
               <DateRectangle>
@@ -53,7 +58,43 @@ export default function Purchases() {
               </DateRectangle>
               <LogoIMG src={purchaseline1} />
             </PathHStack>
-          </InsideVStack>
+            <PathHStack>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Oct 21, 2021</TheDate>
+                  <TheTime>11:21 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={purchaseline1} />
+            </PathHStack>
+            <PathHStack>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Oct 21, 2021</TheDate>
+                  <TheTime>11:21 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={purchaseline2} />
+            </PathHStack>
+            <PathHStack>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Oct 21, 2021</TheDate>
+                  <TheTime>11:21 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={purchaseline3} />
+            </PathHStack>
+            <HorizontalWrapper>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Oct 21, 2021</TheDate>
+                  <TheTime>11:21 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={purchaseline9} />
+            </HorizontalWrapper>
+          </VerticalWrapper>
         </LargeRectangle>
         <HStack>
           <Card1Purchases />
@@ -61,11 +102,22 @@ export default function Purchases() {
         </HStack>
       </VStack>
       <WhiteFogHorizontal src={whitefoghorizontal} />
-      <HorizontalScrollIMG src={horizontalscroll} />
-      <VerticalScrollIMG src={verticalscroll} />
     </div>
   );
 }
+
+const VerticalWrapper = styled.div`
+  display: grid;
+  grid-gap: 22px;
+  padding-left: 60px;
+  padding-top: 40px;
+`;
+
+const HorizontalWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
 
 const HorizontalScrollIMG = styled.img`
   z-index: 30;
@@ -164,9 +216,23 @@ const LargeRectangle = styled.div`
 
   background: #ffffff;
   /* La La La */
-
   box-shadow: 0px 11px 28.5px 6.5px #eceff4;
   border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
 `;
 
 const SmallRectangle = styled.div`
