@@ -26,7 +26,7 @@ export default function Signups() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 6, 2022</TheDate>
+                  <TheDate>Mar 5, 2022</TheDate>
                   <TheTime>9:53 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
@@ -35,8 +35,8 @@ export default function Signups() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 6, 2022</TheDate>
-                  <TheTime>3:42 AM</TheTime>
+                  <TheDate>Mar 5, 2022</TheDate>
+                  <TheTime>9:42 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath7} />
@@ -45,7 +45,7 @@ export default function Signups() {
               <DateRectangle>
                 <DateVStack>
                   <TheDate>Mar 5, 2022</TheDate>
-                  <TheTime>6:27 AM</TheTime>
+                  <TheTime>6:27 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath6} />
@@ -53,7 +53,7 @@ export default function Signups() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 4, 2022</TheDate>
+                  <TheDate>Mar 5, 2022</TheDate>
                   <TheTime>4:42 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
@@ -62,7 +62,7 @@ export default function Signups() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 3, 2021</TheDate>
+                  <TheDate>Mar 5, 2021</TheDate>
                   <TheTime>10:38 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
@@ -71,7 +71,7 @@ export default function Signups() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 2, 2022</TheDate>
+                  <TheDate>Mar 5, 2022</TheDate>
                   <TheTime>4:42 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
@@ -80,8 +80,8 @@ export default function Signups() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 2, 2022</TheDate>
-                  <TheTime>2:09 PM</TheTime>
+                  <TheDate>Mar 5, 2022</TheDate>
+                  <TheTime>3:32 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath2} />
@@ -89,8 +89,8 @@ export default function Signups() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 2, 2022</TheDate>
-                  <TheTime>6:09 PM</TheTime>
+                  <TheDate>Mar 5, 2022</TheDate>
+                  <TheTime>2:09 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath1} />

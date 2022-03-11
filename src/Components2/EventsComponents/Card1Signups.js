@@ -15,6 +15,8 @@ import bing from "../../Images2/binglogonew.png";
 import facebook from "../../Images2/facebooklogonew.png";
 import google from "../../Images2/googlelogonew.png";
 import hackernews from "../../Images2/hackernewslogonew.png";
+import tiktok from "../../Images2/tiktoklogonew.png";
+import linkedin from "../../Images2/linkedinlogonew.png";
 
 // Purchases Breakdown
 
@@ -25,7 +27,7 @@ export default function Card1Signups(props) {
   const [highlight2, setHighlight2] = useState("Purchases");
   const [isShown, setIsShown] = useState(false);
   const [clicked, setClicked] = useState(false);
-  const [total, setTotal] = useState("13.4k");
+  const [total, setTotal] = useState("2.4k");
 
   return (
     <SmallRectangle>
@@ -170,7 +172,7 @@ export default function Card1Signups(props) {
                         <GrayText1>Google SEO</GrayText1>
                       </HStack21>
                       <ShadowRectangle1>
-                        <DarkText1>11.9k</DarkText1>
+                        <DarkText1>1.2k</DarkText1>
                       </ShadowRectangle1>
                     </HStack151>
                   </GrayRectangle1>
@@ -183,7 +185,7 @@ export default function Card1Signups(props) {
                       <GrayText1>Google SEO</GrayText1>
                     </HStack21>
                     <ShadowRectangle1>
-                      <DarkText1>11.9k</DarkText1>
+                      <DarkText1>1.2k</DarkText1>
                     </ShadowRectangle1>
                   </HStack151>
                 </div>
@@ -191,11 +193,11 @@ export default function Card1Signups(props) {
             </HStack151>
             <HStack151>
               <HStack21>
-                <CompanyLogo1 src={google} />
-                <GrayText1>Google Direct Search</GrayText1>
+                <CompanyLogo1 src={instagram} />
+                <GrayText1>Instagram</GrayText1>
               </HStack21>
               <ShadowRectangle1>
-                <DarkText1>8.4k</DarkText1>
+                <DarkText1>723</DarkText1>
               </ShadowRectangle1>
             </HStack151>
             <HStack151>
@@ -204,7 +206,7 @@ export default function Card1Signups(props) {
                 <GrayText1>Facebook</GrayText1>
               </HStack21>
               <ShadowRectangle1>
-                <DarkText1>1.3k</DarkText1>
+                <DarkText1>457</DarkText1>
               </ShadowRectangle1>
             </HStack151>
             <HStack151>
@@ -213,16 +215,16 @@ export default function Card1Signups(props) {
                 <GrayText1>Google Direct Search</GrayText1>
               </HStack21>
               <ShadowRectangle1>
-                <DarkText1>8.4k</DarkText1>
+                <DarkText1>49</DarkText1>
               </ShadowRectangle1>
             </HStack151>
             <HStack151>
               <HStack21>
-                <CompanyLogo1 src={facebook} />
-                <GrayText1>Facebook</GrayText1>
+                <CompanyLogo1 src={linkedin} />
+                <GrayText1>LinkedIn</GrayText1>
               </HStack21>
               <ShadowRectangle1>
-                <DarkText1>1.3k</DarkText1>
+                <DarkText1>22</DarkText1>
               </ShadowRectangle1>
             </HStack151>
           </VStack1>

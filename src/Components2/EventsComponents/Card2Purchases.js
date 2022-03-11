@@ -15,6 +15,8 @@ import bing from "../../Images2/binglogonew.png";
 import facebook from "../../Images2/facebooklogonew.png";
 import google from "../../Images2/googlelogonew.png";
 import hackernews from "../../Images2/hackernewslogonew.png";
+import tiktok from "../../Images2/tiktoklogonew.png";
+import linkedin from "../../Images2/linkedinlogonew.png";
 
 // Purchases Breakdown
 
@@ -26,6 +28,29 @@ export default function Card2Purchases(props) {
   const [isShown, setIsShown] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [total, setTotal] = useState("$12.9k");
+
+  const [firstSpotAmount, setFirstSpotAmount] = useState("605");
+  const [secondSpotAmount, setSecondSpotAmount] = useState("97");
+  const [thirdSpotAmount, setThirdSpotAmount] = useState("89");
+  const [fourthSpotAmount, setFourthSpotAmount] = useState("24");
+  const [fifthSpotAmount, setFifthSpotAmount] = useState("12");
+
+  useEffect(() => {
+    if (highlight1 == "Custom") {
+      setFirstSpotAmount("$7.5k");
+      setSecondSpotAmount("$1.3k");
+      setThirdSpotAmount("$987");
+      setFourthSpotAmount("$823");
+      setFifthSpotAmount("$523");
+    }
+    if (highlight1 == "First-Touch") {
+      setFirstSpotAmount("$4.7k");
+      setSecondSpotAmount("$2.8k");
+      setThirdSpotAmount("$1.1k");
+      setFourthSpotAmount("$567");
+      setFifthSpotAmount("$311");
+    }
+  }, [highlight1]);
 
   return (
     <SmallRectangle>
@@ -166,11 +191,11 @@ export default function Card2Purchases(props) {
                   <GrayRectangle1>
                     <HStack151 onClick={() => setClicked(!clicked)}>
                       <HStack21>
-                        <CompanyLogo1 src={google} />
-                        <GrayText1>Google SEO</GrayText1>
+                        <CompanyLogo1 src={bing} />
+                        <GrayText1>Bing SEO</GrayText1>
                       </HStack21>
                       <ShadowRectangle1>
-                        <DarkText1>11.9k</DarkText1>
+                        <DarkText1>{firstSpotAmount}</DarkText1>
                       </ShadowRectangle1>
                     </HStack151>
                   </GrayRectangle1>
@@ -179,11 +204,11 @@ export default function Card2Purchases(props) {
                 <div>
                   <HStack151>
                     <HStack21>
-                      <CompanyLogo1 src={google} />
-                      <GrayText1>Google SEO</GrayText1>
+                      <CompanyLogo1 src={bing} />
+                      <GrayText1>Bing SEO</GrayText1>
                     </HStack21>
                     <ShadowRectangle1>
-                      <DarkText1>11.9k</DarkText1>
+                      <DarkText1>{firstSpotAmount}</DarkText1>
                     </ShadowRectangle1>
                   </HStack151>
                 </div>
@@ -191,38 +216,38 @@ export default function Card2Purchases(props) {
             </HStack151>
             <HStack151>
               <HStack21>
+                <CompanyLogo1 src={instagram} />
+                <GrayText1>Instagram Campaign V1</GrayText1>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>{secondSpotAmount}</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={linkedin} />
+                <GrayText1>LinkedIn</GrayText1>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>{thirdSpotAmount}</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={hackernews} />
+                <GrayText1>Hacker News</GrayText1>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>{fourthSpotAmount}</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
                 <CompanyLogo1 src={google} />
-                <GrayText1>Google Direct Search</GrayText1>
+                <GrayText1>Google SEO</GrayText1>
               </HStack21>
               <ShadowRectangle1>
-                <DarkText1>8.4k</DarkText1>
-              </ShadowRectangle1>
-            </HStack151>
-            <HStack151>
-              <HStack21>
-                <CompanyLogo1 src={facebook} />
-                <GrayText1>Facebook</GrayText1>
-              </HStack21>
-              <ShadowRectangle1>
-                <DarkText1>1.3k</DarkText1>
-              </ShadowRectangle1>
-            </HStack151>
-            <HStack151>
-              <HStack21>
-                <CompanyLogo1 src={google} />
-                <GrayText1>Google Direct Search</GrayText1>
-              </HStack21>
-              <ShadowRectangle1>
-                <DarkText1>8.4k</DarkText1>
-              </ShadowRectangle1>
-            </HStack151>
-            <HStack151>
-              <HStack21>
-                <CompanyLogo1 src={facebook} />
-                <GrayText1>Facebook</GrayText1>
-              </HStack21>
-              <ShadowRectangle1>
-                <DarkText1>1.3k</DarkText1>
+                <DarkText1>{fifthSpotAmount}</DarkText1>
               </ShadowRectangle1>
             </HStack151>
           </VStack1>
@@ -330,7 +355,7 @@ const SemiBoldText1 = styled.div`
 
 const Line1 = styled.div`
   position: absolute;
-  left: 50px;
+  right: 51px;
   width: 382px;
   height: 1px;
   background: #e4f2ff;

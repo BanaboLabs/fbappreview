@@ -15,6 +15,8 @@ import bing from "../../Images2/binglogonew.png";
 import facebook from "../../Images2/facebooklogonew.png";
 import google from "../../Images2/googlelogonew.png";
 import hackernews from "../../Images2/hackernewslogonew.png";
+import tiktok from "../../Images2/tiktoklogonew.png";
+import linkedin from "../../Images2/linkedinlogonew.png";
 
 // Purchases Breakdown
 
@@ -25,7 +27,30 @@ export default function Card1Purchases(props) {
   const [highlight2, setHighlight2] = useState("Purchases");
   const [isShown, setIsShown] = useState(false);
   const [clicked, setClicked] = useState(false);
-  const [total, setTotal] = useState("23.4k");
+  const [total, setTotal] = useState("829");
+  /////////
+  const [firstSpotAmount, setFirstSpotAmount] = useState("605");
+  const [secondSpotAmount, setSecondSpotAmount] = useState("97");
+  const [thirdSpotAmount, setThirdSpotAmount] = useState("89");
+  const [fourthSpotAmount, setFourthSpotAmount] = useState("24");
+  const [fifthSpotAmount, setFifthSpotAmount] = useState("12");
+
+  useEffect(() => {
+    if (highlight1 == "Custom") {
+      setFirstSpotAmount("605.2");
+      setSecondSpotAmount("97.3");
+      setThirdSpotAmount("89.6");
+      setFourthSpotAmount("24.2");
+      setFifthSpotAmount("12.8");
+    }
+    if (highlight1 == "First-Touch") {
+      setFirstSpotAmount("591");
+      setSecondSpotAmount("106");
+      setThirdSpotAmount("78");
+      setFourthSpotAmount("33");
+      setFifthSpotAmount("21");
+    }
+  }, [highlight1]);
 
   return (
     <SmallRectangle>
@@ -167,10 +192,10 @@ export default function Card1Purchases(props) {
                     <HStack151 onClick={() => setClicked(!clicked)}>
                       <HStack21>
                         <CompanyLogo1 src={google} />
-                        <GrayText1>Google SEO</GrayText1>
+                        <GrayText1>LinkedIn</GrayText1>
                       </HStack21>
                       <ShadowRectangle1>
-                        <DarkText1>11.9k</DarkText1>
+                        <DarkText1>{firstSpotAmount}</DarkText1>
                       </ShadowRectangle1>
                     </HStack151>
                   </GrayRectangle1>
@@ -179,11 +204,11 @@ export default function Card1Purchases(props) {
                 <div>
                   <HStack151>
                     <HStack21>
-                      <CompanyLogo1 src={google} />
-                      <GrayText1>Google SEO</GrayText1>
+                      <CompanyLogo1 src={linkedin} />
+                      <GrayText1>LinkedIn</GrayText1>
                     </HStack21>
                     <ShadowRectangle1>
-                      <DarkText1>11.9k</DarkText1>
+                      <DarkText1>{firstSpotAmount}</DarkText1>
                     </ShadowRectangle1>
                   </HStack151>
                 </div>
@@ -192,19 +217,19 @@ export default function Card1Purchases(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={google} />
-                <GrayText1>Google Direct Search</GrayText1>
+                <GrayText1>Google SEO</GrayText1>
               </HStack21>
               <ShadowRectangle1>
-                <DarkText1>8.4k</DarkText1>
+                <DarkText1>{secondSpotAmount}</DarkText1>
               </ShadowRectangle1>
             </HStack151>
             <HStack151>
               <HStack21>
-                <CompanyLogo1 src={facebook} />
-                <GrayText1>Facebook</GrayText1>
+                <CompanyLogo1 src={instagram} />
+                <GrayText1>Instagram</GrayText1>
               </HStack21>
               <ShadowRectangle1>
-                <DarkText1>1.3k</DarkText1>
+                <DarkText1>{thirdSpotAmount}</DarkText1>
               </ShadowRectangle1>
             </HStack151>
             <HStack151>
@@ -213,16 +238,16 @@ export default function Card1Purchases(props) {
                 <GrayText1>Google Direct Search</GrayText1>
               </HStack21>
               <ShadowRectangle1>
-                <DarkText1>8.4k</DarkText1>
+                <DarkText1>{fourthSpotAmount}</DarkText1>
               </ShadowRectangle1>
             </HStack151>
             <HStack151>
               <HStack21>
-                <CompanyLogo1 src={facebook} />
-                <GrayText1>Facebook</GrayText1>
+                <CompanyLogo1 src={tiktok} />
+                <GrayText1>TikTok</GrayText1>
               </HStack21>
               <ShadowRectangle1>
-                <DarkText1>1.3k</DarkText1>
+                <DarkText1>{fifthSpotAmount}</DarkText1>
               </ShadowRectangle1>
             </HStack151>
           </VStack1>

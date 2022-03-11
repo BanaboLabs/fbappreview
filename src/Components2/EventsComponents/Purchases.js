@@ -25,7 +25,7 @@ export default function Purchases() {
               <DateRectangle>
                 <DateVStack>
                   <TheDate>Mar 5, 2022</TheDate>
-                  <TheTime>11:21 AM</TheTime>
+                  <TheTime>11:21 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath1} />
@@ -34,7 +34,7 @@ export default function Purchases() {
               <DateRectangle>
                 <DateVStack>
                   <TheDate>Mar 5, 2022</TheDate>
-                  <TheTime>9:18 AM</TheTime>
+                  <TheTime>9:18 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath2} />
@@ -42,8 +42,8 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 4, 2022</TheDate>
-                  <TheTime>5:23 AM</TheTime>
+                  <TheDate>Mar 5, 2022</TheDate>
+                  <TheTime>5:23 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath3} />
@@ -51,8 +51,8 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 3, 2022</TheDate>
-                  <TheTime>9:21 PM</TheTime>
+                  <TheDate>Mar 5, 2022</TheDate>
+                  <TheTime>2:21 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath4} />
@@ -60,7 +60,7 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 3, 2021</TheDate>
+                  <TheDate>Mar 5, 2021</TheDate>
                   <TheTime>11:29 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
@@ -69,8 +69,8 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 2, 2022</TheDate>
-                  <TheTime>11:26 AM</TheTime>
+                  <TheDate>Mar 5, 2022</TheDate>
+                  <TheTime>9:26 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath6} />
@@ -78,8 +78,8 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 2, 2022</TheDate>
-                  <TheTime>3:09 AM</TheTime>
+                  <TheDate>Mar 5, 2022</TheDate>
+                  <TheTime>6:09 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath7} />
@@ -87,7 +87,7 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 2, 2022</TheDate>
+                  <TheDate>Mar 5, 2022</TheDate>
                   <TheTime>3:09 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
