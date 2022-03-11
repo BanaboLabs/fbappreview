@@ -1,4 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useLayoutEffect,
+} from "react";
 import styled from "styled-components";
 import Tooling from "./Tooling";
 import eventbutton from "../../Images2/eventbutton.svg";
@@ -18,7 +23,7 @@ export default function EventsHome() {
   const [isParentData6, setIsParentData6] = useState(false);
 
   // Connects to WebElements Child
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isParentData6 == true) {
       console.log("I am a pirate");
       setEventsProcessOn(false);
@@ -26,81 +31,94 @@ export default function EventsHome() {
     }
   }, [isParentData6]);
   //
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     setFilterActive(!filterActive);
     console.log("wentoff1");
   }, [toggleActive]);
 
-  useEffect(() => {
-    setEventsProcessOn(!eventsProcessOn);
-    console.log("wentoff2");
+  useLayoutEffect(() => {
+    if (isParentData1 == false) {
+      setEventsProcessOn(false);
+      console.log("wentoff2");
+    }
   }, [isParentData1]);
+
+  // STOP HERE
 
   return (
     <div>
-      {eventsProcessOn == true ? (
-        <EventsStep1
-          toChild1={isParentData1}
-          sendToParent1={setIsParentData1}
-          toChild6={isParentData6}
-          sendToParent6={setIsParentData6}
-        />
-      ) : (
-        <VStack>
-          <HStack>
-            {Screen == 1 ? (
-              <DarkText>Purchases</DarkText>
-            ) : (
-              <LightText onClick={() => setScreen(1)}>Purchases</LightText>
-            )}
-            {Screen == 1 ? (
-              <LightText onClick={() => setScreen(2)}>Sign Ups</LightText>
-            ) : (
-              <DarkText>Sign Ups</DarkText>
-            )}
-          </HStack>
-          <MainLine />
-          {Screen == 1 ? <LittleLine1 /> : <LittleLine2 />}
-          <HStack2>
-            <div
-              onMouseEnter={() => setIsShown(true)}
-              onMouseLeave={() => setIsShown(false)}
-            >
-              {isShown ? (
-                <div>
-                  <EventButton
-                    src={eventbutton}
-                    onClick={() => setEventsProcessOn(true)}
-                  />
-                  <AddEventRectangle>
-                    <AddEventWrapper>
-                      <BoldEventText>Add an event</BoldEventText>
-                      <RegularEventText>
-                        Create a new conversion event and map a visitor’s
-                        touchpoints through that event
-                      </RegularEventText>
-                    </AddEventWrapper>
-                  </AddEventRectangle>
-                </div>
+      <Wrapper>
+        {eventsProcessOn == true ? (
+          <EventsStepOneWrapper eventsProcessOn={eventsProcessOn}>
+            <EventsStep1
+              toChild1={isParentData1}
+              sendToParent1={setIsParentData1}
+              toChild6={isParentData6}
+              sendToParent6={setIsParentData6}
+            />
+          </EventsStepOneWrapper>
+        ) : (
+          <VStack>
+            <HStack>
+              {Screen == 1 ? (
+                <DarkText>Purchases</DarkText>
               ) : (
-                <EventButton src={eventbutton} />
+                <LightText onClick={() => setScreen(1)}>Purchases</LightText>
               )}
-            </div>
-            <Button2>
-              <HStack3 onClick={() => setToggleActive(!toggleActive)}>
-                <WhiteText>Today</WhiteText>
-                <WhiteArrow src={WhiteArrow1} toggleActive={toggleActive} />
-              </HStack3>
-              {filterActive ? <Filter2 /> : <div></div>}
-            </Button2>
-          </HStack2>
-          {Screen == 1 ? <Purchases /> : <Signups />}
-        </VStack>
-      )}
+              {Screen == 1 ? (
+                <LightText onClick={() => setScreen(2)}>Sign Ups</LightText>
+              ) : (
+                <DarkText>Sign Ups</DarkText>
+              )}
+            </HStack>
+            <MainLine />
+            {Screen == 1 ? <LittleLine1 /> : <LittleLine2 />}
+            <HStack2>
+              <div
+                onMouseEnter={() => setIsShown(true)}
+                onMouseLeave={() => setIsShown(false)}
+              >
+                {isShown ? (
+                  <div>
+                    <EventButton
+                      src={eventbutton}
+                      onClick={() => setEventsProcessOn(true)}
+                    />
+                    <AddEventRectangle>
+                      <AddEventWrapper>
+                        <BoldEventText>Add an event</BoldEventText>
+                        <RegularEventText>
+                          Create a new conversion event and map a visitor’s
+                          touchpoints through that event
+                        </RegularEventText>
+                      </AddEventWrapper>
+                    </AddEventRectangle>
+                  </div>
+                ) : (
+                  <EventButton src={eventbutton} />
+                )}
+              </div>
+              <Button2>
+                <HStack3 onClick={() => setToggleActive(!toggleActive)}>
+                  <WhiteText>Today</WhiteText>
+                  <WhiteArrow src={WhiteArrow1} toggleActive={toggleActive} />
+                </HStack3>
+                {filterActive ? <Filter2 /> : <div></div>}
+              </Button2>
+            </HStack2>
+            {Screen == 1 ? <Purchases /> : <Signups />}
+          </VStack>
+        )}
+      </Wrapper>
     </div>
   );
 }
+
+const EventsStepOneWrapper = styled.div``;
+
+// opacity: ${(props) => (props.eventsProcessOn ? "1" : "0")};
+
+const Wrapper = styled.div``;
 
 const BoldEventText = styled.div`
   font-size: 16px;
