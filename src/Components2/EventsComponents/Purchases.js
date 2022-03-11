@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import purchaseline1 from "../../Images2/purchaseline1.svg";
-import purchaseline2 from "../../Images2/purchaseline2.svg";
-import purchaseline3 from "../../Images2/purchaseline3.svg";
-import purchaseline4 from "../../Images2/purchaseline4.svg";
-import purchaseline5 from "../../Images2/purchaseline1.svg";
-import purchaseline6 from "../../Images2/purchaseline2.svg";
-import purchaseline7 from "../../Images2/purchaseline3.svg";
-import purchaseline8 from "../../Images2/purchaseline4.svg";
-import purchaseline9 from "../../Images2/purchaseline9.svg";
+import eventpath1 from "../../Images2/eventpath1.png";
+import eventpath2 from "../../Images2/eventpath2.png";
+import eventpath3 from "../../Images2/eventpath3.png";
+import eventpath4 from "../../Images2/eventpath4.png";
+import eventpath5 from "../../Images2/eventpath5.png";
+import eventpath6 from "../../Images2/eventpath6.png";
+import eventpath7 from "../../Images2/eventpath7.png";
+import eventpath8 from "../../Images2/eventpath8.png";
 import whitefoghorizontal from "../../Images2/whitefoghorizontal.svg";
 import horizontalscroll from "../../Images2/horizontalscroll.svg";
 import verticalscroll from "../../Images2/verticalscroll.svg";
@@ -25,75 +24,75 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Oct 21, 2021</TheDate>
+                  <TheDate>Mar 5, 2022</TheDate>
                   <TheTime>11:21 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
-              <LogoIMG src={purchaseline1} />
+              <LogoIMG src={eventpath1} />
             </PathHStack>
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Oct 21, 2021</TheDate>
-                  <TheTime>11:21 AM</TheTime>
+                  <TheDate>Mar 5, 2022</TheDate>
+                  <TheTime>9:18 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
-              <LogoIMG src={purchaseline2} />
+              <LogoIMG src={eventpath2} />
             </PathHStack>
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Oct 21, 2021</TheDate>
-                  <TheTime>11:21 AM</TheTime>
+                  <TheDate>Mar 4, 2022</TheDate>
+                  <TheTime>5:23 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
-              <LogoIMG src={purchaseline3} />
+              <LogoIMG src={eventpath3} />
             </PathHStack>
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Oct 21, 2021</TheDate>
-                  <TheTime>11:21 AM</TheTime>
+                  <TheDate>Mar 3, 2022</TheDate>
+                  <TheTime>9:21 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
-              <LogoIMG src={purchaseline1} />
+              <LogoIMG src={eventpath4} />
             </PathHStack>
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Oct 21, 2021</TheDate>
-                  <TheTime>11:21 AM</TheTime>
+                  <TheDate>Mar 3, 2021</TheDate>
+                  <TheTime>11:29 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
-              <LogoIMG src={purchaseline1} />
+              <LogoIMG src={eventpath5} />
             </PathHStack>
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Oct 21, 2021</TheDate>
-                  <TheTime>11:21 AM</TheTime>
+                  <TheDate>Mar 2, 2022</TheDate>
+                  <TheTime>11:26 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
-              <LogoIMG src={purchaseline2} />
+              <LogoIMG src={eventpath6} />
             </PathHStack>
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Oct 21, 2021</TheDate>
-                  <TheTime>11:21 AM</TheTime>
+                  <TheDate>Mar 2, 2022</TheDate>
+                  <TheTime>3:09 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
-              <LogoIMG src={purchaseline3} />
+              <LogoIMG src={eventpath7} />
             </PathHStack>
-            <HorizontalWrapper>
+            <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Oct 21, 2021</TheDate>
-                  <TheTime>11:21 AM</TheTime>
+                  <TheDate>Mar 2, 2022</TheDate>
+                  <TheTime>3:09 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
-              <LogoIMG src={purchaseline9} />
-            </HorizontalWrapper>
+              <LogoIMG src={eventpath8} />
+            </PathHStack>
           </VerticalWrapper>
         </LargeRectangle>
         <HStack>

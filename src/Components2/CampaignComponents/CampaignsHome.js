@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import styled from "styled-components";
 import CampaignsConfigure from "./CampaignConfigure";
 import copybutton from "../../Images2/copybutton.svg";
@@ -39,7 +39,7 @@ export default function CampaignsHome() {
     },
   ]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (submitted == true) {
       setjsonArray([
         {
@@ -71,6 +71,11 @@ export default function CampaignsHome() {
     console.log(jsonArray);
   }, [submitted]);
 
+  useLayoutEffect(() => {
+    console.log("made it");
+    setScreen1(!screen1);
+  }, [isParentData]);
+
   // Input Field handler
   const handleUserInput1 = (e) => {
     setInputValue1(e.target.value);
@@ -96,17 +101,6 @@ export default function CampaignsHome() {
   const resetInputField3 = () => {
     setInputValue3("");
   };
-
-  useEffect(() => {
-    console.log("made it");
-    setScreen1(!screen1);
-  }, [isParentData]);
-
-  useEffect(() => {
-    console.log("changed");
-    console.log(screen1);
-    console.log("above");
-  }, [screen1]);
 
   return (
     <div>
