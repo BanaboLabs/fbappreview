@@ -44,25 +44,25 @@ export default function CampaignsHome() {
       setjsonArray([
         {
           linkName: "Instagram Ads V1",
-          linkDate: "09/21/2021",
+          linkDate: "02/21/2022",
           linkBudget: "$300",
           linkUrl: "https://www.nike.com/men/?b=6453",
         },
         {
           linkName: "Facebook Stories Campaign",
-          linkDate: "09/21/2021",
+          linkDate: "02/18/2022",
           linkBudget: "$187",
           linkUrl: "https://www.nike.com/shoes/?b=7552",
         },
         {
           linkName: "Product Hunt Launch",
-          linkDate: "09/21/2021",
+          linkDate: "02/14/2022",
           linkBudget: "$0",
           linkUrl: "https://www.nike.com/shirts/?b=3354",
         },
         {
           linkName: inputValue2,
-          linkDate: "09/21/2021",
+          linkDate: "03/14/2021",
           linkBudget: "$" + inputValue3,
           linkUrl: inputValue1 + "/?b=3182",
         },
