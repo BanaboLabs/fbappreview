@@ -16,7 +16,7 @@ export default function InsideBottomRight2() {
             <GrayText>New</GrayText>
           </HStack2>
           <ShadowRectangle>
-            <DarkText>937</DarkText>
+            <DarkText>853</DarkText>
           </ShadowRectangle>
         </HStack15>
         <HStack15>
@@ -24,7 +24,7 @@ export default function InsideBottomRight2() {
             <GrayText>Repeat</GrayText>
           </HStack2>
           <ShadowRectangle>
-            <DarkText>200</DarkText>
+            <DarkText>136</DarkText>
           </ShadowRectangle>
         </HStack15>
         <HStack15>
@@ -32,7 +32,7 @@ export default function InsideBottomRight2() {
             <GrayText>Total</GrayText>
           </HStack2>
           <ShadowRectangle>
-            <DarkText>1137</DarkText>
+            <DarkText>989</DarkText>
           </ShadowRectangle>
         </HStack15>
       </VStack>{" "}

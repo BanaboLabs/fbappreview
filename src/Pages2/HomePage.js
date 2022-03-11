@@ -17,7 +17,7 @@ export default function HomePage(props) {
   const [isGrandpaData1, setIsGrandpaData1] = useState(false);
   const [screen1, setScreen1] = useState(true);
   const [isParentData2, setIsParentData2] = useState(false);
-  const [isParentData, setIsParentData] = useState("Link");
+  const [isParentData, setIsParentData] = useState("Home");
 
   useEffect(() => {
     console.log("yessir");

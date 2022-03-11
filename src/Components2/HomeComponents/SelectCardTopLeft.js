@@ -47,7 +47,7 @@ export default function SelectCardTopLeft() {
   const [position6, setPosition6] = useState([
     {
       StatType: "Bounce Rate Today",
-      StatData: "9%",
+      StatData: "24%",
     },
   ]);
 
@@ -82,7 +82,7 @@ export default function SelectCardTopLeft() {
     },
     {
       StatType: "Bounce Rate Today",
-      StatData: "9%",
+      StatData: "24%",
     },
   ]);
 
@@ -190,7 +190,7 @@ export default function SelectCardTopLeft() {
     },
     {
       StatType: "Bounce Rate Today",
-      StatData: "9%",
+      StatData: "24%",
     },
   ];
 

@@ -40,125 +40,125 @@ export default function TopRightCard() {
   useEffect(() => {
     if (highlight1 == "Custom" && highlight2 == "Revenue") {
       setFirstSpotName("Instagram");
-      setFirstSpotAmount("$554k");
+      setFirstSpotAmount("$554.5k");
       setSecondSpotName("Facebook");
-      setSecondSpotAmount("$91k");
+      setSecondSpotAmount("$91.2k");
       setThirdSpotName("LinkedIn");
-      setThirdSpotAmount("$53k");
+      setThirdSpotAmount("$53.1k");
       setFourthSpotName("Google SEO");
-      setFourthSpotAmount("$17k");
+      setFourthSpotAmount("$17.6k");
       setFifthSpotName("YouTube");
-      setFifthSpotAmount("$9k");
+      setFifthSpotAmount("$9.4k");
     }
     if (highlight1 == "First-Touch" && highlight2 == "Revenue") {
       setFirstSpotName("Hacker News");
-      setFirstSpotAmount("$400k");
+      setFirstSpotAmount("$396.1k");
       setSecondSpotName("Facebook");
-      setSecondSpotAmount("$41k");
+      setSecondSpotAmount("$41.2k");
       setThirdSpotName("LinkedIn");
-      setThirdSpotAmount("$17k");
+      setThirdSpotAmount("$36.4k");
       setFourthSpotName("Google SEO");
-      setFourthSpotAmount("$12k");
+      setFourthSpotAmount("$12.7k");
       setFifthSpotName("YouTube");
-      setFifthSpotAmount("$11k");
+      setFifthSpotAmount("$11.1k");
     }
     if (highlight1 == "Last-Touch" && highlight2 == "Revenue") {
       setFirstSpotName("YouTube");
-      setFirstSpotAmount("$160k");
+      setFirstSpotAmount("$161.9k");
       setSecondSpotName("Facebook");
-      setSecondSpotAmount("$41k");
+      setSecondSpotAmount("$41.5k");
       setThirdSpotName("LinkedIn");
-      setThirdSpotAmount("$37k");
+      setThirdSpotAmount("$37.8k");
       setFourthSpotName("Twitter");
-      setFourthSpotAmount("$22k");
+      setFourthSpotAmount("$22.4k");
       setFifthSpotName("Instagram");
-      setFifthSpotAmount("$14k");
+      setFifthSpotAmount("$14.1k");
     }
     if (highlight1 == "Linear" && highlight2 == "Revenue") {
       setFirstSpotName("Facebook");
-      setFirstSpotAmount("$160k");
+      setFirstSpotAmount("$163.1k");
       setSecondSpotName("LinkedIn");
-      setSecondSpotAmount("$21k");
+      setSecondSpotAmount("$21.2k");
       setThirdSpotName("Snapchat");
-      setThirdSpotAmount("$11k");
+      setThirdSpotAmount("$11.5k");
       setFourthSpotName("Twitter");
-      setFourthSpotAmount("$9k");
+      setFourthSpotAmount("$9.4k");
       setFifthSpotName("Twitter");
-      setFifthSpotAmount("$1k");
+      setFifthSpotAmount("$1.3k");
     }
     if (highlight1 == "U-Shaped" && highlight2 == "Revenue") {
       setFirstSpotName("TikTok");
-      setFirstSpotAmount("$110k");
+      setFirstSpotAmount("$114.3k");
       setSecondSpotName("Facebook");
-      setSecondSpotAmount("$24k");
+      setSecondSpotAmount("$24.2k");
       setThirdSpotName("LinkedIn");
-      setThirdSpotAmount("$11k");
+      setThirdSpotAmount("$11.8k");
       setFourthSpotName("Snapchat");
-      setFourthSpotAmount("$8k");
+      setFourthSpotAmount("$8.8k");
       setFifthSpotName("Instagram");
-      setFifthSpotAmount("$7k");
+      setFifthSpotAmount("$7.3k");
     }
     /////////////
 
     if (highlight1 == "Custom" && highlight2 == "Purchase") {
       setFirstSpotName("Instagram");
-      setFirstSpotAmount("478");
+      setFirstSpotAmount("478.4");
       setSecondSpotName("Facebook");
-      setSecondSpotAmount("123");
+      setSecondSpotAmount("123.2");
       setThirdSpotName("LinkedIn");
-      setThirdSpotAmount("97");
+      setThirdSpotAmount("97.5");
       setFourthSpotName("Google SEO");
-      setFourthSpotAmount("91");
+      setFourthSpotAmount("91.1");
       setFifthSpotName("YouTube");
-      setFifthSpotAmount("82");
+      setFifthSpotAmount("82.7");
     }
     if (highlight1 == "First-Touch" && highlight2 == "Purchase") {
       setFirstSpotName("Hacker News");
-      setFirstSpotAmount("981");
+      setFirstSpotAmount("381");
       setSecondSpotName("Facebook");
-      setSecondSpotAmount("874");
+      setSecondSpotAmount("174");
       setThirdSpotName("LinkedIn");
-      setThirdSpotAmount("796");
+      setThirdSpotAmount("136");
       setFourthSpotName("Google SEO");
-      setFourthSpotAmount("775");
+      setFourthSpotAmount("75");
       setFifthSpotName("YouTube");
-      setFifthSpotAmount("612");
+      setFifthSpotAmount("27");
     }
     if (highlight1 == "Last-Touch" && highlight2 == "Purchase") {
       setFirstSpotName("YouTube");
       setFirstSpotAmount("425");
       setSecondSpotName("Facebook");
-      setSecondSpotAmount("412");
+      setSecondSpotAmount("212");
       setThirdSpotName("LinkedIn");
-      setThirdSpotAmount("411");
+      setThirdSpotAmount("121");
       setFourthSpotName("Twitter");
-      setFourthSpotAmount("409");
+      setFourthSpotAmount("109");
       setFifthSpotName("Instagram");
-      setFifthSpotAmount("131");
+      setFifthSpotAmount("101");
     }
     if (highlight1 == "Linear" && highlight2 == "Purchase") {
       setFirstSpotName("Facebook");
-      setFirstSpotAmount("617");
+      setFirstSpotAmount("317.2");
       setSecondSpotName("LinkedIn");
-      setSecondSpotAmount("123");
+      setSecondSpotAmount("123.9");
       setThirdSpotName("Snapchat");
-      setThirdSpotAmount("78");
+      setThirdSpotAmount("78.5");
       setFourthSpotName("Twitter");
-      setFourthSpotAmount("56");
+      setFourthSpotAmount("56.3");
       setFifthSpotName("Twitter");
-      setFifthSpotAmount("15");
+      setFifthSpotAmount("15.1");
     }
     if (highlight1 == "U-Shaped" && highlight2 == "Purchase") {
       setFirstSpotName("TikTok");
-      setFirstSpotAmount("890");
+      setFirstSpotAmount("490.9");
       setSecondSpotName("Facebook");
-      setSecondSpotAmount("789");
+      setSecondSpotAmount("289.7");
       setThirdSpotName("LinkedIn");
-      setThirdSpotAmount("128");
+      setThirdSpotAmount("128.5");
       setFourthSpotName("Snapchat");
-      setFourthSpotAmount("99");
+      setFourthSpotAmount("99.7");
       setFifthSpotName("Instagram");
-      setFifthSpotAmount("78");
+      setFifthSpotAmount("78.4");
     }
   }, [highlight1, highlight2]);
 
@@ -697,7 +697,7 @@ const BoldBlackText2 = styled.div`
 const ToggleRectangle1 = styled.div`
   position: absolute;
   top: 68px;
-  left: 236px;
+  left: 191px;
   width: 110px;
   height: 165px;
   background: #ffffff;
@@ -709,7 +709,7 @@ const ToggleRectangle1 = styled.div`
 const ToggleRectangle2 = styled.div`
   position: absolute;
   top: 68px;
-  left: 356px;
+  left: 311px;
   width: 110px;
   height: 165px;
   background: #ffffff;

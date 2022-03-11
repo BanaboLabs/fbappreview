@@ -29,7 +29,7 @@ export default function InsideBottomRight1(props) {
                       <GrayText>Purchase</GrayText>
                     </HStack2>
                     <ShadowRectangle>
-                      <DarkText>2.7k</DarkText>
+                      <DarkText>989</DarkText>
                     </ShadowRectangle>
                   </HStack15>
                 </GrayRectangle>
@@ -41,7 +41,7 @@ export default function InsideBottomRight1(props) {
                     <GrayText>Purchase</GrayText>
                   </HStack2>
                   <ShadowRectangle>
-                    <DarkText>2.7k</DarkText>
+                    <DarkText>989</DarkText>
                   </ShadowRectangle>
                 </HStack15>
               </div>

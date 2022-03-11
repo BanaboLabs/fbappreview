@@ -7,7 +7,7 @@ import TabHighlightedClear from "../Images2/tabhighlightedclear.svg";
 export default function SideBar(props) {
   // OnClick of Home, we want to change the font color and the background
 
-  const [highlight, setHighlight] = useState("Insights");
+  const [highlight, setHighlight] = useState("Home");
 
   useEffect(() => {
     props.sendToParent(highlight); // This is the mounting part
