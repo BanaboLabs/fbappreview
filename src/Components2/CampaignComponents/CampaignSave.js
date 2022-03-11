@@ -6,19 +6,19 @@ export default function CampaignsSave() {
   const jsonArray = [
     {
       linkName: "Instagram Ads V1",
-      linkDate: "09/21/2021",
+      linkDate: "2/21/2022",
       linkBudget: "$300",
       linkUrl: "https://www.nike.com/men/",
     },
     {
       linkName: "Facebook Stories Campaign",
-      linkDate: "09/21/2021",
+      linkDate: "2/24/2022",
       linkBudget: "$187",
       linkUrl: "https://www.nike.com/shoes/",
     },
     {
       linkName: "Product Hunt Launch",
-      linkDate: "09/21/2021",
+      linkDate: "02/27/2022",
       linkBudget: "$0",
       linkUrl: "https://www.nike.com/shirts/",
     },
