@@ -120,9 +120,6 @@ const Rectangle = styled.div`
   height: 806px;
   left: 1000px;
   top: 110px;
-  background: #ffffff;
-  box-shadow: 0px 11px 28.5px 6.5px #eceff4;
-  border-radius: 10px;
 `;
 
 const InsideWrapper = styled.div`

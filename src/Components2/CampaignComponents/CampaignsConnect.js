@@ -4,7 +4,7 @@ import livegreenbutton from "../../Images2/livegreenbutton.svg";
 import addblackbutton from "../../Images2/addblackbutton.svg";
 import connectcard from "../../Images2/connectcard.svg";
 import blackx from "../../Images2/blackx.svg";
-import logogrid from "../../Images2/companylogogrid.png";
+import logogrid from "../../Images2/logogrid.png";
 
 export default function CampaignsConnect() {
   const [isShown, setIsShown] = useState(false);
@@ -83,11 +83,11 @@ export default function CampaignsConnect() {
                   We’ll have you sign in directly with your marketing accounts.
                   This is a one time process
                 </MediumGrayText>
-                <LogoGridWrapper>
-                  <LogoGrid src={logogrid} />
-                </LogoGridWrapper>
               </MiddleVStack>
             </ContentWrapper>
+            <LogoGridWrapper>
+              <LogoGrid src={logogrid} />
+            </LogoGridWrapper>
           </RectangleModal>
         </div>
       ) : (
@@ -274,6 +274,42 @@ export default function CampaignsConnect() {
     </div>
   );
 }
+
+const LogoGridWrapper = styled.div`
+  position: absolute;
+  padding-top: 35px;
+  padding-left: 130px;
+`;
+
+const LogoGrid = styled.img`
+  cursor: pointer;
+`;
+
+const ContentWrapper = styled.div`
+  padding-left: 150px;
+  padding-top: 55px;
+`;
+
+const ClickIMG11 = styled.img`
+  cursor: pointer;
+  position: absolute;
+  padding-top: 20px;
+  padding-left: 800px;
+`;
+
+const RectangleModal = styled.div`
+  position: absolute;
+  left: 500px;
+  top: 120px;
+  border-radius: 20px;
+  width: 840px;
+  height: 765px;
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+  border-radius: 10px;
+  z-index: 100;
+`;
 
 const RegularText = styled.div`
   font-size: 16px;
@@ -491,21 +527,6 @@ const ClickIMG2 = styled.img`
   top: 216px;
 `;
 
-const LogoGridWrapper = styled.div`
-  padding-top: 40px;
-`;
-
-const LogoGrid = styled.img`
-  cursor: pointer;
-  width: 400px;
-  height: 310px;
-`;
-
-const ContentWrapper = styled.div`
-  padding-left: 80px;
-  padding-top: 60px;
-`;
-
 const LargeBlackText = styled.div`
   font-family: "ProximaNovaSemiBold";
   color: #252531;
@@ -526,27 +547,6 @@ const MiddleVStack = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
-`;
-
-const ClickIMG11 = styled.img`
-  cursor: pointer;
-  position: absolute;
-  padding-top: 20px;
-  padding-left: 620px;
-`;
-
-const RectangleModal = styled.div`
-  border-radius: 20px;
-  width: 657px;
-  height: 603px;
-  background: linear-gradient(0deg, #ffffff, #ffffff),
-    linear-gradient(0deg, #ffffff, #ffffff),
-    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
-  border-radius: 10px;
-  position: absolute;
-  left: 600px;
-  top: 160px;
-  z-index: 100;
 `;
 
 const BlueBlur = styled.div`

@@ -141,9 +141,6 @@ const Rectangle1 = styled.div`
   height: 450px;
   left: 464px;
   top: 110px;
-  background: #ffffff;
-  box-shadow: 0px 11px 28.5px 6.5px #eceff4;
-  border-radius: 10px;
 `;
 
 const InsideRectangle1 = styled.div`
