@@ -459,6 +459,7 @@ const SmallGrayText = styled.div`
   color: #666678;
   font-family: "ProximaNovaRegular";
   width: 250px;
+  line-height: 17px;
 `;
 
 const BottomVStack = styled.div`
