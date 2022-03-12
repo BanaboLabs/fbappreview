@@ -17,6 +17,7 @@ import google from "../../Images2/googlelogonew.png";
 import hackernews from "../../Images2/hackernewslogonew.png";
 import tiktok from "../../Images2/tiktoklogonew.png";
 import linkedin from "../../Images2/linkedinlogonew.png";
+import whitefoghorizontal from "../../Images2/whitefoghorizontal.svg";
 
 // Purchases Breakdown
 
@@ -169,7 +170,7 @@ export default function Card1Signups(props) {
                     <HStack151 onClick={() => setClicked(!clicked)}>
                       <HStack21>
                         <CompanyLogo1 src={google} />
-                        <GrayText1>Google SEO</GrayText1>
+                        <GrayText2>Google SEO</GrayText2>
                       </HStack21>
                       <ShadowRectangle1>
                         <DarkText1>1.2k</DarkText1>
@@ -182,7 +183,7 @@ export default function Card1Signups(props) {
                   <HStack151>
                     <HStack21>
                       <CompanyLogo1 src={google} />
-                      <GrayText1>Google SEO</GrayText1>
+                      <GrayText2>Google SEO</GrayText2>
                     </HStack21>
                     <ShadowRectangle1>
                       <DarkText1>1.2k</DarkText1>
@@ -194,7 +195,7 @@ export default function Card1Signups(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={instagram} />
-                <GrayText1>Instagram</GrayText1>
+                <GrayText2>Instagram</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>723</DarkText1>
@@ -203,7 +204,7 @@ export default function Card1Signups(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={facebook} />
-                <GrayText1>Facebook</GrayText1>
+                <GrayText2>Facebook</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>457</DarkText1>
@@ -212,7 +213,7 @@ export default function Card1Signups(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={google} />
-                <GrayText1>Google Direct Search</GrayText1>
+                <GrayText2>Google Direct Search</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>49</DarkText1>
@@ -221,7 +222,7 @@ export default function Card1Signups(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={linkedin} />
-                <GrayText1>LinkedIn</GrayText1>
+                <GrayText2>LinkedIn</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>22</DarkText1>
@@ -233,9 +234,17 @@ export default function Card1Signups(props) {
       <VerticalLine1 />
       <BoldBlackText1 highlight2={highlight2}>{total}</BoldBlackText1>
       <TotalText1>Total</TotalText1>
+      <WhiteFogHorizontal src={whitefoghorizontal} />
     </SmallRectangle>
   );
 }
+
+const WhiteFogHorizontal = styled.img`
+  z-index: 20;
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+`;
 
 const BlueBackground = styled.div`
   width: 60px;
@@ -365,6 +374,13 @@ const GrayText1 = styled.div`
   color: #9a99a9;
   font-family: "ProximaNovaRegular";
   cursor: pointer;
+`;
+
+const GrayText2 = styled.div`
+  font-size: 16px;
+  line-height: 16px;
+  color: #9a99a9;
+  font-family: "ProximaNovaRegular";
 `;
 
 const ShadowRectangle1 = styled.div`

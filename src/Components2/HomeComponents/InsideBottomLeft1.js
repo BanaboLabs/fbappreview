@@ -62,7 +62,7 @@ export default function InsideBottomLeft1(props) {
           <HStack15>
             <HStack2>
               <CompanyLogo src={google} />
-              <GrayText>Google Direct Search</GrayText>
+              <GrayText2>Google Direct Search</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>8.4k</DarkText>
@@ -71,7 +71,7 @@ export default function InsideBottomLeft1(props) {
           <HStack15>
             <HStack2>
               <CompanyLogo src={facebook} />
-              <GrayText>Facebook</GrayText>
+              <GrayText2>Facebook</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>1.3k</DarkText>
@@ -80,7 +80,7 @@ export default function InsideBottomLeft1(props) {
           <HStack15>
             <HStack2>
               <CompanyLogo src={instagram} />
-              <GrayText>Instagram</GrayText>
+              <GrayText2>Instagram</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>600</DarkText>
@@ -89,7 +89,7 @@ export default function InsideBottomLeft1(props) {
           <HStack15>
             <HStack2>
               <HackerNewsLogo src={hackernews} />
-              <GrayText>Hacker News</GrayText>
+              <GrayText2>Hacker News</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>341</DarkText>
@@ -98,7 +98,7 @@ export default function InsideBottomLeft1(props) {
           <HStack15>
             <HStack2>
               <CompanyLogo src={linkedin} />
-              <GrayText>LinkedIn</GrayText>
+              <GrayText2>LinkedIn</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>82</DarkText>
@@ -107,7 +107,7 @@ export default function InsideBottomLeft1(props) {
           <HStack15>
             <HStack2>
               <CompanyLogo src={tiktok} />
-              <GrayText>TikTok</GrayText>
+              <GrayText2>TikTok</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>61</DarkText>
@@ -116,7 +116,7 @@ export default function InsideBottomLeft1(props) {
           <HStack15>
             <HStack2>
               <CompanyLogo src={bing} />
-              <GrayText>Bing SEO</GrayText>
+              <GrayText2>Bing SEO</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>48</DarkText>
@@ -157,6 +157,13 @@ const VStack = styled.div`
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
   }
+`;
+
+const GrayText2 = styled.div`
+  font-size: 16px;
+  line-height: 16px;
+  color: #9a99a9;
+  font-family: "ProximaNovaRegular";
 `;
 
 const Wrapper = styled.div`

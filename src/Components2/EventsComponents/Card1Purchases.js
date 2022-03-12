@@ -17,6 +17,7 @@ import google from "../../Images2/googlelogonew.png";
 import hackernews from "../../Images2/hackernewslogonew.png";
 import tiktok from "../../Images2/tiktoklogonew.png";
 import linkedin from "../../Images2/linkedinlogonew.png";
+import whitefoghorizontal2 from "../../Images2/whitefoghorizontal2.svg";
 
 // Purchases Breakdown
 
@@ -33,7 +34,10 @@ export default function Card1Purchases(props) {
   const [secondSpotAmount, setSecondSpotAmount] = useState("97");
   const [thirdSpotAmount, setThirdSpotAmount] = useState("89");
   const [fourthSpotAmount, setFourthSpotAmount] = useState("24");
-  const [fifthSpotAmount, setFifthSpotAmount] = useState("12");
+  const [fifthSpotAmount, setFifthSpotAmount] = useState("17");
+  const [sixthSpotAmount, setSixthSpotAmount] = useState("12");
+  const [seventhSpotAmount, setSeventhSpotAmount] = useState("9");
+  const [eightSpotAmount, setEightSpotAmount] = useState("7");
 
   useEffect(() => {
     if (highlight1 == "Custom") {
@@ -42,6 +46,9 @@ export default function Card1Purchases(props) {
       setThirdSpotAmount("89.6");
       setFourthSpotAmount("24.2");
       setFifthSpotAmount("12.8");
+      setSixthSpotAmount("89.6");
+      setSeventhSpotAmount("24.2");
+      setEightSpotAmount("12.8");
     }
     if (highlight1 == "First-Touch") {
       setFirstSpotAmount("591");
@@ -49,6 +56,9 @@ export default function Card1Purchases(props) {
       setThirdSpotAmount("78");
       setFourthSpotAmount("33");
       setFifthSpotAmount("21");
+      setSixthSpotAmount("17");
+      setSeventhSpotAmount("15");
+      setEightSpotAmount("9");
     }
     if (highlight1 == "Last-Touch") {
       setFirstSpotAmount("602");
@@ -56,6 +66,9 @@ export default function Card1Purchases(props) {
       setThirdSpotAmount("84");
       setFourthSpotAmount("43");
       setFifthSpotAmount("31");
+      setSixthSpotAmount("19");
+      setSeventhSpotAmount("12");
+      setEightSpotAmount("7");
     }
     if (highlight1 == "Linear") {
       setFirstSpotAmount("591.5");
@@ -63,6 +76,9 @@ export default function Card1Purchases(props) {
       setThirdSpotAmount("78.5");
       setFourthSpotAmount("32.1");
       setFifthSpotAmount("21.9");
+      setSixthSpotAmount("12.5");
+      setSeventhSpotAmount("11.2");
+      setEightSpotAmount("9.7");
     }
     if (highlight1 == "U-Shaped") {
       setFirstSpotAmount("498.4");
@@ -70,6 +86,9 @@ export default function Card1Purchases(props) {
       setThirdSpotAmount("134.1");
       setFourthSpotAmount("37.2");
       setFifthSpotAmount("14.1");
+      setSixthSpotAmount("7.6");
+      setSeventhSpotAmount("5.2");
+      setEightSpotAmount("3.8");
     }
   }, [highlight1]);
 
@@ -213,7 +232,7 @@ export default function Card1Purchases(props) {
                     <HStack151 onClick={() => setClicked(!clicked)}>
                       <HStack21>
                         <CompanyLogo1 src={google} />
-                        <GrayText1>LinkedIn</GrayText1>
+                        <GrayText2>LinkedIn</GrayText2>
                       </HStack21>
                       <ShadowRectangle1>
                         <DarkText1>{firstSpotAmount}</DarkText1>
@@ -226,7 +245,7 @@ export default function Card1Purchases(props) {
                   <HStack151>
                     <HStack21>
                       <CompanyLogo1 src={linkedin} />
-                      <GrayText1>LinkedIn</GrayText1>
+                      <GrayText2>LinkedIn</GrayText2>
                     </HStack21>
                     <ShadowRectangle1>
                       <DarkText1>{firstSpotAmount}</DarkText1>
@@ -238,7 +257,7 @@ export default function Card1Purchases(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={google} />
-                <GrayText1>Google SEO</GrayText1>
+                <GrayText2>Google SEO</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>{secondSpotAmount}</DarkText1>
@@ -247,7 +266,7 @@ export default function Card1Purchases(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={instagram} />
-                <GrayText1>Instagram</GrayText1>
+                <GrayText2>Instagram</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>{thirdSpotAmount}</DarkText1>
@@ -256,7 +275,7 @@ export default function Card1Purchases(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={google} />
-                <GrayText1>Google Direct Search</GrayText1>
+                <GrayText2>Google Direct Search</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>{fourthSpotAmount}</DarkText1>
@@ -265,10 +284,37 @@ export default function Card1Purchases(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={tiktok} />
-                <GrayText1>TikTok</GrayText1>
+                <GrayText2>TikTok</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>{fifthSpotAmount}</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={bing} />
+                <GrayText2>Bing SEO</GrayText2>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>{sixthSpotAmount}</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={hackernews} />
+                <GrayText2>Hacker News</GrayText2>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>{seventhSpotAmount}</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={facebook} />
+                <GrayText2>Facebook</GrayText2>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>{eightSpotAmount}</DarkText1>
               </ShadowRectangle1>
             </HStack151>
           </VStack1>
@@ -277,9 +323,55 @@ export default function Card1Purchases(props) {
       <VerticalLine1 />
       <BoldBlackText1 highlight2={highlight2}>{total}</BoldBlackText1>
       <TotalText1>Total</TotalText1>
+      <WhiteFogHorizontal src={whitefoghorizontal2} />
     </SmallRectangle>
   );
 }
+
+const VStack1 = styled.div`
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 220px;
+  width: 800px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+`;
+
+const GrayText2 = styled.div`
+  font-size: 16px;
+  line-height: 16px;
+  color: #9a99a9;
+  font-family: "ProximaNovaRegular";
+`;
+
+const WhiteFogHorizontal = styled.img`
+  z-index: 20;
+  position: absolute;
+  left: 0px;
+  bottom: 22px;
+`;
+
+const ParentVStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 50px;
+  gap: 20px;
+`;
 
 const SmallRectangle = styled.div`
   width: 484px;
@@ -391,13 +483,6 @@ const Line1 = styled.div`
   width: 382px;
   height: 1px;
   background: #e4f2ff;
-`;
-
-const VStack1 = styled.div`
-  padding-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
 `;
 
 const HStack151 = styled.div`
@@ -571,14 +656,6 @@ const TitleText = styled.div`
   color: #88879b;
   width: 160px;
   line-height: 19px;
-`;
-
-const ParentVStack = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-left: 50px;
-  gap: 20px;
 `;
 
 const InfoStack = styled.div`

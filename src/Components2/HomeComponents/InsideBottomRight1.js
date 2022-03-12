@@ -51,7 +51,7 @@ export default function InsideBottomRight1(props) {
 
           <HStack15>
             <HStack2>
-              <GrayText>Sign Up</GrayText>
+              <GrayText2>Sign Up</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>900</DarkText>
@@ -59,7 +59,7 @@ export default function InsideBottomRight1(props) {
           </HStack15>
           <HStack15>
             <HStack2>
-              <GrayText>Add to Cart</GrayText>
+              <GrayText2>Add to Cart</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>652</DarkText>
@@ -67,7 +67,7 @@ export default function InsideBottomRight1(props) {
           </HStack15>
           <HStack15>
             <HStack2>
-              <GrayText>Started Trial</GrayText>
+              <GrayText2>Started Trial</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>123</DarkText>
@@ -75,7 +75,7 @@ export default function InsideBottomRight1(props) {
           </HStack15>
           <HStack15>
             <HStack2>
-              <GrayText>Content Viewed</GrayText>
+              <GrayText2>Content Viewed</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>104</DarkText>
@@ -83,7 +83,7 @@ export default function InsideBottomRight1(props) {
           </HStack15>
           <HStack15>
             <HStack2>
-              <GrayText>Filled Out Form</GrayText>
+              <GrayText2>Filled Out Form</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>84</DarkText>
@@ -91,7 +91,7 @@ export default function InsideBottomRight1(props) {
           </HStack15>
           <HStack15>
             <HStack2>
-              <GrayText>Clicked on Button</GrayText>
+              <GrayText2>Clicked on Button</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>52</DarkText>
@@ -99,7 +99,7 @@ export default function InsideBottomRight1(props) {
           </HStack15>
           <HStack15>
             <HStack2>
-              <GrayText>Viewed Page</GrayText>
+              <GrayText2>Viewed Page</GrayText2>
             </HStack2>
             <ShadowRectangle>
               <DarkText>24</DarkText>
@@ -111,6 +111,13 @@ export default function InsideBottomRight1(props) {
     </Wrapper>
   );
 }
+
+const GrayText2 = styled.div`
+  font-size: 16px;
+  line-height: 16px;
+  color: #9a99a9;
+  font-family: "ProximaNovaRegular";
+`;
 
 const VStack = styled.div`
   padding-top: 18px;

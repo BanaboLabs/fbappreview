@@ -17,6 +17,7 @@ import google from "../../Images2/googlelogonew.png";
 import hackernews from "../../Images2/hackernewslogonew.png";
 import tiktok from "../../Images2/tiktoklogonew.png";
 import linkedin from "../../Images2/linkedinlogonew.png";
+import whitefoghorizontal2 from "../../Images2/whitefoghorizontal2.svg";
 
 // Purchases Breakdown
 
@@ -34,6 +35,9 @@ export default function Card2Purchases(props) {
   const [thirdSpotAmount, setThirdSpotAmount] = useState("89");
   const [fourthSpotAmount, setFourthSpotAmount] = useState("24");
   const [fifthSpotAmount, setFifthSpotAmount] = useState("12");
+  const [sixthSpotAmount, setSixthSpotAmount] = useState("12");
+  const [seventhSpotAmount, setSeventhSpotAmount] = useState("9");
+  const [eightSpotAmount, setEightSpotAmount] = useState("7");
 
   useEffect(() => {
     if (highlight1 == "Custom") {
@@ -41,7 +45,10 @@ export default function Card2Purchases(props) {
       setSecondSpotAmount("$1.3k");
       setThirdSpotAmount("$987");
       setFourthSpotAmount("$823");
-      setFifthSpotAmount("$523");
+      setFifthSpotAmount("$525");
+      setSixthSpotAmount("$491");
+      setSeventhSpotAmount("$165");
+      setEightSpotAmount("$129");
     }
     if (highlight1 == "First-Touch") {
       setFirstSpotAmount("$4.7k");
@@ -49,6 +56,9 @@ export default function Card2Purchases(props) {
       setThirdSpotAmount("$1.1k");
       setFourthSpotAmount("$567");
       setFifthSpotAmount("$311");
+      setSixthSpotAmount("$293");
+      setSeventhSpotAmount("$269");
+      setEightSpotAmount("$79");
     }
   }, [highlight1]);
 
@@ -192,7 +202,7 @@ export default function Card2Purchases(props) {
                     <HStack151 onClick={() => setClicked(!clicked)}>
                       <HStack21>
                         <CompanyLogo1 src={bing} />
-                        <GrayText1>Bing SEO</GrayText1>
+                        <GrayText2>Bing SEO</GrayText2>
                       </HStack21>
                       <ShadowRectangle1>
                         <DarkText1>{firstSpotAmount}</DarkText1>
@@ -205,7 +215,7 @@ export default function Card2Purchases(props) {
                   <HStack151>
                     <HStack21>
                       <CompanyLogo1 src={bing} />
-                      <GrayText1>Bing SEO</GrayText1>
+                      <GrayText2>Bing SEO</GrayText2>
                     </HStack21>
                     <ShadowRectangle1>
                       <DarkText1>{firstSpotAmount}</DarkText1>
@@ -217,7 +227,7 @@ export default function Card2Purchases(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={instagram} />
-                <GrayText1>Instagram Campaign V1</GrayText1>
+                <GrayText2>Instagram Campaign V1</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>{secondSpotAmount}</DarkText1>
@@ -226,7 +236,7 @@ export default function Card2Purchases(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={linkedin} />
-                <GrayText1>LinkedIn</GrayText1>
+                <GrayText2>LinkedIn</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>{thirdSpotAmount}</DarkText1>
@@ -235,7 +245,7 @@ export default function Card2Purchases(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={hackernews} />
-                <GrayText1>Hacker News</GrayText1>
+                <GrayText2>Hacker News</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>{fourthSpotAmount}</DarkText1>
@@ -244,10 +254,37 @@ export default function Card2Purchases(props) {
             <HStack151>
               <HStack21>
                 <CompanyLogo1 src={google} />
-                <GrayText1>Google SEO</GrayText1>
+                <GrayText2>Google SEO</GrayText2>
               </HStack21>
               <ShadowRectangle1>
                 <DarkText1>{fifthSpotAmount}</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={instagram} />
+                <GrayText2>Instagram</GrayText2>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>{sixthSpotAmount}</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={tiktok} />
+                <GrayText2>TikTok</GrayText2>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>{seventhSpotAmount}</DarkText1>
+              </ShadowRectangle1>
+            </HStack151>
+            <HStack151>
+              <HStack21>
+                <CompanyLogo1 src={google} />
+                <GrayText2>Google Direct Search</GrayText2>
+              </HStack21>
+              <ShadowRectangle1>
+                <DarkText1>{eightSpotAmount}</DarkText1>
               </ShadowRectangle1>
             </HStack151>
           </VStack1>
@@ -256,9 +293,47 @@ export default function Card2Purchases(props) {
       <VerticalLine1 />
       <BoldBlackText1 highlight2={highlight2}>{total}</BoldBlackText1>
       <TotalText1>Total</TotalText1>
+      <WhiteFogHorizontal src={whitefoghorizontal2} />
     </SmallRectangle>
   );
 }
+
+const VStack1 = styled.div`
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 220px;
+  width: 800px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+`;
+
+const GrayText2 = styled.div`
+  font-size: 16px;
+  line-height: 16px;
+  color: #9a99a9;
+  font-family: "ProximaNovaRegular";
+`;
+
+const WhiteFogHorizontal = styled.img`
+  z-index: 20;
+  position: absolute;
+  left: 534px;
+  bottom: 22px;
+`;
 
 const BlueBackground = styled.div`
   width: 60px;
@@ -359,13 +434,6 @@ const Line1 = styled.div`
   width: 382px;
   height: 1px;
   background: #e4f2ff;
-`;
-
-const VStack1 = styled.div`
-  padding-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
 `;
 
 const HStack151 = styled.div`

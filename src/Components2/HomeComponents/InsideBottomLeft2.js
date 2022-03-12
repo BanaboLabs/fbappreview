@@ -19,7 +19,7 @@ export default function InsideBottomLeft2() {
           <div>
             <HStack15>
               <HStack2>
-                <GrayText>Nike</GrayText>
+                <GrayText2>Nike</GrayText2>
               </HStack2>
               <ShadowRectangle>
                 <DarkText>6.9k</DarkText>
@@ -29,7 +29,7 @@ export default function InsideBottomLeft2() {
         </HStack15>
         <HStack15>
           <HStack2>
-            <GrayText>Nike Sports</GrayText>
+            <GrayText2>Nike Sports</GrayText2>
           </HStack2>
           <ShadowRectangle>
             <DarkText>2.4k</DarkText>
@@ -37,7 +37,7 @@ export default function InsideBottomLeft2() {
         </HStack15>
         <HStack15>
           <HStack2>
-            <GrayText>Sportswear</GrayText>
+            <GrayText2>Sportswear</GrayText2>
           </HStack2>
           <ShadowRectangle>
             <DarkText>1.1k</DarkText>
@@ -45,7 +45,7 @@ export default function InsideBottomLeft2() {
         </HStack15>
         <HStack15>
           <HStack2>
-            <GrayText>Running Shoes</GrayText>
+            <GrayText2>Running Shoes</GrayText2>
           </HStack2>
           <ShadowRectangle>
             <DarkText>320</DarkText>
@@ -53,7 +53,7 @@ export default function InsideBottomLeft2() {
         </HStack15>
         <HStack15>
           <HStack2>
-            <GrayText>Air Jordan</GrayText>
+            <GrayText2>Air Jordan</GrayText2>
           </HStack2>
           <ShadowRectangle>
             <DarkText>141</DarkText>
@@ -63,6 +63,13 @@ export default function InsideBottomLeft2() {
     </div>
   );
 }
+
+const GrayText2 = styled.div`
+  font-size: 16px;
+  line-height: 16px;
+  color: #9a99a9;
+  font-family: "ProximaNovaRegular";
+`;
 
 const HStack = styled.div`
   display: flex;

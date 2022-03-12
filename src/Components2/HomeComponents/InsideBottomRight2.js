@@ -13,7 +13,7 @@ export default function InsideBottomRight2() {
       <VStack>
         <HStack15>
           <HStack2>
-            <GrayText>New</GrayText>
+            <GrayText2>New</GrayText2>
           </HStack2>
           <ShadowRectangle>
             <DarkText>853</DarkText>
@@ -21,7 +21,7 @@ export default function InsideBottomRight2() {
         </HStack15>
         <HStack15>
           <HStack2>
-            <GrayText>Repeat</GrayText>
+            <GrayText2>Repeat</GrayText2>
           </HStack2>
           <ShadowRectangle>
             <DarkText>136</DarkText>
@@ -29,7 +29,7 @@ export default function InsideBottomRight2() {
         </HStack15>
         <HStack15>
           <HStack2>
-            <GrayText>Total</GrayText>
+            <GrayText2>Total</GrayText2>
           </HStack2>
           <ShadowRectangle>
             <DarkText>989</DarkText>
@@ -39,6 +39,13 @@ export default function InsideBottomRight2() {
     </div>
   );
 }
+
+const GrayText2 = styled.div`
+  font-size: 16px;
+  line-height: 16px;
+  color: #9a99a9;
+  font-family: "ProximaNovaRegular";
+`;
 
 const HStack = styled.div`
   display: flex;
