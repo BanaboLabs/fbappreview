@@ -5,6 +5,8 @@ import addblackbutton from "../../Images2/addblackbutton.svg";
 import connectcard from "../../Images2/connectcard.svg";
 import blackx from "../../Images2/blackx.svg";
 import logogrid from "../../Images2/logogrid.png";
+import BlurBackground2 from "../../Images2/BlurBackground2.png";
+import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
 export default function CampaignsConnect() {
   const [isShown, setIsShown] = useState(false);
@@ -61,6 +63,11 @@ export default function CampaignsConnect() {
     },
   ];
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   useEffect(() => {
     console.log(showModal);
   }, [showModal]);
@@ -68,7 +75,12 @@ export default function CampaignsConnect() {
   return (
     <div>
       {showModal ? (
-        <div>
+        <MotionDiv
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 0.2 }}
+        >
           <BlueBlur />
           <RectangleModal>
             <div onClick={() => setIsShown(false)}>
@@ -89,7 +101,7 @@ export default function CampaignsConnect() {
               <LogoGrid src={logogrid} />
             </LogoGridWrapper>
           </RectangleModal>
-        </div>
+        </MotionDiv>
       ) : (
         <div>
           <TitleRectangle>
@@ -286,6 +298,8 @@ export default function CampaignsConnect() {
     </div>
   );
 }
+
+const MotionDiv = styled(motion.div)``;
 
 const AddEventRectangle = styled.div`
   position: absolute;
@@ -602,8 +616,7 @@ const BlueBlur = styled.div`
   position: absolute;
   left: 0px;
   bottom: 500px;
-  background: rgba(45, 102, 159, 0.7);
-  backdrop-filter: blur(20px);
+  background-image: url(${BlurBackground2});
   height: 2000px;
   width: 2000px;
   background-size: cover;

@@ -27,6 +27,11 @@ export default function WebElements(props) {
       console.log("Pink");
     }
   }, [closeEvents]);
+
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
   ///
   ///
 

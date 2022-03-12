@@ -10,6 +10,8 @@ import graybackarrow from "../../../Images2/graybackarrow.svg";
 import clickeventcard2 from "../../../Images2/clickeventcard2.svg";
 import graytriangle from "../../../Images2/graytrianglenew.svg";
 import savebutton from "../../../Images2/savebutton.svg";
+import BlurBackground1 from "../../../Images2/BlurBackground1.png";
+import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
 // first step in creating those custom events
 
@@ -55,6 +57,11 @@ export default function EventsStep1(props) {
     setInputValue3("");
   };
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   ///
   /// Connects WebElements to main
   useEffect(() => {
@@ -76,14 +83,16 @@ export default function EventsStep1(props) {
   return (
     <div>
       {webElementsScreen == true ? (
-        <BlueBlur>
-          <WebElements
-            toChild2={isParentData2}
-            sendToParent2={setIsParentData2}
-            toChild5={isParentData5}
-            sendToParent5={setIsParentData5}
-          />
-        </BlueBlur>
+        <MotionDiv>
+          <BlueBlur>
+            <WebElements
+              toChild2={isParentData2}
+              sendToParent2={setIsParentData2}
+              toChild5={isParentData5}
+              sendToParent5={setIsParentData5}
+            />
+          </BlueBlur>
+        </MotionDiv>
       ) : (
         <BlueBlur>
           <ModalRectangle>
@@ -190,6 +199,24 @@ export default function EventsStep1(props) {
     </div>
   );
 }
+
+const MotionDiv = styled(motion.div)``;
+
+const BlueBlur = styled.div`
+  position: absolute;
+  left: 0px;
+  bottom: 500px;
+  background-image: url(${BlurBackground1});
+  height: 2000px;
+  width: 2000px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  z-index: 50;
+  /* Note: backdrop-filter has minimal browser support */
+`;
 
 const Input1 = styled.input`
   position: absolute;
@@ -533,21 +560,4 @@ const ModalRectangle = styled.div`
 
   background: #ffffff;
   border-radius: 20px;
-`;
-
-const BlueBlur = styled.div`
-  position: absolute;
-  left: 0px;
-  bottom: 500px;
-  background: rgba(45, 102, 159, 0.7);
-  backdrop-filter: blur(20px);
-  height: 2000px;
-  width: 2000px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  z-index: 50;
-  /* Note: backdrop-filter has minimal browser support */
 `;

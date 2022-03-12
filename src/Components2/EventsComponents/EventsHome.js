@@ -1,9 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useCallback,
-  useLayoutEffect,
-} from "react";
+import React, { useState, useLayoutEffect } from "react";
 import styled from "styled-components";
 import Tooling from "./Tooling";
 import eventbutton from "../../Images2/eventbutton.svg";
@@ -12,6 +7,7 @@ import WhiteArrow1 from "../../Images2/whitearrow.svg";
 import Purchases from "./Purchases";
 import Signups from "./Signups";
 import EventsStep1 from "./EventCreation/EventsStep1";
+import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
 export default function EventsHome() {
   const [toggleActive, setToggleActive] = useState(false);
@@ -43,13 +39,24 @@ export default function EventsHome() {
     }
   }, [isParentData1]);
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   // STOP HERE
 
   return (
     <div>
       <Wrapper>
         {eventsProcessOn == true ? (
-          <EventsStepOneWrapper eventsProcessOn={eventsProcessOn}>
+          <EventsStepOneWrapper
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            transition={{ duration: 0.35 }}
+            eventsProcessOn={eventsProcessOn}
+          >
             <EventsStep1
               toChild1={isParentData1}
               sendToParent1={setIsParentData1}
@@ -114,7 +121,7 @@ export default function EventsHome() {
   );
 }
 
-const EventsStepOneWrapper = styled.div``;
+const EventsStepOneWrapper = styled(motion.div)``;
 
 // opacity: ${(props) => (props.eventsProcessOn ? "1" : "0")};
 
