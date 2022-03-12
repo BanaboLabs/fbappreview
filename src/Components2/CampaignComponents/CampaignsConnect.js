@@ -102,7 +102,19 @@ export default function CampaignsConnect() {
             onMouseLeave={() => setIsShown(false)}
             onClick={() => setShowModal(true)}
           />
-          {isShown ? <ConnectButton src={connectcard} /> : <div> </div>}
+          {isShown ? (
+            <AddEventRectangle>
+              <AddEventWrapper>
+                <BoldEventText>Connect a Source</BoldEventText>
+                <RegularEventText>
+                  Create a connection with your external marketing channels and
+                  Banabo
+                </RegularEventText>
+              </AddEventWrapper>
+            </AddEventRectangle>
+          ) : (
+            <div> </div>
+          )}
           <HStackWrapper>
             <ParentHStack>
               <ChildHStack1>
@@ -274,6 +286,43 @@ export default function CampaignsConnect() {
     </div>
   );
 }
+
+const AddEventRectangle = styled.div`
+  position: absolute;
+  width: 285px;
+  height: 79px;
+  left: 560px;
+  top: 245px;
+  background: #ffffff;
+  /* Low */
+  z-index: 100;
+  box-shadow: 2px 5px 20px #f1f1f1;
+  border-radius: 10px;
+`;
+
+const AddEventWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+  padding-left: 12px;
+  gap: 6px;
+`;
+
+const BoldEventText = styled.div`
+  font-size: 16px;
+  line-height: 19px;
+  color: #252531;
+  text-shadow: 2px 5px 20px #f1f1f1;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const RegularEventText = styled.div`
+  color: #88879b;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "ProximaNovaRegular";
+  text-shadow: 2px 5px 20px #f1f1f1;
+`;
 
 const LogoGridWrapper = styled.div`
   position: absolute;
@@ -656,20 +705,18 @@ const ClickIMG1 = styled.img`
 
 const TitleRectangle = styled.div`
   position: absolute;
-  width: 271px;
-  height: 60px;
+  width: 256px;
+  height: 52px;
   left: 420px;
   top: 120px;
-  background: #ffffff;
-  /* BANABO */
-  box-shadow: 2px 5px 40px #eeeeee;
-  border-radius: 20px;
+  background: #f0f0f5;
+  border-radius: 14px;
 `;
 
 const TitleText = styled.div`
-  color: #88879b;
-  font-size: 24px;
+  color: #252531;
+  font-size: 22px;
   font-family: "ProximaNovaRegular";
-  padding-top: 18px;
-  padding-left: 23px;
+  padding-top: 15px;
+  padding-left: 24px;
 `;

@@ -281,6 +281,17 @@ export default function Card1Purchases(props) {
   );
 }
 
+const SmallRectangle = styled.div`
+  width: 484px;
+  height: 370px;
+
+  background: #ffffff;
+  /* La La La */
+
+  box-shadow: 0px 11px 28.5px 6.5px #eceff4;
+  border-radius: 10px;
+`;
+
 const BlueBackground = styled.div`
   width: 60px;
   height: 19px;
@@ -580,17 +591,6 @@ const TopHStack = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0px;
-`;
-
-const SmallRectangle = styled.div`
-  width: 484px;
-  height: 370px;
-
-  background: #ffffff;
-  /* La La La */
-
-  box-shadow: 0px 11px 28.5px 6.5px #eceff4;
-  border-radius: 10px;
 `;
 
 ///////
