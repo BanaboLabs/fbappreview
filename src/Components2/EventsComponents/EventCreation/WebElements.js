@@ -82,7 +82,7 @@ export default function WebElements(props) {
         ></Iframe>
       </AbsolutePositioning>
       <ClickEventCard src={clickeventcard} />
-      <TopText>Add Web Element Details</TopText>
+      <TopText>Add Click Event Details</TopText>
       <form onSubmit={noRefresh}>
         <Input1
           placeholder="Ex: Purchase"
