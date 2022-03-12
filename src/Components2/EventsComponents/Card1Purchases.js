@@ -50,6 +50,27 @@ export default function Card1Purchases(props) {
       setFourthSpotAmount("33");
       setFifthSpotAmount("21");
     }
+    if (highlight1 == "Last-Touch") {
+      setFirstSpotAmount("602");
+      setSecondSpotAmount("97");
+      setThirdSpotAmount("84");
+      setFourthSpotAmount("43");
+      setFifthSpotAmount("31");
+    }
+    if (highlight1 == "Linear") {
+      setFirstSpotAmount("591.5");
+      setSecondSpotAmount("106.2");
+      setThirdSpotAmount("78.5");
+      setFourthSpotAmount("32.1");
+      setFifthSpotAmount("21.9");
+    }
+    if (highlight1 == "U-Shaped") {
+      setFirstSpotAmount("498.4");
+      setSecondSpotAmount("122.2");
+      setThirdSpotAmount("134.1");
+      setFourthSpotAmount("37.2");
+      setFifthSpotAmount("14.1");
+    }
   }, [highlight1]);
 
   return (
