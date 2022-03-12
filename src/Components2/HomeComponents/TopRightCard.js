@@ -409,7 +409,7 @@ export default function TopRightCard() {
           <HStack>
             <TextGray1>Top 5</TextGray1>
             <BlueCircle1>
-              <ModalBlackSemiBold11>Mar 5</ModalBlackSemiBold11>
+              <ModalBlackSemiBold11>Mar 14</ModalBlackSemiBold11>
             </BlueCircle1>
           </HStack>
           <Spacer />
@@ -730,7 +730,7 @@ const ModalBlackSemiBold11 = styled.div`
   font-family: "ProximaNovaSemiBold";
   font-size: 14px;
   padding-top: 3px;
-  padding-left: 10.5px;
+  margin-left: 8.7px;
   color: #666678;
 `;
 
