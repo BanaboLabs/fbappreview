@@ -204,8 +204,8 @@ export default function EventsStep1(props) {
 
 const ClickEventCard5 = styled.img`
   position: absolute;
-  left: 90px;
-  top: 150px;
+  left: 76px;
+  top: 143px;
 `;
 
 const MotionDiv = styled(motion.div)``;
@@ -395,7 +395,7 @@ const BackgroundRectangle3 = styled.div`
 
 const TopText5 = styled.div`
   position: absolute;
-  left: 147px;
+  left: 150px;
   top: 192px;
   width: 200px;
   color: #666678;
