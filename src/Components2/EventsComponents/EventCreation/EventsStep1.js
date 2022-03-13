@@ -12,6 +12,7 @@ import graytriangle from "../../../Images2/graytrianglenew.svg";
 import savebutton from "../../../Images2/savebutton.svg";
 import BlurBackground1 from "../../../Images2/BlurBackground1.png";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
+import TheClickEventCard from "../../../Images2/theclickeventcard.svg";
 
 // first step in creating those custom events
 
@@ -161,8 +162,9 @@ export default function EventsStep1(props) {
                       </MediumGrayText5>
                     </MiddleVStack>
                   </LargeVStack>
-                  <ClickEventCard5 src={clickeventcard2} />
-                  <TopText5>Enter URL Keywords</TopText5>
+                  <ClickEventCard5 src={TheClickEventCard} />
+                  <TopText5>ENTER URL KEYWORDS</TopText5>
+
                   <form onSubmit={noRefresh}>
                     <EventNameText5>EVENT NAME</EventNameText5>
                     <Input1
@@ -200,6 +202,12 @@ export default function EventsStep1(props) {
   );
 }
 
+const ClickEventCard5 = styled.img`
+  position: absolute;
+  left: 90px;
+  top: 150px;
+`;
+
 const MotionDiv = styled(motion.div)``;
 
 const BlueBlur = styled.div`
@@ -220,13 +228,13 @@ const BlueBlur = styled.div`
 
 const Input1 = styled.input`
   position: absolute;
-  left: 135px;
-  top: 275px;
+  left: 165px;
+  top: 282px;
   border: none;
   width: 300px;
   font-size: 16px;
   line-height: 19px;
-  font-family: "ProximaNovaRegular";
+  font-family: "ProximaNovaSemiBold";
   background-color: transparent;
   :focus {
     outline: none;
@@ -235,13 +243,13 @@ const Input1 = styled.input`
 
 const Input2 = styled.input`
   position: absolute;
-  left: 135px;
-  top: 352px;
+  left: 165px;
+  top: 388px;
   border: none;
   width: 340px;
   font-size: 16px;
   line-height: 19px;
-  font-family: "ProximaNovaRegular";
+  font-family: "ProximaNovaSemiBold";
   background-color: transparent;
   :focus {
     outline: none;
@@ -250,17 +258,71 @@ const Input2 = styled.input`
 
 const Input3 = styled.input`
   position: absolute;
-  left: 135px;
-  top: 432px;
+  left: 164px;
+  top: 488px;
   border: none;
   width: 340px;
   font-size: 16px;
   line-height: 19px;
-  font-family: "ProximaNovaRegular";
+  font-family: "ProximaNovaSemiBold";
   background-color: transparent;
   :focus {
     outline: none;
   }
+`;
+
+const TheBlueLine5 = styled.div`
+  position: absolute;
+  width: 330px;
+  height: 2px;
+  left: 167px;
+  top: 306px;
+  background: #e4f2ff;
+`;
+
+const TheBlueLine6 = styled.div`
+  position: absolute;
+  width: 330px;
+  height: 2px;
+  left: 167px;
+  top: 413px;
+  background: #e4f2ff;
+`;
+
+const TheBlueLine7 = styled.div`
+  position: absolute;
+  width: 330px;
+  height: 2px;
+  left: 165px;
+  top: 515px;
+  background: #e4f2ff;
+`;
+
+const EventNameText5 = styled.div`
+  position: absolute;
+  left: 167px;
+  top: 255px;
+  font-size: 13px;
+  color: #9392a6;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const EventNameText6 = styled.div`
+  position: absolute;
+  left: 167px;
+  top: 360px;
+  font-size: 13px;
+  color: #9392a6;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const EventNameText7 = styled.div`
+  position: absolute;
+  left: 167px;
+  top: 460px;
+  font-size: 13px;
+  color: #9392a6;
+  font-family: "ProximaNovaSemiBold";
 `;
 
 const MajorStack1 = styled.div`
@@ -281,80 +343,70 @@ const MajorStack2 = styled.div`
   top: -40px;
 `;
 
-const ClickEventCard5 = styled.img`
-  position: absolute;
-  left: 94px;
-  top: 160px;
+const BackgroundRectangle1 = styled.div`
+  width: 365px;
+  height: 92px;
+
+  background: #ffffff;
+  /* Low */
+
+  box-shadow: 2px 5px 20px #f1f1f1;
+  border-radius: 10px;
+  z-index: 120;
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 5px 20px #f1f1f1;
+`;
+
+const BackgroundRectangle2 = styled.div`
+  width: 365px;
+  height: 92px;
+  z-index: 120;
+  background: #ffffff;
+  /* Low */
+
+  box-shadow: 2px 5px 20px #f1f1f1;
+  border-radius: 10px;
+
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 5px 20px #f1f1f1;
+`;
+
+const BackgroundRectangle3 = styled.div`
+  width: 365px;
+  height: 92px;
+  z-index: 20;
+  background: #ffffff;
+  /* Low */
+  box-shadow: 2px 5px 20px #f1f1f1;
+  border-radius: 10px;
+
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 5px 20px #f1f1f1;
 `;
 
 const TopText5 = styled.div`
   position: absolute;
-  left: 135px;
-  top: 182px;
+  left: 147px;
+  top: 192px;
   width: 200px;
   color: #666678;
   font-size: 18px;
   font-family: "ProximaNovaSemiBold";
 `;
 
-const EventNameText5 = styled.div`
-  position: absolute;
-  left: 135px;
-  top: 250px;
-  font-size: 13px;
-  color: #9392a6;
-  font-family: "ProximaNovaSemiBold";
-`;
-
-const TheBlueLine5 = styled.div`
-  position: absolute;
-  width: 330px;
-  height: 2px;
-  left: 135px;
-  top: 297px;
-  background: #e4f2ff;
-`;
-
-const EventNameText6 = styled.div`
-  position: absolute;
-  left: 135px;
-  top: 330px;
-  font-size: 13px;
-  color: #9392a6;
-  font-family: "ProximaNovaSemiBold";
-`;
-
-const TheBlueLine6 = styled.div`
-  position: absolute;
-  width: 330px;
-  height: 2px;
-  left: 135px;
-  top: 377px;
-  background: #e4f2ff;
-`;
-
-const EventNameText7 = styled.div`
-  position: absolute;
-  left: 135px;
-  top: 410px;
-  font-size: 13px;
-  color: #9392a6;
-  font-family: "ProximaNovaSemiBold";
-`;
-
-const TheBlueLine7 = styled.div`
-  position: absolute;
-  width: 330px;
-  height: 2px;
-  left: 135px;
-  top: 457px;
-  background: #e4f2ff;
-`;
-
 const SaveButton5 = styled.img`
   position: absolute;
-  left: 118px;
-  top: 487px;
+  left: 130px;
+  top: 540px;
   cursor: pointer;
 `;
 
