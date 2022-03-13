@@ -229,7 +229,7 @@ const BlueBlur = styled.div`
 const Input1 = styled.input`
   position: absolute;
   left: 165px;
-  top: 282px;
+  top: 284px;
   border: none;
   width: 300px;
   font-size: 16px;
@@ -244,7 +244,7 @@ const Input1 = styled.input`
 const Input2 = styled.input`
   position: absolute;
   left: 165px;
-  top: 388px;
+  top: 390px;
   border: none;
   width: 340px;
   font-size: 16px;
@@ -259,7 +259,7 @@ const Input2 = styled.input`
 const Input3 = styled.input`
   position: absolute;
   left: 164px;
-  top: 488px;
+  top: 490px;
   border: none;
   width: 340px;
   font-size: 16px;
@@ -301,7 +301,7 @@ const TheBlueLine7 = styled.div`
 const EventNameText5 = styled.div`
   position: absolute;
   left: 167px;
-  top: 255px;
+  top: 256px;
   font-size: 13px;
   color: #9392a6;
   font-family: "ProximaNovaSemiBold";
@@ -310,7 +310,7 @@ const EventNameText5 = styled.div`
 const EventNameText6 = styled.div`
   position: absolute;
   left: 167px;
-  top: 360px;
+  top: 361px;
   font-size: 13px;
   color: #9392a6;
   font-family: "ProximaNovaSemiBold";
@@ -319,7 +319,7 @@ const EventNameText6 = styled.div`
 const EventNameText7 = styled.div`
   position: absolute;
   left: 167px;
-  top: 460px;
+  top: 461px;
   font-size: 13px;
   color: #9392a6;
   font-family: "ProximaNovaSemiBold";
