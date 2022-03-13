@@ -8,6 +8,8 @@ import element1hover from "../../../Images2/element1hover.svg";
 import element1click from "../../../Images2/element1click.svg";
 import element2hover from "../../../Images2/element2hover.svg";
 import element2click from "../../../Images2/element2click.svg";
+import elementmainhover from "../../../Images2/elementmainhover.svg";
+import elementmainclick from "../../../Images2/elementmainclicked.svg";
 import searchimg from "../../../Images2/search.svg";
 
 // 1. Need to reach EventsStep1
@@ -25,6 +27,25 @@ export default function WebElements(props) {
   /// Closing the Tab
   ///
   ///
+
+  ///######///
+  // Controls Logic For the First Set of show/hide
+  const [isShown1, setIsShown1] = useState(false);
+  const [isShown2, setIsShown2] = useState(false);
+  const [element1Clicked, setElement1Clicked] = useState(false);
+  const [element2Clicked, setElement2Clicked] = useState(false);
+  // Controls Logic For the Second Set of show/hide
+  const [isShown3, setIsShown3] = useState(false);
+  const [isShown4, setIsShown4] = useState(false);
+  const [isShown5, setIsShown5] = useState(false);
+  const [isShown6, setIsShown6] = useState(false);
+  const [element3Clicked, setElement3Clicked] = useState(false);
+  const [element4Clicked, setElement4Clicked] = useState(false);
+  const [element5Clicked, setElement5Clicked] = useState(false);
+  const [element6Clicked, setElement6Clicked] = useState(false);
+  ///######///
+
+  ////
   useEffect(() => {
     if (closeEvents == true) {
       props.sendToParent5(true);
@@ -71,10 +92,7 @@ export default function WebElements(props) {
   ///
   ///
   ///
-  const [isShown1, setIsShown1] = useState(false);
-  const [element1Clicked, setElement1Clicked] = useState(false);
-  const [isShown2, setIsShown2] = useState(false);
-  const [element2Clicked, setElement2Clicked] = useState(false);
+
   const [number, setNumber] = useState(1);
 
   useEffect(() => {
@@ -133,50 +151,6 @@ export default function WebElements(props) {
         toggleActive={toggleActive}
       />
       <SaveButton src={savebutton} onClick={() => setCloseEvents(true)} />
-      {isShown1 == true ? (
-        <div>
-          {element1Clicked == false ? (
-            <Element1Hover
-              src={element1hover}
-              onClick={() => setElement1Clicked(true)}
-              onMouseEnter={() => setIsShown1(true)}
-              onMouseLeave={() => setIsShown1(false)}
-            />
-          ) : (
-            <Element1Clicked
-              src={element1click}
-              onClick={() => setElement1Clicked(false)}
-            />
-          )}
-        </div>
-      ) : (
-        <InvisibleWrapper
-          onMouseEnter={() => setIsShown1(true)}
-          onMouseLeave={() => setIsShown1(false)}
-        />
-      )}
-      {isShown2 == true ? (
-        <div>
-          {element2Clicked == false ? (
-            <Element2Hover
-              src={element2hover}
-              onClick={() => setElement2Clicked(true)}
-              onMouseEnter={() => setIsShown2(true)}
-              onMouseLeave={() => setIsShown2(false)}
-            />
-          ) : (
-            <Element2Clicked
-              src={element2click}
-              onClick={() => setElement2Clicked(false)}
-            />
-          )}
-        </div>
-      ) : (
-        <InvisibleWrapper2
-          onMouseEnter={() => setIsShown2(true)}
-          onMouseLeave={() => setIsShown2(false)}
-        />
-      )}
       {toggleActive == true ? (
         <MiniRectangle>
           {yesBold == "Yes" ? (
@@ -200,9 +174,317 @@ export default function WebElements(props) {
       ) : (
         <div> </div>
       )}
+      {isShown1 == true && iframe == "https://www.banabolabs.com/" ? (
+        <div>
+          {element1Clicked == false ? (
+            <Element1Hover
+              src={element1hover}
+              onClick={() => setElement1Clicked(true)}
+              onMouseEnter={() => setIsShown1(true)}
+              onMouseLeave={() => setIsShown1(false)}
+            />
+          ) : (
+            <Element1Clicked
+              src={element1click}
+              onClick={() => setElement1Clicked(false)}
+            />
+          )}
+        </div>
+      ) : iframe == "https://www.banabolabs.com/careers" ? (
+        <div> </div>
+      ) : (
+        <InvisibleWrapper1
+          onMouseEnter={() => setIsShown1(true)}
+          onMouseLeave={() => setIsShown1(false)}
+        />
+      )}
+      {isShown2 == true && iframe == "https://www.banabolabs.com/" ? (
+        <div>
+          {element2Clicked == false ? (
+            <Element2Hover
+              src={element2hover}
+              onClick={() => setElement2Clicked(true)}
+              onMouseEnter={() => setIsShown2(true)}
+              onMouseLeave={() => setIsShown2(false)}
+            />
+          ) : (
+            <Element2Clicked
+              src={element2click}
+              onClick={() => setElement2Clicked(false)}
+            />
+          )}
+        </div>
+      ) : iframe == "https://www.banabolabs.com/careers" ? (
+        <div> </div>
+      ) : (
+        <InvisibleWrapper2
+          onMouseEnter={() => setIsShown2(true)}
+          onMouseLeave={() => setIsShown2(false)}
+        />
+      )}
+      {isShown3 == true && iframe == "https://www.banabolabs.com/careers" ? (
+        <div>
+          {element3Clicked == false ? (
+            <Element3Hover
+              src={elementmainhover}
+              onClick={() => setElement3Clicked(true)}
+              onMouseEnter={() => setIsShown3(true)}
+              onMouseLeave={() => setIsShown3(false)}
+            />
+          ) : (
+            <Element3Clicked
+              src={elementmainclick}
+              onClick={() => setElement3Clicked(false)}
+            />
+          )}
+        </div>
+      ) : iframe == "https://www.banabolabs.com/" ? (
+        <div> </div>
+      ) : (
+        <InvisibleWrapper5
+          onMouseEnter={() => setIsShown3(true)}
+          onMouseLeave={() => setIsShown3(false)}
+        />
+      )}
+      {isShown4 == true && iframe == "https://www.banabolabs.com/careers" ? (
+        <div>
+          {element4Clicked == false ? (
+            <Element4Hover
+              src={elementmainhover}
+              onClick={() => setElement4Clicked(true)}
+              onMouseEnter={() => setIsShown4(true)}
+              onMouseLeave={() => setIsShown4(false)}
+            />
+          ) : (
+            <Element4Clicked
+              src={elementmainclick}
+              onClick={() => setElement4Clicked(false)}
+            />
+          )}
+        </div>
+      ) : iframe == "https://www.banabolabs.com/" ? (
+        <div> </div>
+      ) : (
+        <InvisibleWrapper4
+          onMouseEnter={() => setIsShown4(true)}
+          onMouseLeave={() => setIsShown4(false)}
+        />
+      )}
+      {isShown5 == true && iframe == "https://www.banabolabs.com/careers" ? (
+        <div>
+          {element5Clicked == false ? (
+            <Element5Hover
+              src={elementmainhover}
+              onClick={() => setElement5Clicked(true)}
+              onMouseEnter={() => setIsShown5(true)}
+              onMouseLeave={() => setIsShown5(false)}
+            />
+          ) : (
+            <Element5Clicked
+              src={elementmainclick}
+              onClick={() => setElement5Clicked(false)}
+            />
+          )}
+        </div>
+      ) : iframe == "https://www.banabolabs.com/" ? (
+        <div> </div>
+      ) : (
+        <InvisibleWrapper5
+          onMouseEnter={() => setIsShown5(true)}
+          onMouseLeave={() => setIsShown5(false)}
+        />
+      )}
+      {isShown6 == true && iframe == "https://www.banabolabs.com/careers" ? (
+        <div>
+          {element6Clicked == false ? (
+            <Element6Hover
+              src={elementmainhover}
+              onClick={() => setElement6Clicked(true)}
+              onMouseEnter={() => setIsShown6(true)}
+              onMouseLeave={() => setIsShown6(false)}
+            />
+          ) : (
+            <Element6Clicked
+              src={elementmainclick}
+              onClick={() => setElement6Clicked(false)}
+            />
+          )}
+        </div>
+      ) : iframe == "https://www.banabolabs.com/" ? (
+        <div> </div>
+      ) : (
+        <InvisibleWrapper6
+          onMouseEnter={() => setIsShown6(true)}
+          onMouseLeave={() => setIsShown6(false)}
+        />
+      )}
     </div>
   );
 }
+
+const InvisibleWrapper1 = styled.div`
+  position: absolute;
+  left: 730px;
+  bottom: 790px;
+  width: 231px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 300px;
+  border-radius: 10px;
+`;
+
+const InvisibleWrapper2 = styled.div`
+  position: absolute;
+  right: 482px;
+  bottom: 1151px;
+  width: 231px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 300px;
+  border-radius: 10px;
+`;
+
+const InvisibleWrapper3 = styled.div`
+  position: absolute;
+  right: 682px;
+  bottom: 1151px;
+  width: 231px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+
+  z-index: 300px;
+  border-radius: 10px;
+`;
+
+const InvisibleWrapper4 = styled.div`
+  position: absolute;
+  right: 582px;
+  bottom: 1151px;
+  width: 231px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 300px;
+  border-radius: 10px;
+`;
+
+const InvisibleWrapper5 = styled.div`
+  position: absolute;
+  right: 282px;
+  bottom: 1151px;
+  width: 231px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+
+  z-index: 300px;
+  border-radius: 10px;
+`;
+
+const InvisibleWrapper6 = styled.div`
+  position: absolute;
+  right: 382px;
+  bottom: 1151px;
+  width: 231px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 300px;
+  border-radius: 10px;
+`;
+
+const Element1Hover = styled.img`
+  position: absolute;
+  left: 730px;
+  bottom: 787px;
+  z-index: 300;
+  cursor: pointer;
+`;
+
+const Element1Clicked = styled.img`
+  position: absolute;
+  left: 730px;
+  bottom: 787px;
+  z-index: 300;
+`;
+
+const Element2Hover = styled.img`
+  position: absolute;
+  right: 482px;
+  bottom: 1151px;
+  z-index: 300;
+  cursor: pointer;
+`;
+
+const Element2Clicked = styled.img`
+  position: absolute;
+  right: 482px;
+  bottom: 1151px;
+  z-index: 300;
+`;
+
+const Element3Hover = styled.img`
+  position: absolute;
+  right: 682px;
+  bottom: 1151px;
+  z-index: 300;
+  cursor: pointer;
+`;
+
+const Element3Clicked = styled.img`
+  position: absolute;
+  right: 682px;
+  bottom: 1151px;
+  z-index: 300;
+`;
+
+const Element4Hover = styled.img`
+  position: absolute;
+  right: 582px;
+  bottom: 1151px;
+  z-index: 300;
+  cursor: pointer;
+`;
+
+const Element4Clicked = styled.img`
+  position: absolute;
+  right: 582px;
+  bottom: 1151px;
+  z-index: 300;
+`;
+
+const Element5Hover = styled.img`
+  position: absolute;
+  right: 282px;
+  bottom: 1151px;
+  z-index: 300;
+  cursor: pointer;
+`;
+
+const Element5Clicked = styled.img`
+  position: absolute;
+  right: 282px;
+  bottom: 1151px;
+  z-index: 300px;
+`;
+
+const Element6Hover = styled.img`
+  position: absolute;
+  right: 382px;
+  bottom: 1151px;
+  z-index: 300;
+  cursor: pointer;
+`;
+
+const Element6Clicked = styled.img`
+  position: absolute;
+  right: 382px;
+  bottom: 1151px;
+  z-index: 300;
+`;
 
 const MiniRectangle = styled.div`
   position: absolute;
@@ -391,61 +673,6 @@ const SmallTextBold = styled.div`
   font-size: 15px;
   color: #666678;
   cursor: pointer;
-`;
-
-const Element1Hover = styled.img`
-  position: absolute;
-  left: 730px;
-  bottom: 787px;
-  z-index: 300px;
-  cursor: pointer;
-`;
-
-const Element1Clicked = styled.img`
-  position: absolute;
-  left: 730px;
-  bottom: 787px;
-  z-index: 300px;
-`;
-
-const InvisibleWrapper = styled.div`
-  left: 730px;
-  bottom: 790px;
-  width: 231px;
-  height: 72px;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  position: absolute;
-
-  z-index: 300px;
-  border-radius: 10px;
-`;
-
-const Element2Hover = styled.img`
-  position: absolute;
-  right: 482px;
-  bottom: 1151px;
-  z-index: 300px;
-  cursor: pointer;
-`;
-
-const Element2Clicked = styled.img`
-  position: absolute;
-  right: 482px;
-  bottom: 1151px;
-  z-index: 300px;
-`;
-
-const InvisibleWrapper2 = styled.div`
-  position: absolute;
-  right: 482px;
-  bottom: 1151px;
-  width: 231px;
-  height: 72px;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  z-index: 300px;
-  border-radius: 10px;
 `;
 
 const SaveButton = styled.img`
