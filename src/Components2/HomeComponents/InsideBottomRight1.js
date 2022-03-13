@@ -145,7 +145,7 @@ const VStack = styled.div`
 const WhiteFogHorizontal = styled.img`
   z-index: 20;
   position: absolute;
-  left: 0px;
+  left: -45.5px;
   bottom: 0px;
 `;
 

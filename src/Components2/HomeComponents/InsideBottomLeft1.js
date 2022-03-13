@@ -132,7 +132,7 @@ export default function InsideBottomLeft1(props) {
 const WhiteFogHorizontal = styled.img`
   z-index: 20;
   position: absolute;
-  left: 0px;
+  left: -45.5px;
   bottom: 0px;
 `;
 
