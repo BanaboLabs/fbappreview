@@ -113,7 +113,7 @@ export default function WebElements(props) {
         ></Iframe>
       </AbsolutePositioning>
       <ClickEventCard src={clickeventcard} />
-      <TopText>Add Click Event Details</TopText>
+      <TopText>ADD CLICK EVENT DETAILS</TopText>
       <form onSubmit={noRefresh}>
         <Input1
           placeholder="Ex: Purchase"
@@ -204,6 +204,119 @@ export default function WebElements(props) {
   );
 }
 
+const MiniRectangle = styled.div`
+  position: absolute;
+  right: 60px;
+  top: 820px;
+  z-index: 50;
+  width: 51px;
+  height: 52px;
+  background: #ffffff;
+  box-shadow: 2px 5px 20px #f1f1f1;
+  border-radius: 10px;
+`;
+
+const BlueCircle = styled.div`
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  right: 82px;
+  top: 769px;
+  border-radius: 60px;
+  background: #e4f2ff;
+  transform: rotate(-179.95deg);
+`;
+
+const GrayTriangle = styled.img`
+  position: absolute;
+  right: 87px;
+  top: 775px;
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transform: ${(props) =>
+    props.toggleActive ? "rotate(180deg)" : "rotate(0deg)"};
+`;
+
+const EventFieldText2 = styled.div`
+  position: absolute;
+  right: ${(props) => (props.yesBold == "Yes" ? "250px" : "258px")};
+  top: 773px;
+  font-size: 18px;
+  color: #666678;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const Input1 = styled.input`
+  position: absolute;
+  right: -22px;
+  top: 680px;
+  border: none;
+  width: 300px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666678;
+  font-family: "ProximaNovaSemiBold";
+  background-color: transparent;
+  :focus {
+    outline: none;
+  }
+`;
+
+const EventNameText = styled.div`
+  position: absolute;
+  right: 200px;
+  top: 653px;
+  font-size: 13px;
+  color: #9392a6;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const TheBlueLine = styled.div`
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  right: 80px;
+  top: 704px;
+  background: #e4f2ff;
+`;
+
+const EventNameText2 = styled.div`
+  position: absolute;
+  right: 178px;
+  top: 744px;
+  font-size: 13px;
+  color: #9392a6;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const TheBlueLine2 = styled.div`
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  right: 80px;
+  top: 794px;
+  background: #e4f2ff;
+`;
+
+const ClickEventCard = styled.img`
+  position: absolute;
+  right: 14px;
+  top: 573px;
+  width: 16%;
+  height: 16%;
+`;
+
+const TopText = styled.div`
+  position: absolute;
+  right: 0px;
+  top: 602px;
+  width: 15%;
+  color: #666678;
+  font-size: 18px;
+  font-family: "ProximaNovaSemiBold";
+`;
+
 const RectangleTop = styled.div`
   position: absolute;
   width: 300px;
@@ -258,27 +371,6 @@ const Input2 = styled.input`
   }
 `;
 
-const EventFieldText2 = styled.div`
-  position: absolute;
-  right: ${(props) => (props.yesBold == "Yes" ? "250px" : "258px")};
-  top: 740px;
-  font-size: 18px;
-  color: #666678;
-  font-family: "ProximaNovaSemiBold";
-`;
-
-const MiniRectangle = styled.div`
-  position: absolute;
-  right: 80px;
-  top: 770px;
-  z-index: 50;
-  width: 51px;
-  height: 52px;
-  background: #ffffff;
-  box-shadow: 2px 5px 20px #f1f1f1;
-  border-radius: 10px;
-`;
-
 const VStackSmall = styled.div`
   display: flex;
   flex-direction: column;
@@ -299,21 +391,6 @@ const SmallTextBold = styled.div`
   font-size: 15px;
   color: #666678;
   cursor: pointer;
-`;
-
-const Input1 = styled.input`
-  position: absolute;
-  right: -22px;
-  top: 673px;
-  border: none;
-  width: 300px;
-  font-size: 16px;
-  line-height: 19px;
-  font-family: "ProximaNovaSemiBold";
-  background-color: transparent;
-  :focus {
-    outline: none;
-  }
 `;
 
 const Element1Hover = styled.img`
@@ -371,86 +448,10 @@ const InvisibleWrapper2 = styled.div`
   border-radius: 10px;
 `;
 
-const ClickEventCard = styled.img`
-  position: absolute;
-  right: 22px;
-  top: 546px;
-  width: 16%;
-  height: 16%;
-`;
-
-const TopText = styled.div`
-  position: absolute;
-  right: 12px;
-  top: 597px;
-  width: 15%;
-  color: #666678;
-  font-size: 18px;
-  font-family: "ProximaNovaSemiBold";
-`;
-
-const EventNameText = styled.div`
-  position: absolute;
-  right: 200px;
-  top: 650px;
-  font-size: 13px;
-  color: #9392a6;
-  font-family: "ProximaNovaSemiBold";
-`;
-
-const TheBlueLine = styled.div`
-  position: absolute;
-  width: 200px;
-  height: 2px;
-  right: 80px;
-  top: 694px;
-  background: #e4f2ff;
-`;
-
-const EventNameText2 = styled.div`
-  position: absolute;
-  right: 178px;
-  top: 720px;
-  font-size: 13px;
-  color: #9392a6;
-  font-family: "ProximaNovaSemiBold";
-`;
-
-const TheBlueLine2 = styled.div`
-  position: absolute;
-  width: 200px;
-  height: 2px;
-  right: 80px;
-  top: 760px;
-  background: #e4f2ff;
-`;
-
-const BlueCircle = styled.div`
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  right: 82px;
-  top: 736px;
-  border-radius: 60px;
-  background: #e4f2ff;
-  transform: rotate(-179.95deg);
-`;
-
-const GrayTriangle = styled.img`
-  position: absolute;
-  right: 87px;
-  top: 742px;
-  cursor: pointer;
-  transition-property: transform;
-  transition-duration: 0.1s;
-  transform: ${(props) =>
-    props.toggleActive ? "rotate(180deg)" : "rotate(0deg)"};
-`;
-
 const SaveButton = styled.img`
   position: absolute;
-  right: 150px;
-  top: 770px;
+  right: 170px;
+  top: 810px;
   cursor: pointer;
 `;
 
