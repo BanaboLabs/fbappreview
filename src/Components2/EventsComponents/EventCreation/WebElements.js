@@ -248,6 +248,7 @@ const Input2 = styled.input`
   width: 300px;
   font-size: 16px;
   line-height: 19px;
+  color: #666678;
   font-family: "ProximaNovaSemiBold";
   background-color: transparent;
   padding-top: 9px;

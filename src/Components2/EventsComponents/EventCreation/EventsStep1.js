@@ -232,6 +232,7 @@ const Input1 = styled.input`
   top: 284px;
   border: none;
   width: 300px;
+  color: #666678;
   font-size: 16px;
   line-height: 19px;
   font-family: "ProximaNovaSemiBold";
@@ -247,6 +248,7 @@ const Input2 = styled.input`
   top: 390px;
   border: none;
   width: 340px;
+  color: #666678;
   font-size: 16px;
   line-height: 19px;
   font-family: "ProximaNovaSemiBold";
@@ -262,6 +264,7 @@ const Input3 = styled.input`
   top: 490px;
   border: none;
   width: 340px;
+  color: #666678;
   font-size: 16px;
   line-height: 19px;
   font-family: "ProximaNovaSemiBold";
