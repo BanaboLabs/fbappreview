@@ -10,7 +10,8 @@ import element2hover from "../../../Images2/element2hover.svg";
 import element2click from "../../../Images2/element2click.svg";
 import elementmainhover from "../../../Images2/elementmainhover.svg";
 import elementmainclick from "../../../Images2/elementmainclicked.svg";
-import searchimg from "../../../Images2/search.svg";
+import searchimg1 from "../../../Images2/search1.svg";
+import searchimg2 from "../../../Images2/search2.svg";
 
 // 1. Need to reach EventsStep1
 // 2. Need to reach EventsHome
@@ -89,6 +90,7 @@ export default function WebElements(props) {
   ///
   ///
   const [show2, setShow2] = useState(true);
+  const [show3, setShow3] = useState(false);
   ///
   ///
   ///
@@ -115,7 +117,21 @@ export default function WebElements(props) {
         />
       </RectangleTop>
       <RectangleTopSmall>
-        <TheClickIMG src={searchimg} onClick={() => setSearch(true)} />
+        {show3 == true ? (
+          <TheClickIMG
+            src={searchimg2}
+            onClick={() => setSearch(true)}
+            onMouseEnter={() => setShow3(true)}
+            onMouseLeave={() => setShow3(false)}
+          />
+        ) : (
+          <TheClickIMG
+            src={searchimg1}
+            onClick={() => setSearch(true)}
+            onMouseEnter={() => setShow3(true)}
+            onMouseLeave={() => setShow3(false)}
+          />
+        )}
       </RectangleTopSmall>
       <RectangleMain></RectangleMain>
       <AbsolutePositioning>
@@ -241,7 +257,7 @@ export default function WebElements(props) {
       ) : iframe == "https://www.banabolabs.com/" ? (
         <div> </div>
       ) : (
-        <InvisibleWrapper5
+        <InvisibleWrapper3
           onMouseEnter={() => setIsShown3(true)}
           onMouseLeave={() => setIsShown3(false)}
         />
@@ -348,8 +364,8 @@ const InvisibleWrapper2 = styled.div`
 
 const InvisibleWrapper3 = styled.div`
   position: absolute;
-  right: 682px;
-  bottom: 1151px;
+  right: 1355px;
+  bottom: 906px;
   width: 231px;
   height: 72px;
   background: rgba(0, 0, 0, 0.5);
@@ -357,24 +373,54 @@ const InvisibleWrapper3 = styled.div`
 
   z-index: 300px;
   border-radius: 10px;
+`;
+
+const Element3Hover = styled.img`
+  position: absolute;
+  right: 1355px;
+  bottom: 906px;
+  z-index: 300;
+  cursor: pointer;
+`;
+
+const Element3Clicked = styled.img`
+  position: absolute;
+  right: 1355px;
+  bottom: 906px;
+  z-index: 300;
 `;
 
 const InvisibleWrapper4 = styled.div`
   position: absolute;
-  right: 582px;
-  bottom: 1151px;
+  right: 1359px;
+  bottom: 678px;
   width: 231px;
   height: 72px;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   z-index: 300px;
   border-radius: 10px;
+`;
+
+const Element4Hover = styled.img`
+  position: absolute;
+  right: 1359px;
+  bottom: 678px;
+  z-index: 300;
+  cursor: pointer;
+`;
+
+const Element4Clicked = styled.img`
+  position: absolute;
+  right: 1359px;
+  bottom: 678px;
+  z-index: 300;
 `;
 
 const InvisibleWrapper5 = styled.div`
   position: absolute;
-  right: 282px;
-  bottom: 1151px;
+  right: 757px;
+  bottom: 906px;
   width: 231px;
   height: 72px;
   background: rgba(0, 0, 0, 0.5);
@@ -384,16 +430,46 @@ const InvisibleWrapper5 = styled.div`
   border-radius: 10px;
 `;
 
+const Element5Hover = styled.img`
+  position: absolute;
+  right: 757px;
+  bottom: 906px;
+  z-index: 300;
+  cursor: pointer;
+`;
+
+const Element5Clicked = styled.img`
+  position: absolute;
+  right: 757px;
+  bottom: 906px;
+  z-index: 300px;
+`;
+
 const InvisibleWrapper6 = styled.div`
   position: absolute;
-  right: 382px;
-  bottom: 1151px;
+  right: 742.5px;
+  bottom: 678px;
   width: 231px;
   height: 72px;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   z-index: 300px;
   border-radius: 10px;
+`;
+
+const Element6Hover = styled.img`
+  position: absolute;
+  right: 742.5px;
+  bottom: 678px;
+  z-index: 300;
+  cursor: pointer;
+`;
+
+const Element6Clicked = styled.img`
+  position: absolute;
+  right: 742.5px;
+  bottom: 678px;
+  z-index: 300;
 `;
 
 const Element1Hover = styled.img`
@@ -426,70 +502,10 @@ const Element2Clicked = styled.img`
   z-index: 300;
 `;
 
-const Element3Hover = styled.img`
-  position: absolute;
-  right: 682px;
-  bottom: 1151px;
-  z-index: 300;
-  cursor: pointer;
-`;
-
-const Element3Clicked = styled.img`
-  position: absolute;
-  right: 682px;
-  bottom: 1151px;
-  z-index: 300;
-`;
-
-const Element4Hover = styled.img`
-  position: absolute;
-  right: 582px;
-  bottom: 1151px;
-  z-index: 300;
-  cursor: pointer;
-`;
-
-const Element4Clicked = styled.img`
-  position: absolute;
-  right: 582px;
-  bottom: 1151px;
-  z-index: 300;
-`;
-
-const Element5Hover = styled.img`
-  position: absolute;
-  right: 282px;
-  bottom: 1151px;
-  z-index: 300;
-  cursor: pointer;
-`;
-
-const Element5Clicked = styled.img`
-  position: absolute;
-  right: 282px;
-  bottom: 1151px;
-  z-index: 300px;
-`;
-
-const Element6Hover = styled.img`
-  position: absolute;
-  right: 382px;
-  bottom: 1151px;
-  z-index: 300;
-  cursor: pointer;
-`;
-
-const Element6Clicked = styled.img`
-  position: absolute;
-  right: 382px;
-  bottom: 1151px;
-  z-index: 300;
-`;
-
 const MiniRectangle = styled.div`
   position: absolute;
   right: 60px;
-  top: 820px;
+  top: 812px;
   z-index: 50;
   width: 51px;
   height: 52px;
