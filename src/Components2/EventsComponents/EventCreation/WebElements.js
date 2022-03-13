@@ -8,6 +8,7 @@ import element1hover from "../../../Images2/element1hover.svg";
 import element1click from "../../../Images2/element1click.svg";
 import element2hover from "../../../Images2/element2hover.svg";
 import element2click from "../../../Images2/element2click.svg";
+import searchimg from "../../../Images2/search.svg";
 
 // 1. Need to reach EventsStep1
 // 2. Need to reach EventsHome
@@ -17,6 +18,9 @@ export default function WebElements(props) {
   const [inputValue1, setInputValue1] = useState("");
   const [yesBold, setYesBold] = useState("No");
   const [closeEvents, setCloseEvents] = useState(false);
+  const [iframe, setIframe] = useState("https://www.banabo.io/");
+  const [inputValue2, setInputValue2] = useState("https://www.banabo.io/");
+  const [search, setSearch] = useState(false);
 
   /// Closing the Tab
   ///
@@ -33,6 +37,15 @@ export default function WebElements(props) {
     visible: { opacity: 1 },
   };
   ///
+
+  // When enter is clicked, change setIframe(inputValue2)
+
+  useEffect(() => {
+    console.log("hello there");
+    setIframe(inputValue2);
+    setSearch(false);
+  }, [search]);
+
   ///
 
   ///
@@ -44,6 +57,13 @@ export default function WebElements(props) {
   };
   const resetInputField1 = () => {
     setInputValue1("");
+  };
+
+  const handleUserInput2 = (e) => {
+    setInputValue2(e.target.value);
+  };
+  const resetInputField2 = () => {
+    setInputValue2("");
   };
   ///
   ///
@@ -63,15 +83,26 @@ export default function WebElements(props) {
     }
   }, [number]);
 
+  // LOL
+
+  // Testing for finding specific DOMNODES
+
   return (
     <div>
       <RectangleTop>
-        <URLText>https://www.banabo.io</URLText>
+        <Input2
+          placeholder={iframe}
+          value={inputValue2}
+          onChange={handleUserInput2}
+        />
       </RectangleTop>
+      <RectangleTopSmall>
+        <TheClickIMG src={searchimg} onClick={() => setSearch(true)} />
+      </RectangleTopSmall>
       <RectangleMain></RectangleMain>
       <AbsolutePositioning>
         <Iframe
-          url="https://www.banabo.io/"
+          url={iframe}
           width="1450px"
           height="824px"
           id="myId"
@@ -172,6 +203,59 @@ export default function WebElements(props) {
     </div>
   );
 }
+
+const RectangleTop = styled.div`
+  position: absolute;
+  width: 250px;
+  height: 36px;
+  left: 140px;
+  top: 560px;
+  z-index: 10;
+  background: #ffffff;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+`;
+
+const RectangleTopSmall = styled.div`
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 395px;
+  top: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background: #ffffff;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+`;
+
+const TheClickIMG = styled.img`
+  cursor: pointer;
+`;
+
+const URLText = styled.div`
+  font-size: 14px;
+  font-family: "ProximaNovaSemiBold";
+  color: #666678;
+  padding-top: 11px;
+  padding-left: 20px;
+`;
+
+const Input2 = styled.input`
+  border: none;
+  width: 300px;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "ProximaNovaRegular";
+  background-color: transparent;
+  padding-top: 9px;
+  padding-left: 20px;
+  :focus {
+    outline: none;
+  }
+`;
 
 const EventFieldText2 = styled.div`
   position: absolute;
@@ -386,24 +470,4 @@ const RectangleMain = styled.div`
     linear-gradient(0deg, #ffffff, #ffffff),
     linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
   border-radius: 10px;
-`;
-
-const RectangleTop = styled.div`
-  position: absolute;
-  width: 184px;
-  height: 36px;
-  left: 140px;
-  top: 560px;
-  z-index: 10;
-  background: #ffffff;
-  border-radius: 10px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-`;
-
-const URLText = styled.div`
-  font-size: 14px;
-  font-family: "ProximaNovaSemiBold";
-  color: #666678;
-  padding-top: 11px;
-  padding-left: 20px;
 `;
