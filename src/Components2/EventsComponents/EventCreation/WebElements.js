@@ -18,8 +18,8 @@ export default function WebElements(props) {
   const [inputValue1, setInputValue1] = useState("");
   const [yesBold, setYesBold] = useState("No");
   const [closeEvents, setCloseEvents] = useState(false);
-  const [iframe, setIframe] = useState("https://www.banabo.io/");
-  const [inputValue2, setInputValue2] = useState("https://www.banabo.io/");
+  const [iframe, setIframe] = useState("https://www.banabolabs.com/");
+  const [inputValue2, setInputValue2] = useState("https://www.banabolabs.com/");
   const [search, setSearch] = useState(false);
 
   /// Closing the Tab
