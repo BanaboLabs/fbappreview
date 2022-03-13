@@ -206,7 +206,7 @@ export default function WebElements(props) {
 
 const RectangleTop = styled.div`
   position: absolute;
-  width: 250px;
+  width: 300px;
   height: 36px;
   left: 140px;
   top: 560px;
@@ -220,7 +220,7 @@ const RectangleTopSmall = styled.div`
   position: absolute;
   width: 36px;
   height: 36px;
-  left: 395px;
+  left: 445px;
   top: 560px;
   display: flex;
   justify-content: center;
@@ -248,7 +248,7 @@ const Input2 = styled.input`
   width: 300px;
   font-size: 16px;
   line-height: 19px;
-  font-family: "ProximaNovaRegular";
+  font-family: "ProximaNovaSemiBold";
   background-color: transparent;
   padding-top: 9px;
   padding-left: 20px;
@@ -308,7 +308,7 @@ const Input1 = styled.input`
   width: 300px;
   font-size: 16px;
   line-height: 19px;
-  font-family: "ProximaNovaRegular";
+  font-family: "ProximaNovaSemiBold";
   background-color: transparent;
   :focus {
     outline: none;
