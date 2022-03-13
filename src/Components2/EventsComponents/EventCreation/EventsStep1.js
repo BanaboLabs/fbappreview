@@ -158,7 +158,7 @@ export default function EventsStep1(props) {
                       <LargeBlackText>URL Events</LargeBlackText>
                       <MediumGrayText5>
                         The event will be triggered every time a visitor reaches
-                        the destination url
+                        both destination urls
                       </MediumGrayText5>
                     </MiddleVStack>
                   </LargeVStack>
