@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Iframe from "react-iframe";
 import blackx from "../../Images2/blackx.svg";
-import { Stage, Layer, Line } from "react-konva";
 import _flatten from "lodash/flatten";
 
 export default function Tooling() {
