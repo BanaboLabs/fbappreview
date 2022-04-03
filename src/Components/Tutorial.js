@@ -133,7 +133,7 @@ export default function Tutorial(props) {
   }
 }
 
-const Rectangle33 = styled.div`
+const Rectangle3333 = styled.div`
   width: 756px;
   height: 334px;
   background: #ffffff;
