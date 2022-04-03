@@ -140,6 +140,13 @@ const Rectangle = styled.div`
   border-radius: 25px;
 `;
 
+const Tester = styled.div`
+  width: 756px;
+  height: 334px;
+  background: #ffffff;
+  border-radius: 25px;
+`;
+
 const Rectangle2 = styled.div`
   width: 756px;
   height: 808px;
