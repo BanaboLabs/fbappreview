@@ -21,6 +21,26 @@ export default function LoginPage() {
   const [step, setStep] = useState(1);
   const [showSpinner, setShowSpinner] = useState(false);
   const [presentSpinner, setPresentSpinner] = useState(false);
+  const [demo, setDemo] = useState(2);
+
+  //
+
+  useEffect(() => {
+    if (
+      navigate == true &&
+      emailAddress.value == "admin@banabo.io" &&
+      password.value == "admin"
+    ) {
+      window.open("https://application.banabo.io", "_self");
+      cookies.set("loginValid", "true", { path: "/" });
+    } else {
+      if (demo > 2) {
+        alert("Email or Password is incorrect");
+      }
+    }
+  }, [demo]);
+
+  //
 
   // Function to save the link info without refreshing the page
   const noRefresh = (event) => {
@@ -188,7 +208,7 @@ export default function LoginPage() {
                 </MiddlePortion>
                 {navigate == true ? (
                   <HoriWrapper>
-                    <StyledButton1 onClick={() => setLoggedIn(loggedIn + 1)}>
+                    <StyledButton1 onClick={() => setDemo(demo + 1)}>
                       Login
                     </StyledButton1>
                     {presentSpinner == true ? <Loader /> : null}

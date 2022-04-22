@@ -7,6 +7,11 @@ import blackx from "../../Images2/blackx.svg";
 import logogrid from "../../Images2/logogrid.png";
 import BlurBackground2 from "../../Images2/BlurBackground2.png";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
+import facebooksigninbutton from "../../Images2/facebooksigninbutton.png";
+import snapchatsigninbutton from "../../Images2/snapchatsigninbutton.png";
+import tiktoksigninbutton from "../../Images2/tiktoksigninbutton.png";
+import googlesigninbutton from "../../Images2/googlesigninbutton.png";
+import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 
 export default function CampaignsConnect() {
   const [isShown, setIsShown] = useState(false);
@@ -15,17 +20,17 @@ export default function CampaignsConnect() {
   const jsonArray = [
     {
       CampaignDate: "2/12/22",
-      CampaignLetter: "F",
-      CampaignSource: "FACEBOOK",
-      CampaignName: "Facebook Easter Ads",
+      CampaignLetter: "S",
+      CampaignSource: "SNAPCHAT",
+      CampaignName: "Snapchat Easter Ads",
       CampaignBudget: "$960",
       CampaignTimeFrame: "Feb 3 - Mar 19",
     },
     {
       CampaignDate: "2/12/22",
-      CampaignLetter: "F",
-      CampaignSource: "FACEBOOK",
-      CampaignName: "Facebook Stories Buy",
+      CampaignLetter: "S",
+      CampaignSource: "SNAPCHAT",
+      CampaignName: "Snapchat Stories Buy",
       CampaignBudget: "$8120",
       CampaignTimeFrame: "Feb 1 - Mar 31",
     },
@@ -72,6 +77,40 @@ export default function CampaignsConnect() {
     console.log(showModal);
   }, [showModal]);
 
+  //=============================================================================
+  // ## Facebook
+  //=============================================================================
+  const responseFacebook = (response) => {
+    console.log("I Worked");
+    console.log(response);
+    /*
+    async function SendFacebookToken(accessToken) {
+      console.log("Running Really Facebook Fast");
+      console.log(accessToken);
+      console.log("Running Really Facebook Fast");
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      var raw = JSON.stringify({ accessToken: accessToken });
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
+      return await fetch(
+        "http://localhost:5012/api/facebook/write/storetokendb",
+        // @ts-ignore
+        requestOptions
+      ).then((response) => console.log(response));
+    }
+    SendFacebookToken("lol");
+*/
+  };
+  const clickedFacebook = (response) => {
+    console.log("I Have Been Clicked");
+    console.log(response);
+  };
+
   return (
     <div>
       {showModal ? (
@@ -98,7 +137,24 @@ export default function CampaignsConnect() {
               </MiddleVStack>
             </ContentWrapper>
             <LogoGridWrapper>
-              <LogoGrid src={logogrid} />
+              <LogoGridVStack>
+                <FacebookLogin
+                  appId="515364906844404"
+                  autoLoad={false}
+                  fields="name,email,picture"
+                  onClick={clickedFacebook}
+                  callback={responseFacebook}
+                  render={(renderProps) => (
+                    <LogoFormatFacebook
+                      src={facebooksigninbutton}
+                      onClick={renderProps.onClick}
+                    />
+                  )}
+                />
+                <LogoFormat src={snapchatsigninbutton} />
+                <LogoFormat src={tiktoksigninbutton} />
+                <LogoFormatGoogle src={googlesigninbutton} />
+              </LogoGridVStack>
             </LogoGridWrapper>
           </RectangleModal>
         </MotionDiv>
@@ -149,11 +205,11 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>FACEBOOK</CompanyNameText>
+                    <CompanyNameText>SNAPCHAT</CompanyNameText>
                   </InnerHStack1>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Facebook Easter Ads</RegularText>
+                  <RegularText>Snapchat Easter Ads</RegularText>
                   <DarkGreenTextWrapper>
                     <DarkGreenText>$960</DarkGreenText>
                   </DarkGreenTextWrapper>
@@ -174,11 +230,11 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>FACEBOOK</CompanyNameText>
+                    <CompanyNameText>SNAPCHAT</CompanyNameText>
                   </InnerHStack2>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Facebook Stories Buy</RegularText>
+                  <RegularText>Snapchat Stories Buy</RegularText>
                   <DarkGreenTextWrapper>
                     <DarkGreenText2>$8120</DarkGreenText2>
                   </DarkGreenTextWrapper>
@@ -298,6 +354,37 @@ export default function CampaignsConnect() {
     </div>
   );
 }
+
+const LogoFormatFacebook = styled.img`
+  height: 55px;
+  width: auto;
+  cursor: pointer;
+`;
+
+const LogoFormat = styled.img`
+  height: 55px;
+  width: auto;
+`;
+
+const LogoFormatGoogle = styled.img`
+  height: 55px;
+  width: auto;
+  box-shadow: 0px 0px 15px 2px #eeeeee;
+  border-radius: 10px;
+`;
+
+const LogoGridVStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 20px;
+`;
+
+const LogoGridHStack = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+`;
 
 const MotionDiv = styled(motion.div)``;
 

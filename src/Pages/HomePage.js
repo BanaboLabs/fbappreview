@@ -18,7 +18,7 @@ export default function HomePage() {
   // Decides which of the four surfaces (components to populate
   // The state changes based on the SideTabBar being clicked on
   // SideTabBar (click) -> HomePage (state changes)
-  const [isParentData, setIsParentData] = useState("Link");
+  const [isParentData, setIsParentData] = useState("Pixel");
   const [isParentData3, setIsParentData3] = useState(false);
   // In Charge of Cookies and checking if user is logged in
   const [isLoggedIn, setisLoggedIn] = useState(false);

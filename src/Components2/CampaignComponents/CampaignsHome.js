@@ -20,13 +20,13 @@ export default function CampaignsHome() {
   const [screen1, setScreen1] = useState(true);
   const [jsonArray, setjsonArray] = useState([
     {
-      linkName: "Instagram Ads V1",
+      linkName: "Snapchat Ads V1",
       linkDate: "02/21/2022",
       linkBudget: "$300",
       linkUrl: "https://www.nike.com/men/?b=6453",
     },
     {
-      linkName: "Facebook Stories Campaign",
+      linkName: "Google Stories Campaign",
       linkDate: "02/18/2022",
       linkBudget: "$187",
       linkUrl: "https://www.nike.com/shoes/?b=7552",
@@ -43,13 +43,13 @@ export default function CampaignsHome() {
     if (submitted == true) {
       setjsonArray([
         {
-          linkName: "Instagram Ads V1",
+          linkName: "Snapchat Ads V1",
           linkDate: "02/21/2022",
           linkBudget: "$300",
           linkUrl: "https://www.nike.com/men/?b=6453",
         },
         {
-          linkName: "Facebook Stories Campaign",
+          linkName: "Google Stories Campaign",
           linkDate: "02/18/2022",
           linkBudget: "$187",
           linkUrl: "https://www.nike.com/shoes/?b=7552",
@@ -163,7 +163,7 @@ export default function CampaignsHome() {
                   <Group1>
                     <Header1>LINK NAME</Header1>
                     <Input1
-                      placeholder="Ex: Facebook Campaign V1"
+                      placeholder="Ex: Google Campaign V1"
                       value={inputValue2}
                       onChange={handleUserInput2}
                     />

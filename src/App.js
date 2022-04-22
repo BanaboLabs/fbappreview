@@ -5,6 +5,7 @@
 import React, { useEffect } from "react";
 import "./index.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Login from "../src/Pages/LoginPage.js";
 import Home from "../src/Pages2/HomePage.js";
 import Amplify, { API } from "aws-amplify";
 import awsconfig from "./aws-exports";
@@ -17,6 +18,7 @@ export default function App() {
       <BrowserRouter>
         <div>
           <Switch>
+            <Route path="/login" component={Login} exact />
             <Route path="/" component={Home} exact />
           </Switch>
         </div>

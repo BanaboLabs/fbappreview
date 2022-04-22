@@ -65,7 +65,7 @@ export default function CampaignsConfigure(props) {
             <Group1>
               <Header1>LINK NAME</Header1>
               <Input1
-                placeholder="Ex: Facebook Campaign V1"
+                placeholder="Ex: Google Campaign V1"
                 value={inputValue2}
                 onChange={handleUserInput2}
               />
