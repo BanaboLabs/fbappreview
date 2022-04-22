@@ -4,7 +4,7 @@
 
 import React, { useEffect } from "react";
 import "./index.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Routes } from "react-router-dom";
 import Login from "../src/Pages/LoginPage.js";
 import Home from "../src/Pages2/HomePage.js";
 import Amplify, { API } from "aws-amplify";
@@ -17,10 +17,10 @@ export default function App() {
     <ParentWrapper>
       <BrowserRouter>
         <div>
-          <Switch>
+          <Routes>
             <Route path="/login" component={Login} exact />
             <Route path="/" component={Home} exact />
-          </Switch>
+          </Routes>
         </div>
       </BrowserRouter>
     </ParentWrapper>
