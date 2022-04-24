@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 import facebooksigninbutton from "../../Images2/facebooksigninbutton.png";
 
 import googlesigninbutton from "../../Images2/googlesigninbutton.png";
-import linkedinsigninbutton from "../../Images2/linkedinsigninbutton.svg";
+import pinterestsigninbutton from "../../Images2/pinterestsigninbutton.svg";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 
 export default function CampaignsConnect() {
@@ -21,31 +21,31 @@ export default function CampaignsConnect() {
     {
       CampaignDate: "2/12/22",
       CampaignLetter: "S",
-      CampaignSource: "LINKEDIN",
-      CampaignName: "LINKEDIN Easter Ads",
+      CampaignSource: "pinterest",
+      CampaignName: "pinterest Easter Ads",
       CampaignBudget: "$960",
       CampaignTimeFrame: "Feb 3 - Mar 19",
     },
     {
       CampaignDate: "2/12/22",
       CampaignLetter: "S",
-      CampaignSource: "LINKEDIN",
-      CampaignName: "LINKEDIN Stories Buy",
+      CampaignSource: "pinterest",
+      CampaignName: "pinterest Stories Buy",
       CampaignBudget: "$8120",
       CampaignTimeFrame: "Feb 1 - Mar 31",
     },
     {
       CampaignDate: "1/11/22",
       CampaignLetter: "S",
-      CampaignSource: "LINKEDIN",
-      CampaignName: "LINKEDIN Influencers",
+      CampaignSource: "pinterest",
+      CampaignName: "pinterest Influencers",
       CampaignBudget: "$1210",
       CampaignTimeFrame: "Jan 9 - Jan 30",
     },
     {
       CampaignDate: "1/9/22",
       CampaignLetter: "G",
-      CampaignSource: "LINKEDIN",
+      CampaignSource: "pinterest",
       CampaignName: "Search Campaign V1",
       CampaignBudget: "$2310",
       CampaignTimeFrame: "Jan 7 - Apr 17",
@@ -53,7 +53,7 @@ export default function CampaignsConnect() {
     {
       CampaignDate: "1/9/22",
       CampaignLetter: "G",
-      CampaignSource: "LINKEDIN",
+      CampaignSource: "pinterest",
       CampaignName: "Custom AdWords ",
       CampaignBudget: "$12160",
       CampaignTimeFrame: "Jan 3 - Apr 19",
@@ -61,8 +61,8 @@ export default function CampaignsConnect() {
     {
       CampaignDate: "1/7/22",
       CampaignLetter: "T",
-      CampaignSource: "LINKEDIN",
-      CampaignName: "LINKEDIN Campaign One",
+      CampaignSource: "pinterest",
+      CampaignName: "pinterest Campaign One",
       CampaignBudget: "$4400",
       CampaignTimeFrame: "Jan 2 - Feb 6",
     },
@@ -138,7 +138,15 @@ export default function CampaignsConnect() {
             </ContentWrapper>
             <LogoGridWrapper>
               <LogoGridVStack>
-                <LogoFormat src={linkedinsigninbutton} />
+                <LogoFormat
+                  src={pinterestsigninbutton}
+                  onClick={() =>
+                    window.open(
+                      `https://www.pinterest.com/oauth/?client_id=1477250&redirect_uri=https://app.banabo.io/campaigns/connect/&response_type=code&state=foobarpinterest&scope=ads:read,pins:read`,
+                      "_self"
+                    )
+                  }
+                />
               </LogoGridVStack>
             </LogoGridWrapper>
           </RectangleModal>
@@ -190,7 +198,7 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>LINKEDIN</CompanyNameText>
+                    <CompanyNameText>Pinterest</CompanyNameText>
                   </InnerHStack1>
                 </ChildHStack1>
                 <ChildHStack3>
@@ -215,11 +223,11 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>LINKEDIN</CompanyNameText>
+                    <CompanyNameText>Pinterest</CompanyNameText>
                   </InnerHStack2>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>LinkedIn Stories Buys</RegularText>
+                  <RegularText>Pinterest Stories Buys</RegularText>
                   <DarkGreenTextWrapper>
                     <DarkGreenText2>$8120</DarkGreenText2>
                   </DarkGreenTextWrapper>
@@ -240,7 +248,7 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter>S</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>LINKEDIN</CompanyNameText>
+                    <CompanyNameText>Pinterest</CompanyNameText>
                   </InnerHStack3>
                 </ChildHStack1>
                 <ChildHStack3>
@@ -265,7 +273,7 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter2>G</BlackLetter2>
                     </GreenCircle>
-                    <CompanyNameText>LINKEDIN</CompanyNameText>
+                    <CompanyNameText>Pinterest</CompanyNameText>
                   </InnerHStack4>
                 </ChildHStack1>
                 <ChildHStack3>
@@ -290,7 +298,7 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter2>G</BlackLetter2>
                     </GreenCircle>
-                    <CompanyNameText>LINKEDIN</CompanyNameText>
+                    <CompanyNameText>Pinterest</CompanyNameText>
                   </InnerHStack5>
                 </ChildHStack1>
                 <ChildHStack3>
@@ -315,7 +323,7 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter>T</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>LINKEDIN</CompanyNameText>
+                    <CompanyNameText>Pinterest</CompanyNameText>
                   </InnerHStack6>
                 </ChildHStack1>
                 <ChildHStack3>
@@ -349,6 +357,7 @@ const LogoFormatFacebook = styled.img`
 const LogoFormat = styled.img`
   height: 45px;
   width: auto;
+  cursor: pointer;
 `;
 
 const LogoFormatGoogle = styled.img`
