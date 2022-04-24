@@ -8,9 +8,9 @@ import logogrid from "../../Images2/logogrid.png";
 import BlurBackground2 from "../../Images2/BlurBackground2.png";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 import facebooksigninbutton from "../../Images2/facebooksigninbutton.png";
-import snapchatsigninbutton from "../../Images2/snapchatsigninbutton.png";
-import tiktoksigninbutton from "../../Images2/tiktoksigninbutton.png";
+
 import googlesigninbutton from "../../Images2/googlesigninbutton.png";
+import linkedinsigninbutton from "../../Images2/linkedinsigninbutton.svg";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 
 export default function CampaignsConnect() {
@@ -21,31 +21,31 @@ export default function CampaignsConnect() {
     {
       CampaignDate: "2/12/22",
       CampaignLetter: "S",
-      CampaignSource: "SNAPCHAT",
-      CampaignName: "Snapchat Easter Ads",
+      CampaignSource: "LINKEDIN",
+      CampaignName: "LINKEDIN Easter Ads",
       CampaignBudget: "$960",
       CampaignTimeFrame: "Feb 3 - Mar 19",
     },
     {
       CampaignDate: "2/12/22",
       CampaignLetter: "S",
-      CampaignSource: "SNAPCHAT",
-      CampaignName: "Snapchat Stories Buy",
+      CampaignSource: "LINKEDIN",
+      CampaignName: "LINKEDIN Stories Buy",
       CampaignBudget: "$8120",
       CampaignTimeFrame: "Feb 1 - Mar 31",
     },
     {
       CampaignDate: "1/11/22",
       CampaignLetter: "S",
-      CampaignSource: "SNAPCHAT",
-      CampaignName: "Snapchat Influencers",
+      CampaignSource: "LINKEDIN",
+      CampaignName: "LINKEDIN Influencers",
       CampaignBudget: "$1210",
       CampaignTimeFrame: "Jan 9 - Jan 30",
     },
     {
       CampaignDate: "1/9/22",
       CampaignLetter: "G",
-      CampaignSource: "GOOGLE ADS",
+      CampaignSource: "LINKEDIN",
       CampaignName: "Search Campaign V1",
       CampaignBudget: "$2310",
       CampaignTimeFrame: "Jan 7 - Apr 17",
@@ -53,7 +53,7 @@ export default function CampaignsConnect() {
     {
       CampaignDate: "1/9/22",
       CampaignLetter: "G",
-      CampaignSource: "GOOGLE ADS",
+      CampaignSource: "LINKEDIN",
       CampaignName: "Custom AdWords ",
       CampaignBudget: "$12160",
       CampaignTimeFrame: "Jan 3 - Apr 19",
@@ -61,8 +61,8 @@ export default function CampaignsConnect() {
     {
       CampaignDate: "1/7/22",
       CampaignLetter: "T",
-      CampaignSource: "TIKTOK",
-      CampaignName: "TikTok Campaign One",
+      CampaignSource: "LINKEDIN",
+      CampaignName: "LINKEDIN Campaign One",
       CampaignBudget: "$4400",
       CampaignTimeFrame: "Jan 2 - Feb 6",
     },
@@ -138,22 +138,7 @@ export default function CampaignsConnect() {
             </ContentWrapper>
             <LogoGridWrapper>
               <LogoGridVStack>
-                <FacebookLogin
-                  appId="333005582148546"
-                  autoLoad={false}
-                  fields="name,email,picture"
-                  onClick={clickedFacebook}
-                  callback={responseFacebook}
-                  render={(renderProps) => (
-                    <LogoFormatFacebook
-                      src={facebooksigninbutton}
-                      onClick={renderProps.onClick}
-                    />
-                  )}
-                />
-                <LogoFormat src={snapchatsigninbutton} />
-                <LogoFormat src={tiktoksigninbutton} />
-                <LogoFormatGoogle src={googlesigninbutton} />
+                <LogoFormat src={linkedinsigninbutton} />
               </LogoGridVStack>
             </LogoGridWrapper>
           </RectangleModal>
@@ -205,11 +190,11 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>SNAPCHAT</CompanyNameText>
+                    <CompanyNameText>LINKEDIN</CompanyNameText>
                   </InnerHStack1>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Snapchat Easter Ads</RegularText>
+                  <RegularText>Apr Easter Marketing</RegularText>
                   <DarkGreenTextWrapper>
                     <DarkGreenText>$960</DarkGreenText>
                   </DarkGreenTextWrapper>
@@ -230,11 +215,11 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>SNAPCHAT</CompanyNameText>
+                    <CompanyNameText>LINKEDIN</CompanyNameText>
                   </InnerHStack2>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Snapchat Stories Buy</RegularText>
+                  <RegularText>LinkedIn Stories Buys</RegularText>
                   <DarkGreenTextWrapper>
                     <DarkGreenText2>$8120</DarkGreenText2>
                   </DarkGreenTextWrapper>
@@ -255,11 +240,11 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter>S</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>SNAPCHAT</CompanyNameText>
+                    <CompanyNameText>LINKEDIN</CompanyNameText>
                   </InnerHStack3>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Snapchat Influencers</RegularText>
+                  <RegularText>Business Influencers</RegularText>
                   <DarkGreenTextWrapper>
                     <DarkGreenText3>$1210</DarkGreenText3>
                   </DarkGreenTextWrapper>
@@ -280,7 +265,7 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter2>G</BlackLetter2>
                     </GreenCircle>
-                    <CompanyNameText>GOOGLE ADS</CompanyNameText>
+                    <CompanyNameText>LINKEDIN</CompanyNameText>
                   </InnerHStack4>
                 </ChildHStack1>
                 <ChildHStack3>
@@ -305,7 +290,7 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter2>G</BlackLetter2>
                     </GreenCircle>
-                    <CompanyNameText>GOOGLE ADS</CompanyNameText>
+                    <CompanyNameText>LINKEDIN</CompanyNameText>
                   </InnerHStack5>
                 </ChildHStack1>
                 <ChildHStack3>
@@ -330,11 +315,11 @@ export default function CampaignsConnect() {
                     <GreenCircle>
                       <BlackLetter>T</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>TIKTOK</CompanyNameText>
+                    <CompanyNameText>LINKEDIN</CompanyNameText>
                   </InnerHStack6>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>TikTok Campaign One</RegularText>
+                  <RegularText>Campaign Month Start</RegularText>
                   <DarkGreenTextWrapper>
                     <DarkGreenText6>$12160</DarkGreenText6>
                   </DarkGreenTextWrapper>
@@ -362,7 +347,7 @@ const LogoFormatFacebook = styled.img`
 `;
 
 const LogoFormat = styled.img`
-  height: 55px;
+  height: 45px;
   width: auto;
 `;
 
@@ -453,7 +438,7 @@ const RectangleModal = styled.div`
   top: 120px;
   border-radius: 20px;
   width: 840px;
-  height: 765px;
+  height: 320px;
   background: linear-gradient(0deg, #ffffff, #ffffff),
     linear-gradient(0deg, #ffffff, #ffffff),
     linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
