@@ -23,7 +23,7 @@ export default function LoginPage2() {
   // Google Variables
   const google_client_id =
     "914021793896-2hmcu558rif86gri6n8sl43g28177n6r.apps.googleusercontent.com"; // Banabo - API APP ID
-  const google_redirect_uri = "https://application.banabo.io/signup/";
+  const google_redirect_uri = "https://application.banabo.io/login/";
   const google_state = "foobargoogle";
   const google_response_type = "code";
   const google_scope = "email profile";
