@@ -1,16 +1,15 @@
 import React from "react";
 //=============================================================================
-// ## Auth0 SIGN UP API
+// ## Microsoft Sign Up API
 //=============================================================================
-async function SignUp(email: string, given_name: string, password: string) {
+async function MicrosoftAPI(authCode) {
+  console.log("MicrosoftSend");
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   var raw = JSON.stringify({
-    email: email,
-    given_name: given_name,
-    password: password,
+    authCode: authCode,
   });
-  return await fetch("http://localhost:5012/api/auth0/createuserpassword", {
+  return await fetch("http://localhost:5012/api/auth0/createusermicrosoft", {
     body: raw,
     headers: myHeaders,
     method: "POST",
@@ -21,4 +20,4 @@ async function SignUp(email: string, given_name: string, password: string) {
   );
 }
 
-export default SignUp;
+export default MicrosoftAPI;

@@ -2,7 +2,7 @@ import React from "react";
 //=============================================================================
 // ## Google Sign Up API
 //=============================================================================
-async function GoogleAPI(authCode: string) {
+async function GoogleAPI(authCode) {
   console.log("GoogleSend");
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");

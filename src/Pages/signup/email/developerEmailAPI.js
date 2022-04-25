@@ -3,10 +3,10 @@ import React from "react";
 // ## SES Email Developer
 //=============================================================================
 async function DeveloperEmailAPI(
-  email: string,
-  developerName: string,
-  marketingName: string,
-  codeSnippet: string
+  email,
+  developerName,
+  marketingName,
+  codeSnippet
 ) {
   console.log("Running Fast");
   var myHeaders = new Headers();
