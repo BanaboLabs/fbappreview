@@ -28,7 +28,8 @@ export default function LoginPage2() {
   const google_response_type = "code";
   const google_scope = "email profile";
   const google_access_type = "offline";
-
+  //
+  //
   // Microsoft Variables
   const microsoft_client_id = "8daf51ab-2933-47e1-b8ef-13b1e7091b4f"; // Banabo - API APP ID
   const microsoft_redirect_uri = "https://app.banabo.io/signup/";
