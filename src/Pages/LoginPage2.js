@@ -12,6 +12,7 @@ import whiteWheel from "../Images/whiteWheel.svg";
 import banaboLogo from "../Images/banabologo.svg";
 import signinwithgoogleprod from "../Images/signinwithgoogleprod.svg";
 import signinwithmicrosoftprod from "../Images/signinwithmicrosoftprod.svg";
+import { text } from "body-parser";
 
 export default function LoginPage2() {
   const [getStartedButtonActive, setGetStartedButtonActive] = useState(false);
@@ -19,6 +20,7 @@ export default function LoginPage2() {
   const [navigation, setNavigation] = useState(1);
   const [spinnerActivated, setSpinnerActivated] = useState(false);
   const cookies = new Cookies();
+  const [render, setRender] = useState(1);
 
   // Google Variables
   const google_client_id =
@@ -55,7 +57,25 @@ export default function LoginPage2() {
       // @ts-ignore
       let stateValue = params.state;
       if (stateValue == "foobargoogle") {
+        console.log("ran1");
         GoogleAPISignUp(authCode);
+      }
+    } else {
+      console.log("No Code");
+    }
+
+    if (window.location.href.includes("code")) {
+      const params = new Proxy(new URLSearchParams(window.location.search), {
+        // @ts-ignore
+        get: (searchParams, prop) => searchParams.get(prop),
+      });
+      // @ts-ignore
+      let authCode = params.code;
+      // @ts-ignore
+      let stateValue = params.state;
+      if (stateValue == "foobargoogle") {
+        console.log("ran2");
+        setRender(2);
       }
     } else {
       console.log("No Code");
@@ -100,70 +120,85 @@ export default function LoginPage2() {
   return (
     <ParentWrapper>
       <AlterIMG src={banaboLogo} />
-      <Rectangle>
-        <ParentVStack>
-          <H1Text>Lets Get Started</H1Text>
-          <InsideVStack>
-            <AuthVStack>
-              <ButtonIMG
-                src={signinwithgoogleprod}
-                onClick={() =>
-                  window.open(
-                    `https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?nonce=12345&access_type=${google_access_type}&client_id=${google_client_id}&scope=${google_scope}&redirect_uri=${google_redirect_uri}&state=${google_state}&response_type=${google_response_type}`,
-                    "_self"
-                  )
-                }
-              />
-              <ButtonIMG
-                src={signinwithmicrosoftprod}
-                onClick={() =>
-                  window.open(
-                    `https://login.microsoftonline.com/common/oauth2/v2.0/authorize/?client_id=${microsoft_client_id}&response_type=${microsoft_response_type}&redirect_uri=${microsoft_redirect_uri}&scope=${microsoft_scope}&state=${microsoft_state}`,
-                    "_self"
-                  )
-                }
-              />
-            </AuthVStack>
-            <HStackOr>
-              <OrRectangle />
-              <MainText>Or</MainText>
-              <OrRectangle />
-            </HStackOr>
-            <SmallVStack>
-              <TextInputVStack>
-                <TextInputRegularText>Email Address</TextInputRegularText>
-                <form onSubmit={noRefresh}>
-                  <InputRectangle>
-                    <Input placeholder="" />
-                  </InputRectangle>
-                </form>
-              </TextInputVStack>
-              <TextInputVStack>
-                <TextInputRegularText>Password</TextInputRegularText>
-                <form onSubmit={noRefresh}>
-                  <InputRectangle>
-                    <Input placeholder="" type="password" />
-                  </InputRectangle>
-                </form>
-              </TextInputVStack>
-            </SmallVStack>
-            <SubmitButton getStartedButtonActive={getStartedButtonActive}>
-              {spinnerActivated ? (
-                <SpinnerIMG src={whiteWheel} />
-              ) : (
-                <ButtonHStack>
-                  <ButtonText getStartedButtonActive={getStartedButtonActive}>
-                    Get Started
-                  </ButtonText>
-                  <ButtonWhiteArrowWrapper>
-                    <ButtonWhiteArrow opacity={arrowOpacity} />
-                  </ButtonWhiteArrowWrapper>
-                </ButtonHStack>
-              )}
-            </SubmitButton>
-          </InsideVStack>
-        </ParentVStack>
-      </Rectangle>
+
+      <RenderWrapper>
+        {render == 2 ? (
+          <Rectangle2>
+            <WhiteText>
+              Our team will send an email once your account is setup in the next
+              24 hours
+            </WhiteText>
+          </Rectangle2>
+        ) : (
+          <Rectangle>
+            <ParentVStack>
+              <H1Text>Lets Get Started</H1Text>
+              <InsideVStack>
+                <AuthVStack>
+                  <ButtonIMG
+                    src={signinwithgoogleprod}
+                    onClick={() =>
+                      window.open(
+                        `https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?nonce=12345&access_type=${google_access_type}&client_id=${google_client_id}&scope=${google_scope}&redirect_uri=${google_redirect_uri}&state=${google_state}&response_type=${google_response_type}`,
+                        "_self"
+                      )
+                    }
+                  />
+                  <ButtonIMG
+                    src={signinwithmicrosoftprod}
+                    onClick={() =>
+                      window.open(
+                        `https://login.microsoftonline.com/common/oauth2/v2.0/authorize/?client_id=${microsoft_client_id}&response_type=${microsoft_response_type}&redirect_uri=${microsoft_redirect_uri}&scope=${microsoft_scope}&state=${microsoft_state}`,
+                        "_self"
+                      )
+                    }
+                  />
+                </AuthVStack>
+                <HStackOr>
+                  <OrRectangle />
+                  <MainText>Or</MainText>
+                  <OrRectangle />
+                </HStackOr>
+                <SmallVStack>
+                  <TextInputVStack>
+                    <TextInputRegularText>Email Address</TextInputRegularText>
+                    <form onSubmit={noRefresh}>
+                      <InputRectangle>
+                        <Input placeholder="" />
+                      </InputRectangle>
+                    </form>
+                  </TextInputVStack>
+                  <TextInputVStack>
+                    <TextInputRegularText>Password</TextInputRegularText>
+                    <form onSubmit={noRefresh}>
+                      <InputRectangle>
+                        <Input placeholder="" type="password" />
+                      </InputRectangle>
+                    </form>
+                  </TextInputVStack>
+                </SmallVStack>
+                <SubmitButton getStartedButtonActive={getStartedButtonActive}>
+                  {spinnerActivated ? (
+                    <SpinnerIMG src={whiteWheel} />
+                  ) : (
+                    <ButtonHStack>
+                      <ButtonText
+                        getStartedButtonActive={getStartedButtonActive}
+                      >
+                        Get Started
+                      </ButtonText>
+                      <ButtonWhiteArrowWrapper>
+                        <ButtonWhiteArrow opacity={arrowOpacity} />
+                      </ButtonWhiteArrowWrapper>
+                    </ButtonHStack>
+                  )}
+                </SubmitButton>
+              </InsideVStack>
+            </ParentVStack>
+          </Rectangle>
+        )}
+      </RenderWrapper>
+
       <DumbStuffHStack>
         <DumbStuffText1>2022 Banabo Labs Inc.</DumbStuffText1>
         <DumbStuffText
@@ -184,6 +219,23 @@ export default function LoginPage2() {
     </ParentWrapper>
   );
 }
+
+const RenderWrapper = styled.div``;
+
+const Rectangle2 = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 3vh;
+  padding-right: 14vh;
+`;
+
+const WhiteText = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 30.5px;
+  color: #ffffff;
+  width: 600px;
+  line-height: 40px;
+`;
 
 const DumbStuffHStack = styled.div`
   display: flex;
